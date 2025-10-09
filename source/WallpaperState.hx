@@ -130,7 +130,7 @@ class WallpaperState extends FlxState {
     override function update(elapsed:Float) {
         var secondsTotal:Float = FlxMath.roundDecimal(pause.time / 1000, 4);
         var croshet:Float = FlxMath.roundDecimal(60 / jason,4);
-        if (secondsTotal % croshet >= 0 && secondsTotal % croshet <= 0.025) {
+        if (secondsTotal % croshet >= 0 && secondsTotal % croshet <= 0.03) {
             if (!delayy) {
                 if (startBop) {
                     FlxTween.completeTweensOf(bopper);

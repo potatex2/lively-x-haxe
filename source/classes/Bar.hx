@@ -6,7 +6,9 @@ import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
+import classes.Const;
 
+/**Direct class from Psych Engine for bar sprites.*/
 class Bar extends FlxSpriteGroup
 {
 	public var leftBar:FlxSprite;
@@ -23,7 +25,7 @@ class Bar extends FlxSpriteGroup
 	public var barHeight(default, set):Int = 1;
 	public var barOffset:FlxPoint = new FlxPoint(3, 3);
 	/**
-		*Note:* Bar is not centered and asset name must be in the __bulkAssets__ folder.
+		*Note:* Bar is not centered and asset name must be in the __bulkAssets__ folder. Default asset used is "musicBar".
 	**/
 	public function new(x:Float, y:Float, image:String = 'musicBar', valueFunction:Void->Float = null, boundX:Float = 0, boundY:Float = 1)
 	{
@@ -32,7 +34,7 @@ class Bar extends FlxSpriteGroup
 		this.valueFunction = valueFunction;
 		setBounds(boundX, boundY);
 		
-		bg = new FlxSprite().loadGraphic('bulkAssets/$image.png');
+		bg = new FlxSprite().loadGraphic('${Const.RD}$image.png');
 		bg.antialiasing = true;
 		barWidth = Std.int(bg.width - 6);
 		barHeight = Std.int(bg.height - 6);

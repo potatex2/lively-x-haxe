@@ -8,6 +8,7 @@ import openfl.display.StageScaleMode;
 import flixel.FlxGame;
 import openfl.events.Event;
 import WallpaperState;
+import openfl.system.Capabilities;
 
 /**
  * Command-line argument modes for the executable, which controls what GUI elements are shown.
@@ -33,10 +34,14 @@ enum Args {
 class Main extends Sprite {
 	/**
 		Window initialization settings for FlxGame, derived from Psych Engine.
+
+		**Note:** The `APP` runs on your current screen resolution to ensure that
+		the wallpaper is properly scaled in Lively Wallpaper. *Please do not change*
+		*system screen resolution while the app is running; this may cause scaling issues.*
 	**/
     var state = {
-		width: 1280, // WINDOW width
-		height: 720, // WINDOW height
+		width: Std.int(Capabilities?.screenResolutionX) ?? 1280, // WINDOW width
+		height: Std.int(Capabilities?.screenResolutionY) ?? 720, // WINDOW height
 		initialState: WallpaperState, // starting state
 		zoom: -1.0, // game state bounds, SET TO -1 FOR CALCULATIONS
 		framerate: 60,
@@ -54,6 +59,7 @@ class Main extends Sprite {
 		if (arg.length == 1) {
 			if (arg[0] == "--scr") {
 				mode = ScreenSaver;
+				Sys.println("SCREEN SAVER ARGUMENT USED");
 			}
 		}
 

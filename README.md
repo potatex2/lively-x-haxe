@@ -1,17 +1,20 @@
+Hyperfixation Status:
+- [x] In Active Development (WE ARE SO BACK)
+- [ ] In Periodic Development
+- [ ] Burnout / Other Hyperfocus
+
 # Haxe Wallpaper for Lively Wallpaper
 Oh, hey. You found another one of my hyperfixations lurking in the Internet. Well done.
 
 Now, what *exactly* does this one have in store for us?
 
-## Current Features - init:
+## Current Features - 0.4.0 (yes I jumped, I'm an amateur):
 
-* Backdrop to prevent screen burn, I guess?
-* Current **local** time indicator, decent if you have your taskbar auto-hidden
-* Camera instance for bopping on beat
-* Metadata file for if custom background music will be added, with proper BPM bops *with some inconsistencies for now*
-* goober bopping as well, i live in your walls teehee
-* Currently, two buttons to allow for opening desktop file directory and a quick shutdown of your system. *I can do much more than that. >:3* **(DISCLAIMER, NO UNETHICAL OR ILLEGAL PRACTICES WILL BE DONE TO YOUR PC IN THIS PROJECT.)**
-* More to come when my hyperfixation continues.
+* Buttons can now be softcoded through JSON format, located in `bulkAssets/buttons/config.json`. A guideline for the variables is provided in the root folder.
+* Your own custom music can now also be added! (Yeah, having FNF pause menu music can get kinda old quickly...)
+  * info.json is now slightly redundant (hardcoded soon™️), and *you can select which one to play through the Settings substate in the top right corner.* :D
+* AFK duration counter and customizable AFK note (more info below later on, it's 1 am)
+* Proper crash handler (props to sqirra-rng)
 
 ## Overview
 **Please note:** I'm too damn broke to get Wallpaper Engine, HOWEVER Lively Wallpaper works very similar to that software, so this will be the focus for this repo.
@@ -20,7 +23,9 @@ This repo contains Haxe files for an interactive wallpaper that is currently bas
 
 <sup>*PauseSubState.hx based off of [version 0.7.3](https://github.com/ShadowMario/FNF-PsychEngine/releases/tag/0.7.3)</sup>
 
-To prevent interactivity issues, keyboard inputs are not allowed or set as defined in Project.xml. You can enable them by commenting out `<haxedef name="FLX_NO_KEYBOARD" />`, but **make sure your desktop icons are set to hidden**.
+To prevent interactivity issues, keyboard inputs are not allowed or set as defined in Project.xml. ~~You can enable them by commenting out `<haxedef name="FLX_NO_KEYBOARD" />`*, but~~ **make sure your desktop icons are set to hidden**. There are transparency features for obvious convenience. :]
+
+<sup>* Keyboard inputs are inconsistent and do not register once the first signal of losing window focus is triggered.</sup>
 
 ## How do I apply it? - Setup
 In order to use this wallpaper, you're obviously going to need [the software](https://www.rocksdanister.com/lively) itself. **It is important that you use the INSTALLER VERSION instead of the Microsoft Store version, as there are compatibility differences present between each of them.**
@@ -35,7 +40,9 @@ Then go to the Wallpaper tab and ensure that this is set to "Mouse".
 
 As mentioned above, keyboard input is available, but for the purpose of this template, *we're not using them*.
 
-**Optional:** Go to Screensaver and follow the setup instructions on the Windows Settings section if you want to use this as a screensaver instead (it's really cool trust me :D ).
+~~**Optional:** Go to Screensaver and follow the setup instructions on the Windows Settings section if you want to use this as a screensaver instead (it's really cool trust me :D ).~~
+
+<sup>* > Screensaver's probably going to be built-in to the main wallpaper.</sup>
 
 You can run any sort of file or other application that handles its own independent window, but I'm not the app creator, so [check out the repo yourself.](https://github.com/rocksdanister/lively)
 
@@ -71,14 +78,15 @@ For the libraries you need to run this, run `haxelib install <library>` with the
 
 <img width="151" height="178" alt="image" src="https://github.com/user-attachments/assets/ac16b22a-172c-482c-9afe-9b761c399d26" />
 
-### Important: For the purpose of this project, flixel 5.8.0 has been modified for compatibility, and the version folder in libs/ MUST be added to `C:\Users\<user>\lime`. Ensure the version is confirmed with `haxelib set flixel 5.8.0`.
+### Important: For the purpose of this project, flixel 5.8.0 has been modified for compatibility, and the version folder in libs/ MUST be added to `C:\Users\<user>\lime`. Ensure the version is confirmed with `haxelib set flixel 5.8.0`. I'm planning on making this more convenient later on, so sorry about that.
 
-#### Now you might be tired of all the hassle yuo had setting all this up, so *how do you see if it works?*
+#### Now you might be tired of all the hassle you had setting all this up, so *how do you see if it works?*
 
 In the root directory in the terminal, run `lime [test | build] windows` and wait a couple minutes for everything to build, depending on how good your hardware is. If you ran `test`, the window *should* open with no errors, and there's your wallpaper! _Well, MY wallpaper since you probably went to test this first..._
 
 # Compile-time errors can be easily resolved. Please report any runtime errors in the Issues tab of this repo.
 
 ---
+## Remaining info added soon. 
 **\~ PotateX2**
-Edited on 10/06/2025, 12:20 am.
+Edited on 05/19/2026, 1:29 am.

@@ -1,0 +1,25 @@
+{
+    "buttons": [
+        {
+            "x": 500,
+            "y": 200,
+            "fromRight": false,
+            "fromBottom": true,
+            "label": "VSCode.png",
+            "tooltip": "Open Recent Workspace",
+            "target": "Code.exe",
+            "runIn": "%USERPROFILE%/AppData/Local/Programs/Microsoft VS Code"
+        },
+        {
+            "x": 650,
+            "y": 200,
+            "fromRight": false,
+            "fromBottom": true,
+            "label": "psychIcon.png",
+            "tooltip": "Open Psych 0.7.3",
+            "tooltipColor": "#00eeee",
+            "target": "PsychEngine.exe",
+            "runIn": "%USERPROFILE%/FNF MODS/Psych 0.7.3 BULK"
+        }
+    ]
+}

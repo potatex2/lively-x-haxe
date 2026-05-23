@@ -8,13 +8,13 @@ Oh, hey. You found another one of my hyperfixations lurking in the Internet. Wel
 
 Now, what *exactly* does this one have in store for us?
 
-## Current Features - 0.4.0 (yes I jumped, I'm an amateur):
+## Current Features - 0.4.1
 
 * Buttons can now be softcoded through JSON format, located in `bulkAssets/buttons/config.json`. A guideline for the variables is provided in the root folder.
 * Your own custom music can now also be added! (Yeah, having FNF pause menu music can get kinda old quickly...)
-  * info.json is now slightly redundant (hardcoded soon™️), and *you can select which one to play through the Settings substate in the top right corner.* :D
-* AFK duration counter and customizable AFK note (more info below later on, it's 1 am)
-* Proper crash handler (props to sqirra-rng)
+  * info.json has been replaced; *you can select which one to play through the Settings substate in the top right corner.* :D
+* AFK duration counter and customizable AFK note
+* Proper crash handler (props to sqirra-rng) and **event logger** with console coloring
 
 ## Overview
 **Please note:** I'm too damn broke to get Wallpaper Engine, HOWEVER Lively Wallpaper works very similar to that software, so this will be the focus for this repo.
@@ -84,9 +84,9 @@ For the libraries you need to run this, run `haxelib install <library>` with the
 
 In the root directory in the terminal, run `lime [test | build] windows` and wait a couple minutes for everything to build, depending on how good your hardware is. If you ran `test`, the window *should* open with no errors, and there's your wallpaper! _Well, MY wallpaper since you probably went to test this first..._
 
-# Compile-time errors can be easily resolved. Please report any runtime errors in the Issues tab of this repo.
+# Please report any runtime errors in the Issues tab of this repo.
 
 ---
-## Remaining info added soon. 
+## Other info will be added to the wiki soon.
 **\~ PotateX2**
-Edited on 05/19/2026, 1:29 am.
+Edited on 05/23/2026, 12:07 am.

@@ -25,22 +25,23 @@ class SettingsSubState extends FlxSubState {
         placehold = new FlxDynamicText("placeholder", 0, 0, 0, "placeholder ehehe", 16)
         .setFormat("PhantomMuff 1.5", 16, 0x63ED00, CENTER, OUTLINE, 0x01959f);
         placehold.screenCenter();
+        placehold.y += 200;
         this.add(placehold);
 
         outtaThere = new FlxAnimButton("exit", 0, Capabilities.screenResolutionY * 0.7125, "bulkAssets/SaveConfig.png", destroy);
         outtaThere.x = Capabilities.screenResolutionX / 2 - outtaThere.width / 2;
         this.add(outtaThere);
-        
-        //FlxG.save.data.stateOpened++; //temp, gonna use this for config settings soon
-        //FlxG.save.flush(); // Uncaught Exception when you spam; move to save changes button
 
         InitMusicSelect();
+        musicSelect.selectedLabel = WallpaperState.Selection;
     }
     override function destroy() {
         FlxTween.completeTweensOf(WallpaperState.camHUD, ["alpha"]);
         FlxTween.tween(WallpaperState.camHUD, {alpha: 1}, 0.85, {ease: FlxEase.cubeOut});
         WallpaperState.instance.configButton.visible = true;
         outtaThere = null;
+        FlxG.save.data.selected = musicSelect.selectedLabel;
+        FlxG.save.flush();
         close();
         super.destroy();
     }
@@ -66,6 +67,7 @@ class SettingsSubState extends FlxSubState {
         }
         musicSelect = new FlxUIDropDownMenu(100, 50, musicSelection, (sel:String) -> {
             if (WallpaperState.flaxhixele.text.contains(sel)) return; // better way to check this, sigh.
+            WallpaperState.Selection = sel;
             WallpaperState.pause.soundCheck("music/" + sel + ".ogg", false);
             WallpaperState.jason = haxe.Json.parse(Assets.getText('bulkAssets/music/$sel.json')).music.bpm;
             trace('Data BPM: ${WallpaperState.jason}');

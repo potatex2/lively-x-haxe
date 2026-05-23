@@ -1,3 +1,4 @@
+import haxe.Constraints.Function;
 import classes.ButtonMapping;
 import flixel.ui.FlxButton;
 import flixel.group.FlxSpriteGroup;
@@ -7,6 +8,7 @@ import openfl.system.Capabilities;
 import openfl.events.Event;
 import lime.app.Application;
 import haxe.Json; // parser
+import hscript.Interp;
 #if html5
 import js.Browser;
 #elseif sys
@@ -78,7 +80,6 @@ class WallpaperState extends FlxState {
     public static var toggle:Music = new Music();
 
     var startBop:Bool = false;
-    var bopConst:Float;
     public static var jason:Float;
     public static var croshet:Float;
     var realTime:FlxText;
@@ -116,11 +117,26 @@ class WallpaperState extends FlxState {
 
     // Load config preferences before wallpaper application runs with default values.
     public static function loadConfig(save:flixel.util.FlxSave) {
-        var Prefs = save.data;
-        Selection = Prefs.selected;
+        if (save.data.selected == null) { //Fallback for music
+            var musicList:Array<String> = FileSystem.readDirectory("bulkAssets/music");
+            var i:Int = 0;
+            while (i <= musicList.length - 1) {
+                if (i > musicList.length - 1) throw "WallpaperState | No music files were found, please add a file for fallback!";
+                var fileName:Array<String> = musicList[i].split(".");
+                if (fileName[1] == "ogg" || fileName[1] == "mp3" || fileName[1] == "wav") {
+                    Selection = fileName[0];
+                    save.data.selected = Selection;
+                    Sys.println("        \x1b[1;33mloadConfig | \x1b[0;43m Fallback set to: " + Selection + "\x1b[0m");
+                    break;   
+                }
+                i++;
+            }
+        }
         save.data.fish = "fosj.";
         save.flush();
-        trace(save.data);
+
+        Selection = save.data.selected;
+        Sys.println("$$$$$ SAVE DATA: " + save.data);
     }
     override function create() {
         // For substate use
@@ -134,10 +150,6 @@ class WallpaperState extends FlxState {
 
         super.create();
         Application.current.window.focus();
-
-        Selection = Json.parse(Assets.getText('bulkAssets/info.json')).selected;
-        Note = Json.parse(Assets.getText('bulkAssets/info.json')).afkNote;
-
         
 		bgGoofy = new BG(RootDirectory + "bgGoofy.png"); 
 		bgGoofy.updateHitbox(); 
@@ -222,9 +234,11 @@ class WallpaperState extends FlxState {
         FlxTween.tween(musicProg, {alpha: 0.7}, 1.4, {ease: FlxEase.sineInOut});
         */
         jason = Json.parse(Assets.getText('bulkAssets/music/$Selection.json')).music.bpm;
-        trace('Data BPM: $jason');
+        Sys.println("   $$$$$ Data BPM: " + jason);
         croshet = FlxMath.roundDecimal(60 / jason, 4);
-        FlxTween.tween(bopper, {alpha: 1, x: FlxG.width/2 - bopper.width/2}, 1.7, {ease: FlxEase.sineOut, onComplete: (_) -> {startBop = true; bopConst = bopper.x;}});
+        FlxTween.tween(bopper, {alpha: 1, x: FlxG.width/2 - bopper.width/2}, 1.7, {ease: FlxEase.sineOut, onComplete: (_) -> startBop = true});
+        bopper.angle = 10;
+        FlxTween.tween(bopper, {angle: -10}, 2.6, {ease: FlxEase.sineInOut, type: 4});
         /*
         mute = new FlxGroupButton("music", musicProg.barWidth + 30, FlxG.height - 30, new FlxAnimButton(
             "toggleMusic", 0, 0, "bulkAssets/musicIcon.png", null
@@ -339,7 +353,7 @@ class WallpaperState extends FlxState {
         shutDown = new FlxAnimButton("Shutdown", 0, 0, "bulkAssets/shutdown.png");
         shutDown.scale.x = 0.7;
         shutDown.scale.y = 0.7;
-        shutDown.init_X = FlxG.width / 2 - shutDown.width / 2 + 125;
+        shutDown.init_X = FlxG.width - shutDown.width / 2 - 100;
         //shutDown.init_Y = FlxG.height - shutDown.height - 10;
         BottomGroup.add(shutDown);
         var safety:Int = 0;
@@ -405,6 +419,7 @@ class WallpaperState extends FlxState {
 
         add(TopGroup);
         add(BottomGroup);
+
         classes.WindowsTransparency.enableTransparency();
         #end
         ButtonMapping.createButtons();
@@ -523,13 +538,12 @@ class WallpaperState extends FlxState {
                             bopper.loadGraphic("bulkAssets/heh.png");
                         else bopper.loadGraphic("bulkAssets/bozo.png");
                     }
-                    bopper.x += (camBeat % 2 == 0 ? 5 : -5);
-                    FlxTween.tween(bopper, {x: bopConst}, croshet / 2.01, {ease: FlxEase.expoOut});
+                    FlxTween.tween(bopper, {y: bopper.y - 7}, croshet / 2.04, {ease: FlxEase.expoOut, onComplete: (_) -> {
+                        FlxTween.tween(bopper, {y: FlxG.height / 2 - bopper.height/2}, croshet / 2.05, {ease: FlxEase.sineIn});
+                    }});
                 }
                 boopWay = !boopWay;
-                bopper.angle = boopWay ? 10 : -10;
                 bopper.scale.set(0.9,0.9); //YES. IT. DOES.
-                FlxTween.tween(bopper, {angle: 0}, croshet/1.7, {ease: FlxEase.circOut});
                 FlxTween.tween(bopper.scale, {x: 0.75, y: 0.75}, croshet/1.5, {ease: FlxEase.quadOut});
                 delayy = true;
                 new FlxTimer().start(croshet/4, (_) -> delayy = false);
@@ -541,6 +555,11 @@ class WallpaperState extends FlxState {
             Hour12 = ((aawur == 0 || aawur == 12) ? 12 : Std.parseInt(timestuff.substring(11,13)) % 12);
             realTime.text = "Current Time: " + Hour12 + timestuff.substr(13) + AmPm #if js + " MST" #end;
         super.update(elapsed);
+        for (cb in updateArray) cb();
+    }
+    static var updateArray:Array<Function> = [];
+    public static inline function bindToUpdate(callback:Function) {
+        updateArray.push((?args) -> callback(args));
     }
 }
 

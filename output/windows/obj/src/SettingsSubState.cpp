@@ -133,6 +133,9 @@
 #ifndef INCLUDED_flixel_ui_FlxTypedButton_flixel_FlxSprite
 #include <flixel/ui/FlxTypedButton_flixel_FlxSprite.h>
 #endif
+#ifndef INCLUDED_flixel_util_FlxSave
+#include <flixel/util/FlxSave.h>
+#endif
 #ifndef INCLUDED_flixel_util_IFlxDestroyable
 #include <flixel/util/IFlxDestroyable.h>
 #endif
@@ -157,16 +160,16 @@ HX_LOCAL_STACK_FRAME(_hx_pos_0621bb3808d6e07e_19_create,"SettingsSubState","crea
 static const ::String _hx_array_data_7800fc94_2[] = {
 	HX_("alpha",5e,a7,96,21),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_0621bb3808d6e07e_39_destroy,"SettingsSubState","destroy",0x7a845f20,"SettingsSubState.destroy","SettingsSubState.hx",39,0x7bbb5aaa)
+HX_LOCAL_STACK_FRAME(_hx_pos_0621bb3808d6e07e_38_destroy,"SettingsSubState","destroy",0x7a845f20,"SettingsSubState.destroy","SettingsSubState.hx",38,0x7bbb5aaa)
 static const ::String _hx_array_data_7800fc94_4[] = {
 	HX_("alpha",5e,a7,96,21),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_0621bb3808d6e07e_67_InitMusicSelect,"SettingsSubState","InitMusicSelect",0x13e7d057,"SettingsSubState.InitMusicSelect","SettingsSubState.hx",67,0x7bbb5aaa)
-HX_LOCAL_STACK_FRAME(_hx_pos_0621bb3808d6e07e_49_InitMusicSelect,"SettingsSubState","InitMusicSelect",0x13e7d057,"SettingsSubState.InitMusicSelect","SettingsSubState.hx",49,0x7bbb5aaa)
+HX_LOCAL_STACK_FRAME(_hx_pos_0621bb3808d6e07e_68_InitMusicSelect,"SettingsSubState","InitMusicSelect",0x13e7d057,"SettingsSubState.InitMusicSelect","SettingsSubState.hx",68,0x7bbb5aaa)
+HX_LOCAL_STACK_FRAME(_hx_pos_0621bb3808d6e07e_50_InitMusicSelect,"SettingsSubState","InitMusicSelect",0x13e7d057,"SettingsSubState.InitMusicSelect","SettingsSubState.hx",50,0x7bbb5aaa)
 
 void SettingsSubState_obj::__construct( ::Dynamic BGColor){
             	HX_STACKFRAME(&_hx_pos_0621bb3808d6e07e_15_new)
-HXLINE(  48)		this->musicSelection = ::Array_obj< ::Dynamic>::__new(0);
+HXLINE(  49)		this->musicSelection = ::Array_obj< ::Dynamic>::__new(0);
 HXLINE(  15)		super::__construct(BGColor);
             	}
 
@@ -237,81 +240,87 @@ HXLINE(  27)				int _hx_tmp3 = ::flixel::FlxG_obj::height;
 HXDLIN(  27)				_this->set_y(((( (Float)(_hx_tmp3) ) - _this->get_height()) / ( (Float)(2) )));
             			}
             		}
-HXLINE(  28)		this->add(this->placehold);
-HXLINE(  30)		this->outtaThere =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("exit",1e,f7,1d,43),( (Float)(0) ),(::openfl::_hx_system::Capabilities_obj::get_screenResolutionY() * ((Float)0.7125)),HX_("bulkAssets/SaveConfig.png",94,91,13,26),this->destroy_dyn());
-HXLINE(  31)		 ::classes::FlxAnimButton _hx_tmp4 = this->outtaThere;
-HXDLIN(  31)		Float _hx_tmp5 = (::openfl::_hx_system::Capabilities_obj::get_screenResolutionX() / ( (Float)(2) ));
-HXDLIN(  31)		_hx_tmp4->set_x((_hx_tmp5 - (this->outtaThere->get_width() / ( (Float)(2) ))));
-HXLINE(  32)		this->add(this->outtaThere);
-HXLINE(  37)		this->InitMusicSelect();
+HXLINE(  28)		 ::classes::FlxDynamicText fh = this->placehold;
+HXDLIN(  28)		fh->set_y((fh->y + 200));
+HXLINE(  29)		this->add(this->placehold);
+HXLINE(  31)		this->outtaThere =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("exit",1e,f7,1d,43),( (Float)(0) ),(::openfl::_hx_system::Capabilities_obj::get_screenResolutionY() * ((Float)0.7125)),HX_("bulkAssets/SaveConfig.png",94,91,13,26),this->destroy_dyn());
+HXLINE(  32)		 ::classes::FlxAnimButton _hx_tmp4 = this->outtaThere;
+HXDLIN(  32)		Float _hx_tmp5 = (::openfl::_hx_system::Capabilities_obj::get_screenResolutionX() / ( (Float)(2) ));
+HXDLIN(  32)		_hx_tmp4->set_x((_hx_tmp5 - (this->outtaThere->get_width() / ( (Float)(2) ))));
+HXLINE(  33)		this->add(this->outtaThere);
+HXLINE(  35)		this->InitMusicSelect();
+HXLINE(  36)		this->musicSelect->set_selectedLabel(::WallpaperState_obj::Selection);
             	}
 
 
 void SettingsSubState_obj::destroy(){
-            	HX_STACKFRAME(&_hx_pos_0621bb3808d6e07e_39_destroy)
-HXLINE(  40)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::camHUD,::Array_obj< ::String >::fromData( _hx_array_data_7800fc94_4,1));
-HXLINE(  41)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camHUD, ::Dynamic(::hx::Anon_obj::Create(1)
+            	HX_STACKFRAME(&_hx_pos_0621bb3808d6e07e_38_destroy)
+HXLINE(  39)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::camHUD,::Array_obj< ::String >::fromData( _hx_array_data_7800fc94_4,1));
+HXLINE(  40)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camHUD, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("alpha",5e,a7,96,21),1)),((Float)0.85), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::cubeOut_dyn())));
-HXLINE(  42)		::WallpaperState_obj::instance->configButton->set_visible(true);
-HXLINE(  43)		this->outtaThere = null();
-HXLINE(  44)		this->close();
-HXLINE(  45)		this->super::destroy();
+HXLINE(  41)		::WallpaperState_obj::instance->configButton->set_visible(true);
+HXLINE(  42)		this->outtaThere = null();
+HXLINE(  43)		::flixel::FlxG_obj::save->data->__SetField(HX_("selected",5b,2a,6d,b1),this->musicSelect->get_selectedLabel(),::hx::paccDynamic);
+HXLINE(  44)		::flixel::FlxG_obj::save->flush(null());
+HXLINE(  45)		this->close();
+HXLINE(  46)		this->super::destroy();
             	}
 
 
 void SettingsSubState_obj::InitMusicSelect(){
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(1)
             		void _hx_run(::String sel){
-            			HX_GC_STACKFRAME(&_hx_pos_0621bb3808d6e07e_67_InitMusicSelect)
-HXLINE(  68)			if ((::WallpaperState_obj::flaxhixele->text.indexOf(sel,null()) != -1)) {
-HXLINE(  68)				return;
+            			HX_GC_STACKFRAME(&_hx_pos_0621bb3808d6e07e_68_InitMusicSelect)
+HXLINE(  69)			if ((::WallpaperState_obj::flaxhixele->text.indexOf(sel,null()) != -1)) {
+HXLINE(  69)				return;
             			}
-HXLINE(  69)			::WallpaperState_obj::pause->soundCheck(((HX_("music/",ea,bf,1b,3f) + sel) + HX_(".ogg",e1,64,bc,1e)),false);
-HXLINE(  70)			::WallpaperState_obj::jason = ( (Float)( ::Dynamic( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::openfl::utils::Assets_obj::getText(((HX_("bulkAssets/music/",c4,68,b5,8b) + sel) + HX_(".json",56,f1,d6,c2))))->doParse()->__Field(HX_("music",a5,d0,5a,10),::hx::paccDynamic))->__Field(HX_("bpm",df,be,4a,00),::hx::paccDynamic)) );
-HXLINE(  71)			::haxe::Log_obj::trace((HX_("Data BPM: ",cf,dc,b7,ae) + ::WallpaperState_obj::jason),::hx::SourceInfo(HX_("source/SettingsSubState.hx",36,f4,ff,6c),71,HX_("SettingsSubState",94,fc,00,78),HX_("InitMusicSelect",31,08,92,19)));
-HXLINE(  72)			::WallpaperState_obj::croshet = ::flixel::math::FlxMath_obj::roundDecimal((( (Float)(60) ) / ::WallpaperState_obj::jason),4);
-HXLINE(  73)			::WallpaperState_obj::flaxhixele->set_text(((HX_("Custom-made in HaxeFlixel; music selected: \"",93,86,7f,91) + sel) + HX_("\"",22,00,00,00)));
+HXLINE(  70)			::WallpaperState_obj::Selection = sel;
+HXLINE(  71)			::WallpaperState_obj::pause->soundCheck(((HX_("music/",ea,bf,1b,3f) + sel) + HX_(".ogg",e1,64,bc,1e)),false);
+HXLINE(  72)			::WallpaperState_obj::jason = ( (Float)( ::Dynamic( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::openfl::utils::Assets_obj::getText(((HX_("bulkAssets/music/",c4,68,b5,8b) + sel) + HX_(".json",56,f1,d6,c2))))->doParse()->__Field(HX_("music",a5,d0,5a,10),::hx::paccDynamic))->__Field(HX_("bpm",df,be,4a,00),::hx::paccDynamic)) );
+HXLINE(  73)			::haxe::Log_obj::trace((HX_("Data BPM: ",cf,dc,b7,ae) + ::WallpaperState_obj::jason),::hx::SourceInfo(HX_("source/SettingsSubState.hx",36,f4,ff,6c),73,HX_("SettingsSubState",94,fc,00,78),HX_("InitMusicSelect",31,08,92,19)));
+HXLINE(  74)			::WallpaperState_obj::croshet = ::flixel::math::FlxMath_obj::roundDecimal((( (Float)(60) ) / ::WallpaperState_obj::jason),4);
+HXLINE(  75)			::WallpaperState_obj::flaxhixele->set_text(((HX_("Custom-made in HaxeFlixel; music selected: \"",93,86,7f,91) + sel) + HX_("\"",22,00,00,00)));
             		}
             		HX_END_LOCAL_FUNC1((void))
 
-            	HX_GC_STACKFRAME(&_hx_pos_0621bb3808d6e07e_49_InitMusicSelect)
-HXLINE(  51)		::Array< ::String > musicList = ::sys::FileSystem_obj::readDirectory(HX_("bulkAssets/music",0b,81,5b,44));
-HXLINE(  52)		::haxe::Log_obj::trace(musicList,::hx::SourceInfo(HX_("source/SettingsSubState.hx",36,f4,ff,6c),52,HX_("SettingsSubState",94,fc,00,78),HX_("InitMusicSelect",31,08,92,19)));
-HXLINE(  53)		int i = 0;
-HXLINE(  54)		while((i <= (musicList->length - 1))){
-HXLINE(  55)			if ((i > (musicList->length - 1))) {
-HXLINE(  55)				goto _hx_goto_5;
+            	HX_GC_STACKFRAME(&_hx_pos_0621bb3808d6e07e_50_InitMusicSelect)
+HXLINE(  52)		::Array< ::String > musicList = ::sys::FileSystem_obj::readDirectory(HX_("bulkAssets/music",0b,81,5b,44));
+HXLINE(  53)		::haxe::Log_obj::trace(musicList,::hx::SourceInfo(HX_("source/SettingsSubState.hx",36,f4,ff,6c),53,HX_("SettingsSubState",94,fc,00,78),HX_("InitMusicSelect",31,08,92,19)));
+HXLINE(  54)		int i = 0;
+HXLINE(  55)		while((i <= (musicList->length - 1))){
+HXLINE(  56)			if ((i > (musicList->length - 1))) {
+HXLINE(  56)				goto _hx_goto_5;
             			}
-HXLINE(  56)			::Array< ::String > fileName = musicList->__get(i).split(HX_(".",2e,00,00,00));
-HXLINE(  57)			::Array< ::String > nextFile;
-HXLINE(  58)			if (((i + 1) <= musicList->length)) {
-HXLINE(  59)				nextFile = musicList->__get((i + 1)).split(HX_(".",2e,00,00,00));
-HXLINE(  60)				bool _hx_tmp;
-HXDLIN(  60)				bool _hx_tmp1;
-HXDLIN(  60)				if ((fileName->__get(0) == nextFile->__get(0))) {
-HXLINE(  60)					_hx_tmp1 = (fileName->__get(1) == HX_("json",28,42,68,46));
+HXLINE(  57)			::Array< ::String > fileName = musicList->__get(i).split(HX_(".",2e,00,00,00));
+HXLINE(  58)			::Array< ::String > nextFile;
+HXLINE(  59)			if (((i + 1) <= musicList->length)) {
+HXLINE(  60)				nextFile = musicList->__get((i + 1)).split(HX_(".",2e,00,00,00));
+HXLINE(  61)				bool _hx_tmp;
+HXDLIN(  61)				bool _hx_tmp1;
+HXDLIN(  61)				if ((fileName->__get(0) == nextFile->__get(0))) {
+HXLINE(  61)					_hx_tmp1 = (fileName->__get(1) == HX_("json",28,42,68,46));
             				}
             				else {
-HXLINE(  60)					_hx_tmp1 = false;
+HXLINE(  61)					_hx_tmp1 = false;
             				}
-HXDLIN(  60)				if (_hx_tmp1) {
-HXLINE(  60)					_hx_tmp = (nextFile->__get(1) == HX_("ogg",4f,94,54,00));
+HXDLIN(  61)				if (_hx_tmp1) {
+HXLINE(  61)					_hx_tmp = (nextFile->__get(1) == HX_("ogg",4f,94,54,00));
             				}
             				else {
-HXLINE(  60)					_hx_tmp = false;
+HXLINE(  61)					_hx_tmp = false;
             				}
-HXDLIN(  60)				if (_hx_tmp) {
-HXLINE(  61)					::Array< ::Dynamic> _hx_tmp2 = this->musicSelection;
-HXDLIN(  61)					_hx_tmp2->push( ::flixel::addons::ui::StrNameLabel_obj::__alloc( HX_CTX ,fileName->__get(0),fileName->__get(0)));
-HXLINE(  62)					i = (i + 1);
+HXDLIN(  61)				if (_hx_tmp) {
+HXLINE(  62)					::Array< ::Dynamic> _hx_tmp2 = this->musicSelection;
+HXDLIN(  62)					_hx_tmp2->push( ::flixel::addons::ui::StrNameLabel_obj::__alloc( HX_CTX ,fileName->__get(0),fileName->__get(0)));
+HXLINE(  63)					i = (i + 1);
             				}
             			}
-HXLINE(  65)			i = (i + 1);
+HXLINE(  66)			i = (i + 1);
             		}
             		_hx_goto_5:;
-HXLINE(  67)		this->musicSelect =  ::flixel::addons::ui::FlxUIDropDownMenu_obj::__alloc( HX_CTX ,100,50,this->musicSelection, ::Dynamic(new _hx_Closure_0()),null(),null(),null(),null());
-HXLINE(  75)		this->add(this->musicSelect);
+HXLINE(  68)		this->musicSelect =  ::flixel::addons::ui::FlxUIDropDownMenu_obj::__alloc( HX_CTX ,100,50,this->musicSelection, ::Dynamic(new _hx_Closure_0()),null(),null(),null(),null());
+HXLINE(  77)		this->add(this->musicSelect);
             	}
 
 

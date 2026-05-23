@@ -14,6 +14,9 @@
 #ifndef INCLUDED_Std
 #include <Std.h>
 #endif
+#ifndef INCLUDED_StringTools
+#include <StringTools.h>
+#endif
 #ifndef INCLUDED_Sys
 #include <Sys.h>
 #endif
@@ -91,9 +94,6 @@
 #endif
 #ifndef INCLUDED_flixel_util_typeLimit__NextState_InitialState_Impl_
 #include <flixel/util/typeLimit/_NextState/InitialState_Impl_.h>
-#endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
 #endif
 #ifndef INCLUDED_haxe_StackItem
 #include <haxe/StackItem.h>
@@ -187,15 +187,15 @@
 #endif
 
 HX_DEFINE_STACK_FRAME(_hx_pos_e47a9afac0942eb9_42_new,"Main","new",0x6616a5cb,"Main.new","Main.hx",42,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_85_init,"Main","init",0xea732345,"Main.init","Main.hx",85,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_121_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",121,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_90_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",90,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_142_Preload,"Main","Preload",0x66c5d694,"Main.Preload","Main.hx",142,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_138_Preload,"Main","Preload",0x66c5d694,"Main.Preload","Main.hx",138,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_134_Preload,"Main","Preload",0x66c5d694,"Main.Preload","Main.hx",134,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_72_main,"Main","main",0xed0e206e,"Main.main","Main.hx",72,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_146_resetSpriteCache,"Main","resetSpriteCache",0xd7fbf223,"Main.resetSpriteCache","Main.hx",146,0x087e5c05)
-HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_152_dies,"Main","dies",0xe7214368,"Main.dies","Main.hx",152,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_83_init,"Main","init",0xea732345,"Main.init","Main.hx",83,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_119_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",119,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_88_setupGame,"Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",88,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_140_Preload,"Main","Preload",0x66c5d694,"Main.Preload","Main.hx",140,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_136_Preload,"Main","Preload",0x66c5d694,"Main.Preload","Main.hx",136,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_132_Preload,"Main","Preload",0x66c5d694,"Main.Preload","Main.hx",132,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_70_main,"Main","main",0xed0e206e,"Main.main","Main.hx",70,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_144_resetSpriteCache,"Main","resetSpriteCache",0xd7fbf223,"Main.resetSpriteCache","Main.hx",144,0x087e5c05)
+HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_150_dies,"Main","dies",0xe7214368,"Main.dies","Main.hx",150,0x087e5c05)
 HX_LOCAL_STACK_FRAME(_hx_pos_e47a9afac0942eb9_60_boot,"Main","boot",0xe5d36c67,"Main.boot","Main.hx",60,0x087e5c05)
 
 void Main_obj::__construct(){
@@ -238,13 +238,13 @@ HXLINE(  50)		this->state =  ::Dynamic(::hx::Anon_obj::Create(7)
             			->setFixed(4,HX_("initialState",ed,76,1b,48),::hx::ClassOf< ::WallpaperState >())
             			->setFixed(5,HX_("framerate",8d,e5,4b,4e),60)
             			->setFixed(6,HX_("zoom",13,a3,f8,50),((Float)1.0)));
-HXLINE(  76)		super::__construct();
-HXLINE(  78)		::flixel::_hx_system::FlxSplash_obj::creditOverride(::flixel::_hx_system::Context_obj::Wallpaper_dyn());
-HXLINE(  79)		if (::hx::IsNotNull( this->stage )) {
-HXLINE(  80)			this->init(null());
+HXLINE(  74)		super::__construct();
+HXLINE(  76)		::flixel::_hx_system::FlxSplash_obj::creditOverride(::flixel::_hx_system::Context_obj::Wallpaper_dyn());
+HXLINE(  77)		if (::hx::IsNotNull( this->stage )) {
+HXLINE(  78)			this->init(null());
             		}
             		else {
-HXLINE(  82)			this->addEventListener(HX_("addedToStage",63,22,55,0c),this->init_dyn(),null(),null(),null());
+HXLINE(  80)			this->addEventListener(HX_("addedToStage",63,22,55,0c),this->init_dyn(),null(),null(),null());
             		}
             	}
 
@@ -280,11 +280,11 @@ bool Main_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void Main_obj::init( ::openfl::events::Event E){
-            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_85_init)
-HXLINE(  86)		if (this->hasEventListener(HX_("addedToStage",63,22,55,0c))) {
-HXLINE(  87)			this->removeEventListener(HX_("addedToStage",63,22,55,0c),this->init_dyn(),null());
+            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_83_init)
+HXLINE(  84)		if (this->hasEventListener(HX_("addedToStage",63,22,55,0c))) {
+HXLINE(  85)			this->removeEventListener(HX_("addedToStage",63,22,55,0c),this->init_dyn(),null());
             		}
-HXLINE(  88)		this->setupGame();
+HXLINE(  86)		this->setupGame();
             	}
 
 
@@ -293,53 +293,53 @@ HX_DEFINE_DYNAMIC_FUNC1(Main_obj,init,(void))
 void Main_obj::setupGame(){
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(2)
             		void _hx_run(int w,int h){
-            			HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_121_setupGame)
-HXLINE( 122)			if (::hx::IsNotNull( ::flixel::FlxG_obj::cameras )) {
-HXLINE( 123)				int _g = 0;
-HXDLIN( 123)				::Array< ::Dynamic> _g1 = ::flixel::FlxG_obj::cameras->list;
-HXDLIN( 123)				while((_g < _g1->length)){
-HXLINE( 123)					 ::flixel::FlxCamera cam = _g1->__get(_g).StaticCast<  ::flixel::FlxCamera >();
-HXDLIN( 123)					_g = (_g + 1);
-HXLINE( 124)					bool _hx_tmp;
-HXDLIN( 124)					if (::hx::IsNotNull( cam )) {
-HXLINE( 124)						_hx_tmp = ::hx::IsNotNull( cam->filters );
+            			HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_119_setupGame)
+HXLINE( 120)			if (::hx::IsNotNull( ::flixel::FlxG_obj::cameras )) {
+HXLINE( 121)				int _g = 0;
+HXDLIN( 121)				::Array< ::Dynamic> _g1 = ::flixel::FlxG_obj::cameras->list;
+HXDLIN( 121)				while((_g < _g1->length)){
+HXLINE( 121)					 ::flixel::FlxCamera cam = _g1->__get(_g).StaticCast<  ::flixel::FlxCamera >();
+HXDLIN( 121)					_g = (_g + 1);
+HXLINE( 122)					bool _hx_tmp;
+HXDLIN( 122)					if (::hx::IsNotNull( cam )) {
+HXLINE( 122)						_hx_tmp = ::hx::IsNotNull( cam->filters );
             					}
             					else {
-HXLINE( 124)						_hx_tmp = false;
+HXLINE( 122)						_hx_tmp = false;
             					}
-HXDLIN( 124)					if (_hx_tmp) {
-HXLINE( 125)						::Main_obj::resetSpriteCache(cam->flashSprite);
+HXDLIN( 122)					if (_hx_tmp) {
+HXLINE( 123)						::Main_obj::resetSpriteCache(cam->flashSprite);
             					}
             				}
             			}
-HXLINE( 129)			if (::hx::IsNotNull( ::flixel::FlxG_obj::game )) {
-HXLINE( 130)				::Main_obj::resetSpriteCache(::flixel::FlxG_obj::game);
+HXLINE( 127)			if (::hx::IsNotNull( ::flixel::FlxG_obj::game )) {
+HXLINE( 128)				::Main_obj::resetSpriteCache(::flixel::FlxG_obj::game);
             			}
             		}
             		HX_END_LOCAL_FUNC2((void))
 
-            	HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_90_setupGame)
-HXLINE(  95)		this->Preload();
-HXLINE(  97)		int stageWidth = ::openfl::Lib_obj::get_current()->stage->stageWidth;
-HXLINE(  98)		int stageHeight = ::openfl::Lib_obj::get_current()->stage->stageHeight;
-HXLINE( 100)		::Main_obj::screenX = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionX();
-HXLINE( 101)		::Main_obj::screenY = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionY();
-HXLINE( 103)		if (::hx::IsEq( this->state->__Field(HX_("zoom",13,a3,f8,50),::hx::paccDynamic),((Float)-1.0) )) {
-HXLINE( 105)			Float ratioX = (( (Float)(stageWidth) ) / ( (Float)(this->state->__Field(HX_("width",06,b6,62,ca),::hx::paccDynamic)) ));
-HXLINE( 106)			Float ratioY = (( (Float)(stageHeight) ) / ( (Float)(this->state->__Field(HX_("height",e7,07,4c,02),::hx::paccDynamic)) ));
-HXLINE( 107)			this->state->__SetField(HX_("zoom",13,a3,f8,50),::Math_obj::min(ratioX,ratioY),::hx::paccDynamic);
-HXLINE( 108)			this->state->__SetField(HX_("width",06,b6,62,ca),::Math_obj::ceil((( (Float)(stageWidth) ) / ( (Float)(this->state->__Field(HX_("zoom",13,a3,f8,50),::hx::paccDynamic)) ))),::hx::paccDynamic);
-HXLINE( 109)			this->state->__SetField(HX_("height",e7,07,4c,02),::Math_obj::ceil((( (Float)(stageHeight) ) / ( (Float)(this->state->__Field(HX_("zoom",13,a3,f8,50),::hx::paccDynamic)) ))),::hx::paccDynamic);
+            	HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_88_setupGame)
+HXLINE(  93)		this->Preload();
+HXLINE(  95)		int stageWidth = ::openfl::Lib_obj::get_current()->stage->stageWidth;
+HXLINE(  96)		int stageHeight = ::openfl::Lib_obj::get_current()->stage->stageHeight;
+HXLINE(  98)		::Main_obj::screenX = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionX();
+HXLINE(  99)		::Main_obj::screenY = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionY();
+HXLINE( 101)		if (::hx::IsEq( this->state->__Field(HX_("zoom",13,a3,f8,50),::hx::paccDynamic),((Float)-1.0) )) {
+HXLINE( 103)			Float ratioX = (( (Float)(stageWidth) ) / ( (Float)(this->state->__Field(HX_("width",06,b6,62,ca),::hx::paccDynamic)) ));
+HXLINE( 104)			Float ratioY = (( (Float)(stageHeight) ) / ( (Float)(this->state->__Field(HX_("height",e7,07,4c,02),::hx::paccDynamic)) ));
+HXLINE( 105)			this->state->__SetField(HX_("zoom",13,a3,f8,50),::Math_obj::min(ratioX,ratioY),::hx::paccDynamic);
+HXLINE( 106)			this->state->__SetField(HX_("width",06,b6,62,ca),::Math_obj::ceil((( (Float)(stageWidth) ) / ( (Float)(this->state->__Field(HX_("zoom",13,a3,f8,50),::hx::paccDynamic)) ))),::hx::paccDynamic);
+HXLINE( 107)			this->state->__SetField(HX_("height",e7,07,4c,02),::Math_obj::ceil((( (Float)(stageHeight) ) / ( (Float)(this->state->__Field(HX_("zoom",13,a3,f8,50),::hx::paccDynamic)) ))),::hx::paccDynamic);
             		}
-HXLINE( 111)		int _hx_tmp = ( (int)(this->state->__Field(HX_("width",06,b6,62,ca),::hx::paccDynamic)) );
-HXDLIN( 111)		int _hx_tmp1 = ( (int)(this->state->__Field(HX_("height",e7,07,4c,02),::hx::paccDynamic)) );
-HXDLIN( 111)		this->addChild( ::flixel::FlxGame_obj::__alloc( HX_CTX ,_hx_tmp,_hx_tmp1,::flixel::util::typeLimit::_NextState::InitialState_Impl__obj::fromType(this->state->__Field(HX_("initialState",ed,76,1b,48),::hx::paccDynamic)),this->state->__Field(HX_("framerate",8d,e5,4b,4e),::hx::paccDynamic),this->state->__Field(HX_("framerate",8d,e5,4b,4e),::hx::paccDynamic),this->state->__Field(HX_("skipSplash",46,75,9c,27),::hx::paccDynamic),this->state->__Field(HX_("startFullscreen",3d,c1,ee,2d),::hx::paccDynamic)));
-HXLINE( 112)		this->addChild( ::classes::FPSCounter_obj::__alloc( HX_CTX ,5,5,16777215));
-HXLINE( 113)		::flixel::FlxG_obj::autoPause = false;
-HXLINE( 114)		::openfl::Lib_obj::get_current()->stage->align = ::openfl::display::_StageAlign::StageAlign_Impl__obj::fromString(HX_("tl",78,65,00,00));
-HXLINE( 115)		::openfl::Lib_obj::get_current()->stage->set_scaleMode(2);
-HXLINE( 118)		::openfl::Lib_obj::get_current()->get_loaderInfo()->uncaughtErrorEvents->addEventListener(HX_("uncaughtError",f3,98,8b,8b),::Main_obj::dies_dyn(),null(),null(),null());
-HXLINE( 121)		::flixel::FlxG_obj::signals->gameResized->add( ::Dynamic(new _hx_Closure_0()));
+HXLINE( 109)		int _hx_tmp = ( (int)(this->state->__Field(HX_("width",06,b6,62,ca),::hx::paccDynamic)) );
+HXDLIN( 109)		int _hx_tmp1 = ( (int)(this->state->__Field(HX_("height",e7,07,4c,02),::hx::paccDynamic)) );
+HXDLIN( 109)		this->addChild( ::flixel::FlxGame_obj::__alloc( HX_CTX ,_hx_tmp,_hx_tmp1,::flixel::util::typeLimit::_NextState::InitialState_Impl__obj::fromType(this->state->__Field(HX_("initialState",ed,76,1b,48),::hx::paccDynamic)),this->state->__Field(HX_("framerate",8d,e5,4b,4e),::hx::paccDynamic),this->state->__Field(HX_("framerate",8d,e5,4b,4e),::hx::paccDynamic),this->state->__Field(HX_("skipSplash",46,75,9c,27),::hx::paccDynamic),this->state->__Field(HX_("startFullscreen",3d,c1,ee,2d),::hx::paccDynamic)));
+HXLINE( 110)		this->addChild( ::classes::FPSCounter_obj::__alloc( HX_CTX ,5,5,16777215));
+HXLINE( 111)		::flixel::FlxG_obj::autoPause = false;
+HXLINE( 112)		::openfl::Lib_obj::get_current()->stage->align = ::openfl::display::_StageAlign::StageAlign_Impl__obj::fromString(HX_("tl",78,65,00,00));
+HXLINE( 113)		::openfl::Lib_obj::get_current()->stage->set_scaleMode(2);
+HXLINE( 116)		::openfl::Lib_obj::get_current()->get_loaderInfo()->uncaughtErrorEvents->addEventListener(HX_("uncaughtError",f3,98,8b,8b),::Main_obj::dies_dyn(),null(),null(),null());
+HXLINE( 119)		::flixel::FlxG_obj::signals->gameResized->add( ::Dynamic(new _hx_Closure_0()));
             	}
 
 
@@ -350,24 +350,24 @@ void Main_obj::Preload(){
             		void _hx_run(){
             			HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(1)
             			void _hx_run( ::flixel::tweens::FlxTween _){
-            				HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_142_Preload)
-HXLINE( 142)				::flixel::FlxG_obj::sound->play(HX_("bulkAssets/ToggleJingle.ogg",c0,d6,56,e5),null(),null(),null(),null(),null());
+            				HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_140_Preload)
+HXLINE( 140)				::flixel::FlxG_obj::sound->play(HX_("bulkAssets/ToggleJingle.ogg",c0,d6,56,e5),null(),null(),null(),null(),null());
             			}
             			HX_END_LOCAL_FUNC1((void))
 
             			HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_1) HXARGC(1)
             			void _hx_run( ::flixel::tweens::FlxTween _){
-            				HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_142_Preload)
-HXLINE( 142)				::Sys_obj::exit(0);
+            				HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_140_Preload)
+HXLINE( 140)				::Sys_obj::exit(0);
             			}
             			HX_END_LOCAL_FUNC1((void))
 
-            			HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_138_Preload)
-HXLINE( 139)			::openfl::Lib_obj::get_application()->_hx___window->onClose->cancel();
-HXLINE( 140)			::haxe::Log_obj::trace(HX_("Closing window..",db,ae,68,4b),::hx::SourceInfo(HX_("source/Main.hx",91,d3,a7,40),140,HX_("Main",59,64,2f,33),HX_("Preload",a9,6f,94,02)));
-HXLINE( 141)			::flixel::FlxG_obj::save->close(null());
-HXLINE( 142)			 ::lime::ui::Window _hx_tmp = ::openfl::Lib_obj::get_application()->_hx___window;
-HXDLIN( 142)			::flixel::tweens::FlxTween_obj::tween(_hx_tmp, ::Dynamic(::hx::Anon_obj::Create(3)
+            			HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_136_Preload)
+HXLINE( 137)			::openfl::Lib_obj::get_application()->_hx___window->onClose->cancel();
+HXLINE( 138)			::Sys_obj::println(HX_("Closing window..",db,ae,68,4b));
+HXLINE( 139)			::flixel::FlxG_obj::save->close(null());
+HXLINE( 140)			 ::lime::ui::Window _hx_tmp = ::openfl::Lib_obj::get_application()->_hx___window;
+HXDLIN( 140)			::flixel::tweens::FlxTween_obj::tween(_hx_tmp, ::Dynamic(::hx::Anon_obj::Create(3)
             				->setFixed(0,HX_("width",06,b6,62,ca),50)
             				->setFixed(1,HX_("y",79,00,00,00),1500)
             				->setFixed(2,HX_("height",e7,07,4c,02),50)),((Float)1.1), ::Dynamic(::hx::Anon_obj::Create(3)
@@ -377,10 +377,10 @@ HXDLIN( 142)			::flixel::tweens::FlxTween_obj::tween(_hx_tmp, ::Dynamic(::hx::An
             		}
             		HX_END_LOCAL_FUNC0((void))
 
-            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_134_Preload)
-HXLINE( 135)		::flixel::FlxG_obj::save->bind(HX_("WallpaperConfig",84,0e,28,28),null());
-HXLINE( 136)		::WallpaperState_obj::loadConfig(::flixel::FlxG_obj::save);
-HXLINE( 138)		::openfl::Lib_obj::get_application()->_hx___window->onClose->add( ::Dynamic(new _hx_Closure_2()),null(),null());
+            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_132_Preload)
+HXLINE( 133)		::flixel::FlxG_obj::save->bind(HX_("WallpaperConfig",84,0e,28,28),null());
+HXLINE( 134)		::WallpaperState_obj::loadConfig(::flixel::FlxG_obj::save);
+HXLINE( 136)		::openfl::Lib_obj::get_application()->_hx___window->onClose->add( ::Dynamic(new _hx_Closure_2()),null(),null());
             	}
 
 
@@ -395,40 +395,32 @@ Float Main_obj::screenX;
 Float Main_obj::screenY;
 
 void Main_obj::main(){
-            	HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_72_main)
-HXDLIN(  72)		 ::openfl::display::MovieClip _hx_tmp = ::openfl::Lib_obj::get_current();
-HXDLIN(  72)		::Main_obj::mainInstance = _hx_tmp->addChild( ::Main_obj::__alloc( HX_CTX ));
+            	HX_GC_STACKFRAME(&_hx_pos_e47a9afac0942eb9_70_main)
+HXDLIN(  70)		 ::openfl::display::MovieClip _hx_tmp = ::openfl::Lib_obj::get_current();
+HXDLIN(  70)		::Main_obj::mainInstance = _hx_tmp->addChild( ::Main_obj::__alloc( HX_CTX ));
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Main_obj,main,(void))
 
 void Main_obj::resetSpriteCache( ::openfl::display::Sprite sprite){
-            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_146_resetSpriteCache)
-HXLINE( 147)		sprite->_hx___cacheBitmap = null();
-HXLINE( 148)		sprite->_hx___cacheBitmapData = null();
+            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_144_resetSpriteCache)
+HXLINE( 145)		sprite->_hx___cacheBitmap = null();
+HXLINE( 146)		sprite->_hx___cacheBitmapData = null();
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Main_obj,resetSpriteCache,(void))
 
 void Main_obj::dies( ::openfl::events::UncaughtErrorEvent e){
-            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_152_dies)
-HXLINE( 153)		::Array< ::Dynamic> callStack = ::haxe::_CallStack::CallStack_Impl__obj::exceptionStack(true);
-HXLINE( 154)		::String eee = HX_("Oops. I fumbled.\n----------\n",73,93,f6,cb);
-HXLINE( 155)		if (::hx::IsNotNull( callStack )) {
-HXLINE( 156)			int _g = 0;
-HXDLIN( 156)			while((_g < callStack->length)){
-HXLINE( 156)				 ::haxe::StackItem bsReason = callStack->__get(_g).StaticCast<  ::haxe::StackItem >();
-HXDLIN( 156)				_g = (_g + 1);
-HXLINE( 157)				eee = (eee + (::Std_obj::string(bsReason) + HX_("\n",0a,00,00,00)));
-            			}
-            		}
-HXLINE( 159)		eee = (eee + (HX_W(u"\n==\u26a0\ufe0f CRASH REASON: \u26a0\ufe0f==\n",ed71,acd7) + ::Std_obj::string(e->error)));
-HXLINE( 160)		::Sys_obj::println(eee);
-HXLINE( 161)		::flixel::FlxG_obj::sound->play(HX_("bulkAssets/error.wav",ec,9c,49,cf),null(),null(),null(),null(),null());
-HXLINE( 162)		::lime::app::Application_obj::current->_hx___window->alert(eee,HX_("please yell at me  -PotateX2",5d,83,f2,c1));
-HXLINE( 163)		::Sys_obj::exit(1);
+            	HX_STACKFRAME(&_hx_pos_e47a9afac0942eb9_150_dies)
+HXLINE( 151)		::Array< ::Dynamic> callStack = ::haxe::_CallStack::CallStack_Impl__obj::exceptionStack(true);
+HXLINE( 152)		::String eee = HX_("Oops. I fumbled.\n----------\n",73,93,f6,cb);
+HXLINE( 153)		eee = (eee + (HX_W(u"\n==\u26a0\ufe0f CRASH REASON: \u26a0\ufe0f==\n",ed71,acd7) + ::StringTools_obj::replace(::haxe::_CallStack::CallStack_Impl__obj::toString(callStack),HX_("Called from",cd,13,cb,c9),HX_("@ ",e0,37,00,00))));
+HXLINE( 154)		::Sys_obj::println(eee);
+HXLINE( 155)		::flixel::FlxG_obj::sound->play(HX_("bulkAssets/error.wav",ec,9c,49,cf),null(),null(),null(),null(),null());
+HXLINE( 156)		::lime::app::Application_obj::current->_hx___window->alert(eee,HX_("please yell at me  -PotateX2",5d,83,f2,c1));
+HXLINE( 157)		::Sys_obj::exit(1);
             	}
 
 

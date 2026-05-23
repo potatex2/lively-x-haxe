@@ -124,11 +124,14 @@ class HXCPP_CLASS_ATTRIBUTES WallpaperState_obj : public  ::flixel::FlxState_obj
 		static ::Dynamic moveMouse_dyn();
 
 		static bool tabbedOut;
+		static ::cpp::VirtualArray updateArray;
+		static void bindToUpdate( ::Dynamic callback);
+		static ::Dynamic bindToUpdate_dyn();
+
 		::String RootDirectory;
 		 ::flixel::FlxSprite bopper;
 		 ::flixel::addons::display::FlxBackdrop bgGoofy;
 		bool startBop;
-		Float bopConst;
 		 ::flixel::text::FlxText realTime;
 		 ::classes::Bar musicProg;
 		 ::classes::FlxGroupButton mute;

@@ -154,9 +154,6 @@
 #ifndef INCLUDED_flixel_util_IFlxPooled
 #include <flixel/util/IFlxPooled.h>
 #endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
-#endif
 #ifndef INCLUDED_haxe_Timer
 #include <haxe/Timer.h>
 #endif
@@ -230,72 +227,75 @@
 #include <sys/io/Process.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_d4fd66a66087e08d_37_new,"WallpaperState","new",0x4f9c0101,"WallpaperState.new","WallpaperState.hx",37,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_186_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",186,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_227_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",227,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_288_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",288,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_296_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",296,0xca66d98f)
+HX_DEFINE_STACK_FRAME(_hx_pos_d4fd66a66087e08d_39_new,"WallpaperState","new",0x4f9c0101,"WallpaperState.new","WallpaperState.hx",39,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_198_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",198,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_239_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",239,0xca66d98f)
 HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_302_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",302,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_310_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",310,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_316_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",316,0xca66d98f)
 static const ::String _hx_array_data_d96d6c8f_7[] = {
 	HX_("scale.x",94,2d,07,65),HX_("scale.y",95,2d,07,65),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_306_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",306,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_320_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",320,0xca66d98f)
 static const ::String _hx_array_data_d96d6c8f_9[] = {
 	HX_("scale.x",94,2d,07,65),HX_("scale.y",95,2d,07,65),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_347_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",347,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_349_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",349,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_361_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",361,0xca66d98f)
 HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_363_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",363,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_369_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",369,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_377_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",377,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_383_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",383,0xca66d98f)
 static const ::String _hx_array_data_d96d6c8f_14[] = {
 	HX_("scale.x",94,2d,07,65),HX_("scale.y",95,2d,07,65),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_374_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",374,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_388_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",388,0xca66d98f)
 static const ::String _hx_array_data_d96d6c8f_16[] = {
 	HX_("scale.x",94,2d,07,65),HX_("scale.y",95,2d,07,65),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_384_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",384,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_389_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",389,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_395_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",395,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_398_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",398,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_403_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",403,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_409_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",409,0xca66d98f)
 static const ::String _hx_array_data_d96d6c8f_20[] = {
 	HX_("scale.x",94,2d,07,65),HX_("scale.y",95,2d,07,65),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_399_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",399,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_413_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",413,0xca66d98f)
 static const ::String _hx_array_data_d96d6c8f_22[] = {
 	HX_("scale.x",94,2d,07,65),HX_("scale.y",95,2d,07,65),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_125_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",125,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_141_create,"WallpaperState","create",0x0e7090fb,"WallpaperState.create","WallpaperState.hx",141,0xca66d98f)
 static const int _hx_array_data_d96d6c8f_24[] = {
 	(int)0,
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_492_update,"WallpaperState","update",0x1966b008,"WallpaperState.update","WallpaperState.hx",492,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_535_update,"WallpaperState","update",0x1966b008,"WallpaperState.update","WallpaperState.hx",535,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_118_loadConfig,"WallpaperState","loadConfig",0x94d51b07,"WallpaperState.loadConfig","WallpaperState.hx",118,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_416_RunAFK,"WallpaperState","RunAFK",0x026da77a,"WallpaperState.RunAFK","WallpaperState.hx",416,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_413_RunAFK,"WallpaperState","RunAFK",0x026da77a,"WallpaperState.RunAFK","WallpaperState.hx",413,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_424_resetSelection,"WallpaperState","resetSelection",0x0c351d7c,"WallpaperState.resetSelection","WallpaperState.hx",424,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_426_changeText,"WallpaperState","changeText",0x3f1a97bc,"WallpaperState.changeText","WallpaperState.hx",426,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_444_onTabOut,"WallpaperState","onTabOut",0x28733f77,"WallpaperState.onTabOut","WallpaperState.hx",444,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_432_onTabOut,"WallpaperState","onTabOut",0x28733f77,"WallpaperState.onTabOut","WallpaperState.hx",432,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_464_onTabIn,"WallpaperState","onTabIn",0x23c4cd1c,"WallpaperState.onTabIn","WallpaperState.hx",464,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_452_onTabIn,"WallpaperState","onTabIn",0x23c4cd1c,"WallpaperState.onTabIn","WallpaperState.hx",452,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_475_moveMouse,"WallpaperState","moveMouse",0xecb7c4b5,"WallpaperState.moveMouse","WallpaperState.hx",475,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_67_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",67,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_68_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",68,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_77_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",77,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_78_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",78,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_88_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",88,0xca66d98f)
-HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_491_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",491,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_507_update,"WallpaperState","update",0x1966b008,"WallpaperState.update","WallpaperState.hx",507,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_549_update,"WallpaperState","update",0x1966b008,"WallpaperState.update","WallpaperState.hx",549,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_542_update,"WallpaperState","update",0x1966b008,"WallpaperState.update","WallpaperState.hx",542,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_119_loadConfig,"WallpaperState","loadConfig",0x94d51b07,"WallpaperState.loadConfig","WallpaperState.hx",119,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_431_RunAFK,"WallpaperState","RunAFK",0x026da77a,"WallpaperState.RunAFK","WallpaperState.hx",431,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_428_RunAFK,"WallpaperState","RunAFK",0x026da77a,"WallpaperState.RunAFK","WallpaperState.hx",428,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_439_resetSelection,"WallpaperState","resetSelection",0x0c351d7c,"WallpaperState.resetSelection","WallpaperState.hx",439,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_441_changeText,"WallpaperState","changeText",0x3f1a97bc,"WallpaperState.changeText","WallpaperState.hx",441,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_459_onTabOut,"WallpaperState","onTabOut",0x28733f77,"WallpaperState.onTabOut","WallpaperState.hx",459,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_447_onTabOut,"WallpaperState","onTabOut",0x28733f77,"WallpaperState.onTabOut","WallpaperState.hx",447,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_479_onTabIn,"WallpaperState","onTabIn",0x23c4cd1c,"WallpaperState.onTabIn","WallpaperState.hx",479,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_467_onTabIn,"WallpaperState","onTabIn",0x23c4cd1c,"WallpaperState.onTabIn","WallpaperState.hx",467,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_490_moveMouse,"WallpaperState","moveMouse",0xecb7c4b5,"WallpaperState.moveMouse","WallpaperState.hx",490,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_562_bindToUpdate,"WallpaperState","bindToUpdate",0x01cb9800,"WallpaperState.bindToUpdate","WallpaperState.hx",562,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_69_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",69,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_70_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",70,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_79_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",79,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_80_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",80,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_89_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",89,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_506_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",506,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_d4fd66a66087e08d_560_boot,"WallpaperState","boot",0x50fde071,"WallpaperState.boot","WallpaperState.hx",560,0xca66d98f)
 #include <windows.h>
 
 void WallpaperState_obj::__construct(){
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_37_new)
-HXLINE( 483)		this->delayy = false;
-HXLINE( 482)		this->boopWay = true;
-HXLINE(  87)		this->bopPrefs = true;
-HXLINE(  80)		this->startBop = false;
-HXLINE(  43)		this->RootDirectory = HX_("bulkAssets/",5a,29,49,21);
-HXLINE(  37)		super::__construct();
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_39_new)
+HXLINE( 498)		this->delayy = false;
+HXLINE( 497)		this->boopWay = true;
+HXLINE(  88)		this->bopPrefs = true;
+HXLINE(  82)		this->startBop = false;
+HXLINE(  45)		this->RootDirectory = HX_("bulkAssets/",5a,29,49,21);
+HXLINE(  39)		super::__construct();
             	}
 
 Dynamic WallpaperState_obj::__CreateEmpty() { return new WallpaperState_obj; }
@@ -328,66 +328,65 @@ bool WallpaperState_obj::_hx_isInstanceOf(int inClassId) {
 void WallpaperState_obj::create(){
             		HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::WallpaperState,_gthis) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_186_create)
-HXLINE( 186)			bool _hx_tmp;
-HXDLIN( 186)			if (::hx::IsNull( ::flixel::FlxG_obj::game->_state->subState )) {
-HXLINE( 186)				_hx_tmp = _gthis->configButton->visible;
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_198_create)
+HXLINE( 198)			bool _hx_tmp;
+HXDLIN( 198)			if (::hx::IsNull( ::flixel::FlxG_obj::game->_state->subState )) {
+HXLINE( 198)				_hx_tmp = _gthis->configButton->visible;
             			}
             			else {
-HXLINE( 186)				_hx_tmp = false;
+HXLINE( 198)				_hx_tmp = false;
             			}
-HXDLIN( 186)			if (_hx_tmp) {
-HXLINE( 186)				 ::WallpaperState _gthis1 = _gthis;
-HXDLIN( 186)				_gthis1->openSubState( ::SettingsSubState_obj::__alloc( HX_CTX ,null()));
+HXDLIN( 198)			if (_hx_tmp) {
+HXLINE( 198)				 ::WallpaperState _gthis1 = _gthis;
+HXDLIN( 198)				_gthis1->openSubState( ::SettingsSubState_obj::__alloc( HX_CTX ,null()));
             			}
             		}
             		HX_END_LOCAL_FUNC0((void))
 
             		HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_1, ::WallpaperState,_gthis) HXARGC(1)
             		void _hx_run( ::flixel::tweens::FlxTween _){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_227_create)
-HXLINE( 227)			_gthis->startBop = true;
-HXDLIN( 227)			_gthis->bopConst = _gthis->bopper->x;
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_239_create)
+HXLINE( 239)			_gthis->startBop = true;
             		}
             		HX_END_LOCAL_FUNC1((void))
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_2) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_288_create)
-HXLINE( 289)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::updateNote,null());
-HXLINE( 290)			::WallpaperState_obj::toggle->soundCheck(HX_("clickOut.ogg",07,a9,f1,aa),null());
-HXLINE( 291)			bool hasOneDrive = ::sys::FileSystem_obj::exists((::Sys_obj::getEnv(HX_("ONEDRIVECONSUMER",1a,0c,09,1f)) + HX_("\\Desktop\\AFKNote.px2",98,d6,40,c0)));
-HXLINE( 292)			 ::openfl::text::TextField _hx_tmp = ::WallpaperState_obj::afkNote;
-HXDLIN( 292)			::String text;
-HXDLIN( 292)			if (hasOneDrive) {
-HXLINE( 292)				text = HX_("ONEDRIVECONSUMER",1a,0c,09,1f);
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_302_create)
+HXLINE( 303)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::updateNote,null());
+HXLINE( 304)			::WallpaperState_obj::toggle->soundCheck(HX_("clickOut.ogg",07,a9,f1,aa),null());
+HXLINE( 305)			bool hasOneDrive = ::sys::FileSystem_obj::exists((::Sys_obj::getEnv(HX_("ONEDRIVECONSUMER",1a,0c,09,1f)) + HX_("\\Desktop\\AFKNote.px2",98,d6,40,c0)));
+HXLINE( 306)			 ::openfl::text::TextField _hx_tmp = ::WallpaperState_obj::afkNote;
+HXDLIN( 306)			::String text;
+HXDLIN( 306)			if (hasOneDrive) {
+HXLINE( 306)				text = HX_("ONEDRIVECONSUMER",1a,0c,09,1f);
             			}
             			else {
-HXLINE( 292)				text = HX_("USERPROFILE",1e,72,55,c2);
+HXLINE( 306)				text = HX_("USERPROFILE",1e,72,55,c2);
             			}
-HXDLIN( 292)			_hx_tmp->set_text(( (::String)( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::sys::io::File_obj::getContent((::Sys_obj::getEnv(text) + HX_("\\Desktop\\AFKNote.px2",98,d6,40,c0))))->doParse()->__Field(HX_("afkNote",f8,22,cc,59),::hx::paccDynamic)) ));
-HXLINE( 293)			::WallpaperState_obj::updateNote->scale->set_x(( (Float)(1) ));
-HXLINE( 294)			::WallpaperState_obj::updateNote->scale->set_y(( (Float)(1) ));
+HXDLIN( 306)			_hx_tmp->set_text(( (::String)( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::sys::io::File_obj::getContent((::Sys_obj::getEnv(text) + HX_("\\Desktop\\AFKNote.px2",98,d6,40,c0))))->doParse()->__Field(HX_("afkNote",f8,22,cc,59),::hx::paccDynamic)) ));
+HXLINE( 307)			::WallpaperState_obj::updateNote->scale->set_x(( (Float)(1) ));
+HXLINE( 308)			::WallpaperState_obj::updateNote->scale->set_y(( (Float)(1) ));
             		}
             		HX_END_LOCAL_FUNC0((void))
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_3) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_296_create)
-HXLINE( 297)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::updateNote,null());
-HXLINE( 298)			::WallpaperState_obj::toggle->soundCheck(HX_("clickIn.ogg",ae,6d,4a,9f),null());
-HXLINE( 299)			 ::classes::FlxAnimButton fh = ::WallpaperState_obj::updateNote;
-HXDLIN( 299)			fh->scale->set_x((fh->scale->x - ((Float)0.2)));
-HXLINE( 300)			 ::classes::FlxAnimButton fh1 = ::WallpaperState_obj::updateNote;
-HXDLIN( 300)			fh1->scale->set_y((fh1->scale->y - ((Float)0.2)));
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_310_create)
+HXLINE( 311)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::updateNote,null());
+HXLINE( 312)			::WallpaperState_obj::toggle->soundCheck(HX_("clickIn.ogg",ae,6d,4a,9f),null());
+HXLINE( 313)			 ::classes::FlxAnimButton fh = ::WallpaperState_obj::updateNote;
+HXDLIN( 313)			fh->scale->set_x((fh->scale->x - ((Float)0.2)));
+HXLINE( 314)			 ::classes::FlxAnimButton fh1 = ::WallpaperState_obj::updateNote;
+HXDLIN( 314)			fh1->scale->set_y((fh1->scale->y - ((Float)0.2)));
             		}
             		HX_END_LOCAL_FUNC0((void))
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_4) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_302_create)
-HXLINE( 303)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::updateNote,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_7,2));
-HXLINE( 304)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::updateNote, ::Dynamic(::hx::Anon_obj::Create(3)
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_316_create)
+HXLINE( 317)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::updateNote,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_7,2));
+HXLINE( 318)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::updateNote, ::Dynamic(::hx::Anon_obj::Create(3)
             				->setFixed(0,HX_("y",79,00,00,00),(::WallpaperState_obj::updateNote->y - ( (Float)(10) )))
             				->setFixed(1,HX_("scale.x",94,2d,07,65),((Float)0.9))
             				->setFixed(2,HX_("scale.y",95,2d,07,65),((Float)0.9))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
@@ -397,9 +396,9 @@ HXLINE( 304)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::updat
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_5) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_306_create)
-HXLINE( 307)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::updateNote,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_9,2));
-HXLINE( 308)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::updateNote, ::Dynamic(::hx::Anon_obj::Create(3)
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_320_create)
+HXLINE( 321)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::updateNote,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_9,2));
+HXLINE( 322)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::updateNote, ::Dynamic(::hx::Anon_obj::Create(3)
             				->setFixed(0,HX_("y",79,00,00,00),::WallpaperState_obj::updateNote->init_Y)
             				->setFixed(1,HX_("scale.x",94,2d,07,65),((Float)0.8))
             				->setFixed(2,HX_("scale.y",95,2d,07,65),((Float)0.8))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
@@ -409,68 +408,68 @@ HXLINE( 308)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::updat
 
             		HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_6,::Array< int >,safety) HXARGC(1)
             		void _hx_run( ::flixel::util::FlxTimer _){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_347_create)
-HXLINE( 347)			safety[0] = 0;
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_361_create)
+HXLINE( 361)			safety[0] = 0;
             		}
             		HX_END_LOCAL_FUNC1((void))
 
             		HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_7,::Array< int >,safety, ::flixel::util::FlxTimer,time) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_349_create)
-HXLINE( 350)			::WallpaperState_obj::shutDown->scale->set_x(((Float)0.7));
-HXLINE( 351)			::WallpaperState_obj::shutDown->scale->set_y(((Float)0.7));
-HXLINE( 352)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutdownWarn,null());
-HXLINE( 353)			::WallpaperState_obj::shutdownWarn->set_alpha(( (Float)(1) ));
-HXLINE( 354)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::shutdownWarn, ::Dynamic(::hx::Anon_obj::Create(1)
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_363_create)
+HXLINE( 364)			::WallpaperState_obj::shutDown->scale->set_x(((Float)0.7));
+HXLINE( 365)			::WallpaperState_obj::shutDown->scale->set_y(((Float)0.7));
+HXLINE( 366)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutdownWarn,null());
+HXLINE( 367)			::WallpaperState_obj::shutdownWarn->set_alpha(( (Float)(1) ));
+HXLINE( 368)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::shutdownWarn, ::Dynamic(::hx::Anon_obj::Create(1)
             				->setFixed(0,HX_("alpha",5e,a7,96,21),0)),1, ::Dynamic(::hx::Anon_obj::Create(1)
             				->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::expoOut_dyn())));
-HXLINE( 356)			time->reset(1);
-HXLINE( 357)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutDown,null());
-HXLINE( 358)			safety[0]++;
-HXLINE( 359)			::flixel::FlxG_obj::sound->play(((HX_("bulkAssets/shutdown",f0,0f,05,50) + safety->__get(0)) + HX_(".ogg",e1,64,bc,1e)),((Float)0.7),null(),null(),null(),null());
-HXLINE( 360)			if ((safety->__get(0) == 3)) {
-HXLINE( 361)				::Type_obj::createInstance(::hx::ClassOf< ::sys::io::Process >(),::cpp::VirtualArray_obj::__new(1)->init(0,HX_("shutdown /p",ab,f6,d7,c2)));
+HXLINE( 370)			time->reset(1);
+HXLINE( 371)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutDown,null());
+HXLINE( 372)			safety[0]++;
+HXLINE( 373)			::flixel::FlxG_obj::sound->play(((HX_("bulkAssets/shutdown",f0,0f,05,50) + safety->__get(0)) + HX_(".ogg",e1,64,bc,1e)),((Float)0.7),null(),null(),null(),null());
+HXLINE( 374)			if ((safety->__get(0) == 3)) {
+HXLINE( 375)				::Type_obj::createInstance(::hx::ClassOf< ::sys::io::Process >(),::cpp::VirtualArray_obj::__new(1)->init(0,HX_("shutdown /p",ab,f6,d7,c2)));
             			}
             		}
             		HX_END_LOCAL_FUNC0((void))
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_8) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_363_create)
-HXLINE( 364)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutDown,null());
-HXLINE( 365)			::WallpaperState_obj::toggle->soundCheck(HX_("clickIn.ogg",ae,6d,4a,9f),null());
-HXLINE( 366)			 ::classes::FlxAnimButton fh = ::WallpaperState_obj::shutDown;
-HXDLIN( 366)			fh->scale->set_x((fh->scale->x - ((Float)0.2)));
-HXLINE( 367)			 ::classes::FlxAnimButton fh1 = ::WallpaperState_obj::shutDown;
-HXDLIN( 367)			fh1->scale->set_y((fh1->scale->y - ((Float)0.2)));
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_377_create)
+HXLINE( 378)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutDown,null());
+HXLINE( 379)			::WallpaperState_obj::toggle->soundCheck(HX_("clickIn.ogg",ae,6d,4a,9f),null());
+HXLINE( 380)			 ::classes::FlxAnimButton fh = ::WallpaperState_obj::shutDown;
+HXDLIN( 380)			fh->scale->set_x((fh->scale->x - ((Float)0.2)));
+HXLINE( 381)			 ::classes::FlxAnimButton fh1 = ::WallpaperState_obj::shutDown;
+HXDLIN( 381)			fh1->scale->set_y((fh1->scale->y - ((Float)0.2)));
             		}
             		HX_END_LOCAL_FUNC0((void))
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_9) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_369_create)
-HXLINE( 370)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutDown,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_14,2));
-HXLINE( 371)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::shutDown, ::Dynamic(::hx::Anon_obj::Create(3)
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_383_create)
+HXLINE( 384)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutDown,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_14,2));
+HXLINE( 385)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::shutDown, ::Dynamic(::hx::Anon_obj::Create(3)
             				->setFixed(0,HX_("y",79,00,00,00),(::WallpaperState_obj::shutDown->y - ( (Float)(10) )))
             				->setFixed(1,HX_("scale.x",94,2d,07,65),((Float)0.8))
             				->setFixed(2,HX_("scale.y",95,2d,07,65),((Float)0.8))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
             				->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::circOut_dyn())));
-HXLINE( 372)			{
-HXLINE( 372)				::WallpaperState_obj::selectedLink->set_text(HX_("Shutdown PC",1d,ab,0a,a7));
-HXDLIN( 372)				::WallpaperState_obj::selectedLink->set_textColor(16711680);
+HXLINE( 386)			{
+HXLINE( 386)				::WallpaperState_obj::selectedLink->set_text(HX_("Shutdown PC",1d,ab,0a,a7));
+HXDLIN( 386)				::WallpaperState_obj::selectedLink->set_textColor(16711680);
             			}
             		}
             		HX_END_LOCAL_FUNC0((void))
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_10) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_374_create)
-HXLINE( 375)			{
-HXLINE( 375)				::WallpaperState_obj::selectedLink->set_text(HX_("",00,00,00,00));
-HXDLIN( 375)				::WallpaperState_obj::selectedLink->set_textColor(65322);
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_388_create)
+HXLINE( 389)			{
+HXLINE( 389)				::WallpaperState_obj::selectedLink->set_text(HX_("",00,00,00,00));
+HXDLIN( 389)				::WallpaperState_obj::selectedLink->set_textColor(65322);
             			}
-HXLINE( 376)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutDown,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_16,2));
-HXLINE( 377)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::shutDown, ::Dynamic(::hx::Anon_obj::Create(3)
+HXLINE( 390)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::shutDown,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_16,2));
+HXLINE( 391)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::shutDown, ::Dynamic(::hx::Anon_obj::Create(3)
             				->setFixed(0,HX_("y",79,00,00,00),::WallpaperState_obj::BottomPos)
             				->setFixed(1,HX_("scale.x",94,2d,07,65),((Float)0.7))
             				->setFixed(2,HX_("scale.y",95,2d,07,65),((Float)0.7))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
@@ -480,14 +479,14 @@ HXLINE( 377)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::shutD
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_11) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_384_create)
-HXLINE( 385)			::WallpaperState_obj::onTabIn();
-HXLINE( 386)			{
-HXLINE( 386)				 ::Dynamic filter = null();
-HXDLIN( 386)				 ::flixel::group::FlxTypedGroupIterator btn =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,::WallpaperState_obj::BottomGroup->group->members,filter);
-HXDLIN( 386)				while(btn->hasNext()){
-HXLINE( 386)					 ::classes::FlxAnimButton btn1 = btn->next().StaticCast<  ::classes::FlxAnimButton >();
-HXLINE( 387)					btn1->cd = false;
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_398_create)
+HXLINE( 399)			::WallpaperState_obj::onTabIn();
+HXLINE( 400)			{
+HXLINE( 400)				 ::Dynamic filter = null();
+HXDLIN( 400)				 ::flixel::group::FlxTypedGroupIterator btn =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,::WallpaperState_obj::BottomGroup->group->members,filter);
+HXDLIN( 400)				while(btn->hasNext()){
+HXLINE( 400)					 ::classes::FlxAnimButton btn1 = btn->next().StaticCast<  ::classes::FlxAnimButton >();
+HXLINE( 401)					btn1->cd = false;
             				}
             			}
             		}
@@ -495,21 +494,21 @@ HXLINE( 387)					btn1->cd = false;
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_12) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_389_create)
-HXLINE( 390)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::tabBackIn,null());
-HXLINE( 391)			::WallpaperState_obj::toggle->soundCheck(HX_("clickIn.ogg",ae,6d,4a,9f),null());
-HXLINE( 392)			 ::classes::FlxAnimButton fh = ::WallpaperState_obj::tabBackIn;
-HXDLIN( 392)			fh->scale->set_x((fh->scale->x - ((Float)0.2)));
-HXLINE( 393)			 ::classes::FlxAnimButton fh1 = ::WallpaperState_obj::tabBackIn;
-HXDLIN( 393)			fh1->scale->set_y((fh1->scale->y - ((Float)0.2)));
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_403_create)
+HXLINE( 404)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::tabBackIn,null());
+HXLINE( 405)			::WallpaperState_obj::toggle->soundCheck(HX_("clickIn.ogg",ae,6d,4a,9f),null());
+HXLINE( 406)			 ::classes::FlxAnimButton fh = ::WallpaperState_obj::tabBackIn;
+HXDLIN( 406)			fh->scale->set_x((fh->scale->x - ((Float)0.2)));
+HXLINE( 407)			 ::classes::FlxAnimButton fh1 = ::WallpaperState_obj::tabBackIn;
+HXDLIN( 407)			fh1->scale->set_y((fh1->scale->y - ((Float)0.2)));
             		}
             		HX_END_LOCAL_FUNC0((void))
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_13) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_395_create)
-HXLINE( 396)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::tabBackIn,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_20,2));
-HXLINE( 397)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBackIn, ::Dynamic(::hx::Anon_obj::Create(2)
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_409_create)
+HXLINE( 410)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::tabBackIn,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_20,2));
+HXLINE( 411)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBackIn, ::Dynamic(::hx::Anon_obj::Create(2)
             				->setFixed(0,HX_("scale.x",94,2d,07,65),((Float)0.9))
             				->setFixed(1,HX_("scale.y",95,2d,07,65),((Float)0.9))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
             				->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::circOut_dyn())));
@@ -518,414 +517,419 @@ HXLINE( 397)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBa
 
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_14) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_399_create)
-HXLINE( 400)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::tabBackIn,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_22,2));
-HXLINE( 401)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBackIn, ::Dynamic(::hx::Anon_obj::Create(2)
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_413_create)
+HXLINE( 414)			::flixel::tweens::FlxTween_obj::cancelTweensOf(::WallpaperState_obj::tabBackIn,::Array_obj< ::String >::fromData( _hx_array_data_d96d6c8f_22,2));
+HXLINE( 415)			::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBackIn, ::Dynamic(::hx::Anon_obj::Create(2)
             				->setFixed(0,HX_("scale.x",94,2d,07,65),((Float)0.8))
             				->setFixed(1,HX_("scale.y",95,2d,07,65),((Float)0.8))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
             				->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::circOut_dyn())));
             		}
             		HX_END_LOCAL_FUNC0((void))
 
-            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_125_create)
-HXDLIN( 125)		 ::WallpaperState _gthis = ::hx::ObjectPtr<OBJ_>(this);
-HXLINE( 127)		::WallpaperState_obj::instance = ::hx::ObjectPtr<OBJ_>(this);
-HXLINE( 130)		::WallpaperState_obj::BottomGroup =  ::flixel::group::FlxTypedSpriteGroup_obj::__alloc( HX_CTX ,0,::Main_obj::screenY,null());
-HXLINE( 131)		::WallpaperState_obj::BottomPos = (::Main_obj::screenY - ( (Float)(125) ));
-HXLINE( 132)		 ::lime::ui::Window fh = ::lime::app::Application_obj::current->_hx___window;
-HXDLIN( 132)		fh->set_y((fh->_hx___y + 10));
-HXLINE( 135)		this->super::create();
-HXLINE( 136)		::lime::app::Application_obj::current->_hx___window->focus();
-HXLINE( 138)		::WallpaperState_obj::Selection = ( (::String)( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::openfl::utils::Assets_obj::getText(HX_("bulkAssets/info.json",8e,45,aa,43)))->doParse()->__Field(HX_("selected",5b,2a,6d,b1),::hx::paccDynamic)) );
-HXLINE( 139)		::WallpaperState_obj::Note = ( (::String)( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::openfl::utils::Assets_obj::getText(HX_("bulkAssets/info.json",8e,45,aa,43)))->doParse()->__Field(HX_("afkNote",f8,22,cc,59),::hx::paccDynamic)) );
-HXLINE( 142)		this->bgGoofy =  ::flixel::addons::display::FlxBackdrop_obj::__alloc( HX_CTX ,(this->RootDirectory + HX_("bgGoofy.png",10,8e,5d,9b)),null(),null(),null());
-HXLINE( 143)		this->bgGoofy->updateHitbox();
-HXLINE( 144)		this->bgGoofy->set_alpha(( (Float)(1) ));
-HXLINE( 145)		{
-HXLINE( 145)			 ::flixel::addons::display::FlxBackdrop _this = this->bgGoofy;
-HXDLIN( 145)			int axes = 1;
-HXDLIN( 145)			bool _hx_tmp;
-HXDLIN( 145)			if ((axes != 1)) {
-HXLINE( 145)				_hx_tmp = (axes == 17);
+            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_141_create)
+HXDLIN( 141)		 ::WallpaperState _gthis = ::hx::ObjectPtr<OBJ_>(this);
+HXLINE( 143)		::WallpaperState_obj::instance = ::hx::ObjectPtr<OBJ_>(this);
+HXLINE( 146)		::WallpaperState_obj::BottomGroup =  ::flixel::group::FlxTypedSpriteGroup_obj::__alloc( HX_CTX ,0,::Main_obj::screenY,null());
+HXLINE( 147)		::WallpaperState_obj::BottomPos = (::Main_obj::screenY - ( (Float)(125) ));
+HXLINE( 148)		 ::lime::ui::Window fh = ::lime::app::Application_obj::current->_hx___window;
+HXDLIN( 148)		fh->set_y((fh->_hx___y + 10));
+HXLINE( 151)		this->super::create();
+HXLINE( 152)		::lime::app::Application_obj::current->_hx___window->focus();
+HXLINE( 154)		this->bgGoofy =  ::flixel::addons::display::FlxBackdrop_obj::__alloc( HX_CTX ,(this->RootDirectory + HX_("bgGoofy.png",10,8e,5d,9b)),null(),null(),null());
+HXLINE( 155)		this->bgGoofy->updateHitbox();
+HXLINE( 156)		this->bgGoofy->set_alpha(( (Float)(1) ));
+HXLINE( 157)		{
+HXLINE( 157)			 ::flixel::addons::display::FlxBackdrop _this = this->bgGoofy;
+HXDLIN( 157)			int axes = 1;
+HXDLIN( 157)			bool _hx_tmp;
+HXDLIN( 157)			if ((axes != 1)) {
+HXLINE( 157)				_hx_tmp = (axes == 17);
             			}
             			else {
-HXLINE( 145)				_hx_tmp = true;
+HXLINE( 157)				_hx_tmp = true;
             			}
-HXDLIN( 145)			if (_hx_tmp) {
-HXLINE( 145)				int _hx_tmp1 = ::flixel::FlxG_obj::width;
-HXDLIN( 145)				_this->set_x(((( (Float)(_hx_tmp1) ) - _this->get_width()) / ( (Float)(2) )));
+HXDLIN( 157)			if (_hx_tmp) {
+HXLINE( 157)				int _hx_tmp1 = ::flixel::FlxG_obj::width;
+HXDLIN( 157)				_this->set_x(((( (Float)(_hx_tmp1) ) - _this->get_width()) / ( (Float)(2) )));
             			}
-HXDLIN( 145)			bool _hx_tmp2;
-HXDLIN( 145)			if ((axes != 16)) {
-HXLINE( 145)				_hx_tmp2 = (axes == 17);
+HXDLIN( 157)			bool _hx_tmp2;
+HXDLIN( 157)			if ((axes != 16)) {
+HXLINE( 157)				_hx_tmp2 = (axes == 17);
             			}
             			else {
-HXLINE( 145)				_hx_tmp2 = true;
+HXLINE( 157)				_hx_tmp2 = true;
             			}
-HXDLIN( 145)			if (_hx_tmp2) {
-HXLINE( 145)				int _hx_tmp3 = ::flixel::FlxG_obj::height;
-HXDLIN( 145)				_this->set_y(((( (Float)(_hx_tmp3) ) - _this->get_height()) / ( (Float)(2) )));
+HXDLIN( 157)			if (_hx_tmp2) {
+HXLINE( 157)				int _hx_tmp3 = ::flixel::FlxG_obj::height;
+HXDLIN( 157)				_this->set_y(((( (Float)(_hx_tmp3) ) - _this->get_height()) / ( (Float)(2) )));
             			}
             		}
-HXLINE( 146)		this->add(this->bgGoofy);
-HXLINE( 147)		this->bgGoofy->set_alpha(( (Float)(0) ));
-HXLINE( 148)		this->bgGoofy->set_angle(((Float)22.5));
-HXLINE( 149)		{
-HXLINE( 149)			 ::flixel::math::FlxBasePoint this1 = this->bgGoofy->velocity;
-HXDLIN( 149)			this1->set_x(( (Float)(50) ));
-HXDLIN( 149)			this1->set_y(( (Float)(25) ));
+HXLINE( 158)		this->add(this->bgGoofy);
+HXLINE( 159)		this->bgGoofy->set_alpha(( (Float)(0) ));
+HXLINE( 160)		this->bgGoofy->set_angle(((Float)22.5));
+HXLINE( 161)		{
+HXLINE( 161)			 ::flixel::math::FlxBasePoint this1 = this->bgGoofy->velocity;
+HXDLIN( 161)			this1->set_x(( (Float)(50) ));
+HXDLIN( 161)			this1->set_y(( (Float)(25) ));
             		}
-HXLINE( 150)		::flixel::tweens::FlxTween_obj::tween(this->bgGoofy, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 162)		::flixel::tweens::FlxTween_obj::tween(this->bgGoofy, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("alpha",5e,a7,96,21),((Float)0.25))),((Float)1.4), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::quartInOut_dyn())));
-HXLINE( 152)		::WallpaperState_obj::pause->soundCheck(((HX_("music/",ea,bf,1b,3f) + ::WallpaperState_obj::Selection) + HX_(".ogg",e1,64,bc,1e)),false);
-HXLINE( 153)		::WallpaperState_obj::pause->set_volume(( (Float)(0) ));
-HXLINE( 154)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::pause, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 164)		::WallpaperState_obj::pause->soundCheck(((HX_("music/",ea,bf,1b,3f) + ::WallpaperState_obj::Selection) + HX_(".ogg",e1,64,bc,1e)),false);
+HXLINE( 165)		::WallpaperState_obj::pause->set_volume(( (Float)(0) ));
+HXLINE( 166)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::pause, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("volume",da,29,53,5f),1)),2,null());
-HXLINE( 156)		::WallpaperState_obj::camHUD =  ::flixel::FlxCamera_obj::__alloc( HX_CTX ,null(),null(),null(),null(),null());
-HXLINE( 157)		::flixel::FlxG_obj::cameras->add(::WallpaperState_obj::camHUD,false).StaticCast<  ::flixel::FlxCamera >();
-HXLINE( 158)		{
-HXLINE( 158)			 ::flixel::FlxCamera _hx_tmp4 = ::WallpaperState_obj::camHUD;
-HXDLIN( 158)			_hx_tmp4->bgColor = (_hx_tmp4->bgColor & 16777215);
-HXDLIN( 158)			 ::flixel::FlxCamera _hx_tmp5 = ::WallpaperState_obj::camHUD;
-HXDLIN( 158)			_hx_tmp5->bgColor = (_hx_tmp5->bgColor | 0);
+HXLINE( 168)		::WallpaperState_obj::camHUD =  ::flixel::FlxCamera_obj::__alloc( HX_CTX ,null(),null(),null(),null(),null());
+HXLINE( 169)		::flixel::FlxG_obj::cameras->add(::WallpaperState_obj::camHUD,false).StaticCast<  ::flixel::FlxCamera >();
+HXLINE( 170)		{
+HXLINE( 170)			 ::flixel::FlxCamera _hx_tmp4 = ::WallpaperState_obj::camHUD;
+HXDLIN( 170)			_hx_tmp4->bgColor = (_hx_tmp4->bgColor & 16777215);
+HXDLIN( 170)			 ::flixel::FlxCamera _hx_tmp5 = ::WallpaperState_obj::camHUD;
+HXDLIN( 170)			_hx_tmp5->bgColor = (_hx_tmp5->bgColor | 0);
             		}
-HXLINE( 160)		::WallpaperState_obj::camGUI =  ::flixel::FlxCamera_obj::__alloc( HX_CTX ,null(),null(),null(),null(),null());
-HXLINE( 161)		::flixel::FlxG_obj::cameras->add(::WallpaperState_obj::camGUI,false).StaticCast<  ::flixel::FlxCamera >();
-HXLINE( 162)		{
-HXLINE( 162)			 ::flixel::FlxCamera _hx_tmp6 = ::WallpaperState_obj::camGUI;
-HXDLIN( 162)			_hx_tmp6->bgColor = (_hx_tmp6->bgColor & 16777215);
-HXDLIN( 162)			 ::flixel::FlxCamera _hx_tmp7 = ::WallpaperState_obj::camGUI;
-HXDLIN( 162)			_hx_tmp7->bgColor = (_hx_tmp7->bgColor | 0);
+HXLINE( 172)		::WallpaperState_obj::camGUI =  ::flixel::FlxCamera_obj::__alloc( HX_CTX ,null(),null(),null(),null(),null());
+HXLINE( 173)		::flixel::FlxG_obj::cameras->add(::WallpaperState_obj::camGUI,false).StaticCast<  ::flixel::FlxCamera >();
+HXLINE( 174)		{
+HXLINE( 174)			 ::flixel::FlxCamera _hx_tmp6 = ::WallpaperState_obj::camGUI;
+HXDLIN( 174)			_hx_tmp6->bgColor = (_hx_tmp6->bgColor & 16777215);
+HXDLIN( 174)			 ::flixel::FlxCamera _hx_tmp7 = ::WallpaperState_obj::camGUI;
+HXDLIN( 174)			_hx_tmp7->bgColor = (_hx_tmp7->bgColor | 0);
             		}
-HXLINE( 164)		 ::flixel::FlxSprite _hx_tmp8 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,(::flixel::FlxG_obj::width + 200),(( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) )),null());
-HXDLIN( 164)		this->bopper = _hx_tmp8->loadGraphic((this->RootDirectory + HX_("bozo.png",fd,c3,df,bc)),null(),null(),null(),null(),null());
-HXLINE( 165)		 ::flixel::FlxSprite _hx_tmp9 = this->bopper;
-HXDLIN( 165)		Float _hx_tmp10 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
-HXDLIN( 165)		_hx_tmp9->set_y((_hx_tmp10 - (this->bopper->get_height() / ( (Float)(2) ))));
-HXLINE( 166)		this->bopper->set_alpha(( (Float)(0) ));
-HXLINE( 167)		this->add(this->bopper);
-HXLINE( 171)		Float TargetWidth = ( (Float)((::flixel::FlxG_obj::width - 10)) );
-HXLINE( 172)		Float TargetHeight = ( (Float)((::flixel::FlxG_obj::height - 22)) );
-HXLINE( 173)		::String TargetAlignment = HX_("right",dc,0b,64,e9);
-HXLINE( 174)		int TargetSize = 15;
-HXLINE( 175)		this->realTime =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,TargetWidth,TargetHeight,400,HX_("Current Time: ",3a,09,ae,70),25,null());
-HXLINE( 176)		this->realTime->set_alignment(TargetAlignment);
-HXLINE( 177)		 ::flixel::text::FlxText fh1 = this->realTime;
-HXDLIN( 177)		Float fh2 = fh1->x;
-HXDLIN( 177)		fh1->set_x((fh2 - this->realTime->get_fieldWidth()));
-HXLINE( 178)		this->realTime->set_alpha(((Float)1e-3));
-HXLINE( 179)		this->realTime->setFormat(HX_("PhantomMuff 1.5",0d,79,26,b7),TargetSize,-7667834,TargetAlignment,null(),null(),null());
-HXLINE( 180)		this->add(this->realTime);
-HXLINE( 181)		this->realTime->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camHUD));
-HXLINE( 182)		::flixel::tweens::FlxTween_obj::tween(this->realTime, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 176)		 ::flixel::FlxSprite _hx_tmp8 =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,(::flixel::FlxG_obj::width + 200),(( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) )),null());
+HXDLIN( 176)		this->bopper = _hx_tmp8->loadGraphic((this->RootDirectory + HX_("bozo.png",fd,c3,df,bc)),null(),null(),null(),null(),null());
+HXLINE( 177)		 ::flixel::FlxSprite _hx_tmp9 = this->bopper;
+HXDLIN( 177)		Float _hx_tmp10 = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN( 177)		_hx_tmp9->set_y((_hx_tmp10 - (this->bopper->get_height() / ( (Float)(2) ))));
+HXLINE( 178)		this->bopper->set_alpha(( (Float)(0) ));
+HXLINE( 179)		this->add(this->bopper);
+HXLINE( 183)		Float TargetWidth = ( (Float)((::flixel::FlxG_obj::width - 10)) );
+HXLINE( 184)		Float TargetHeight = ( (Float)((::flixel::FlxG_obj::height - 22)) );
+HXLINE( 185)		::String TargetAlignment = HX_("right",dc,0b,64,e9);
+HXLINE( 186)		int TargetSize = 15;
+HXLINE( 187)		this->realTime =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,TargetWidth,TargetHeight,400,HX_("Current Time: ",3a,09,ae,70),25,null());
+HXLINE( 188)		this->realTime->set_alignment(TargetAlignment);
+HXLINE( 189)		 ::flixel::text::FlxText fh1 = this->realTime;
+HXDLIN( 189)		Float fh2 = fh1->x;
+HXDLIN( 189)		fh1->set_x((fh2 - this->realTime->get_fieldWidth()));
+HXLINE( 190)		this->realTime->set_alpha(((Float)1e-3));
+HXLINE( 191)		this->realTime->setFormat(HX_("PhantomMuff 1.5",0d,79,26,b7),TargetSize,-7667834,TargetAlignment,null(),null(),null());
+HXLINE( 192)		this->add(this->realTime);
+HXLINE( 193)		this->realTime->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camHUD));
+HXLINE( 194)		::flixel::tweens::FlxTween_obj::tween(this->realTime, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("alpha",5e,a7,96,21),1)),((Float)1.4), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineInOut_dyn())));
-HXLINE( 184)		::WallpaperState_obj::ticktock =  ::haxe::Timer_obj::__alloc( HX_CTX ,( (Float)(1000) ));
-HXLINE( 186)		this->configButton =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("TestState",3f,94,e0,ee),( (Float)(0) ),( (Float)(50) ),HX_("bulkAssets/Settings.png",18,6c,ff,7c), ::Dynamic(new _hx_Closure_0(_gthis)));
-HXLINE( 187)		 ::classes::FlxAnimButton _hx_tmp11 = this->configButton;
-HXDLIN( 187)		Float _hx_tmp12 = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionX();
-HXDLIN( 187)		_hx_tmp11->set_x(((_hx_tmp12 - this->configButton->get_width()) - ( (Float)(50) )));
-HXLINE( 188)		this->add(this->configButton);
-HXLINE( 189)		this->configButton->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camHUD));
-HXLINE( 202)		::WallpaperState_obj::silly =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,(( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) )),(( (Float)(::flixel::FlxG_obj::height) ) * ((Float)0.6)),400,HX_("Time since AFK: ",93,7a,4d,6b),20,null());
-HXLINE( 203)		::WallpaperState_obj::silly->set_alignment(HX_("center",d5,25,db,05));
-HXLINE( 204)		 ::flixel::text::FlxText fh3 = ::WallpaperState_obj::silly;
-HXDLIN( 204)		Float fh4 = fh3->x;
-HXDLIN( 204)		fh3->set_x((fh4 - (::WallpaperState_obj::silly->get_fieldWidth() / ( (Float)(2) ))));
-HXLINE( 205)		::WallpaperState_obj::silly->set_alpha(((Float)0.001));
-HXLINE( 206)		::WallpaperState_obj::silly->setFormat(HX_("PhantomMuff 1.5",0d,79,26,b7),20,-16732702,HX_("center",d5,25,db,05),null(),null(),null());
-HXLINE( 207)		this->add(::WallpaperState_obj::silly);
-HXLINE( 208)		::WallpaperState_obj::silly->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camHUD));
-HXLINE( 209)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::silly, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 196)		::WallpaperState_obj::ticktock =  ::haxe::Timer_obj::__alloc( HX_CTX ,( (Float)(1000) ));
+HXLINE( 198)		this->configButton =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("TestState",3f,94,e0,ee),( (Float)(0) ),( (Float)(50) ),HX_("bulkAssets/Settings.png",18,6c,ff,7c), ::Dynamic(new _hx_Closure_0(_gthis)));
+HXLINE( 199)		 ::classes::FlxAnimButton _hx_tmp11 = this->configButton;
+HXDLIN( 199)		Float _hx_tmp12 = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionX();
+HXDLIN( 199)		_hx_tmp11->set_x(((_hx_tmp12 - this->configButton->get_width()) - ( (Float)(50) )));
+HXLINE( 200)		this->add(this->configButton);
+HXLINE( 201)		this->configButton->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camHUD));
+HXLINE( 214)		::WallpaperState_obj::silly =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,(( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) )),(( (Float)(::flixel::FlxG_obj::height) ) * ((Float)0.6)),400,HX_("Time since AFK: ",93,7a,4d,6b),20,null());
+HXLINE( 215)		::WallpaperState_obj::silly->set_alignment(HX_("center",d5,25,db,05));
+HXLINE( 216)		 ::flixel::text::FlxText fh3 = ::WallpaperState_obj::silly;
+HXDLIN( 216)		Float fh4 = fh3->x;
+HXDLIN( 216)		fh3->set_x((fh4 - (::WallpaperState_obj::silly->get_fieldWidth() / ( (Float)(2) ))));
+HXLINE( 217)		::WallpaperState_obj::silly->set_alpha(((Float)0.001));
+HXLINE( 218)		::WallpaperState_obj::silly->setFormat(HX_("PhantomMuff 1.5",0d,79,26,b7),20,-16732702,HX_("center",d5,25,db,05),null(),null(),null());
+HXLINE( 219)		this->add(::WallpaperState_obj::silly);
+HXLINE( 220)		::WallpaperState_obj::silly->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camHUD));
+HXLINE( 221)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::silly, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("alpha",5e,a7,96,21),1)),((Float)1.4), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineInOut_dyn())));
-HXLINE( 211)		::WallpaperState_obj::flaxhixele =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,5,(::flixel::FlxG_obj::height - 30),600,((HX_("Custom-made in HaxeFlixel; music selected: \"",93,86,7f,91) + ::WallpaperState_obj::Selection) + HX_("\"",22,00,00,00)),15,null());
-HXLINE( 212)		::WallpaperState_obj::flaxhixele->set_alignment(HX_("left",07,08,b0,47));
-HXLINE( 213)		::WallpaperState_obj::flaxhixele->set_alpha(((Float)0.001));
-HXLINE( 214)		::WallpaperState_obj::flaxhixele->setFormat(HX_("PhantomMuff 1.5",0d,79,26,b7),15,-23040,HX_("left",07,08,b0,47),null(),null(),null());
-HXLINE( 215)		this->add(::WallpaperState_obj::flaxhixele);
-HXLINE( 216)		::WallpaperState_obj::flaxhixele->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camHUD));
-HXLINE( 217)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::flaxhixele, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 223)		::WallpaperState_obj::flaxhixele =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,5,(::flixel::FlxG_obj::height - 30),600,((HX_("Custom-made in HaxeFlixel; music selected: \"",93,86,7f,91) + ::WallpaperState_obj::Selection) + HX_("\"",22,00,00,00)),15,null());
+HXLINE( 224)		::WallpaperState_obj::flaxhixele->set_alignment(HX_("left",07,08,b0,47));
+HXLINE( 225)		::WallpaperState_obj::flaxhixele->set_alpha(((Float)0.001));
+HXLINE( 226)		::WallpaperState_obj::flaxhixele->setFormat(HX_("PhantomMuff 1.5",0d,79,26,b7),15,-23040,HX_("left",07,08,b0,47),null(),null(),null());
+HXLINE( 227)		this->add(::WallpaperState_obj::flaxhixele);
+HXLINE( 228)		::WallpaperState_obj::flaxhixele->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camHUD));
+HXLINE( 229)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::flaxhixele, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("alpha",5e,a7,96,21),((Float)0.25))),((Float)1.4), ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::circInOut_dyn())
             			->setFixed(1,HX_("type",ba,f2,08,4d),4)));
-HXLINE( 224)		::WallpaperState_obj::jason = ( (Float)( ::Dynamic( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::openfl::utils::Assets_obj::getText(((HX_("bulkAssets/music/",c4,68,b5,8b) + ::WallpaperState_obj::Selection) + HX_(".json",56,f1,d6,c2))))->doParse()->__Field(HX_("music",a5,d0,5a,10),::hx::paccDynamic))->__Field(HX_("bpm",df,be,4a,00),::hx::paccDynamic)) );
-HXLINE( 225)		::haxe::Log_obj::trace((HX_("Data BPM: ",cf,dc,b7,ae) + ::WallpaperState_obj::jason),::hx::SourceInfo(HX_("source/WallpaperState.hx",1b,b8,4d,0d),225,HX_("WallpaperState",8f,6c,6d,d9),HX_("create",fc,66,0f,7c)));
-HXLINE( 226)		::WallpaperState_obj::croshet = ::flixel::math::FlxMath_obj::roundDecimal((( (Float)(60) ) / ::WallpaperState_obj::jason),4);
-HXLINE( 227)		 ::flixel::FlxSprite _hx_tmp13 = this->bopper;
-HXDLIN( 227)		Float _hx_tmp14 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN( 227)		Float _hx_tmp15 = (_hx_tmp14 - (this->bopper->get_width() / ( (Float)(2) )));
-HXDLIN( 227)		::flixel::tweens::FlxTween_obj::tween(_hx_tmp13, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 236)		::WallpaperState_obj::jason = ( (Float)( ::Dynamic( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::openfl::utils::Assets_obj::getText(((HX_("bulkAssets/music/",c4,68,b5,8b) + ::WallpaperState_obj::Selection) + HX_(".json",56,f1,d6,c2))))->doParse()->__Field(HX_("music",a5,d0,5a,10),::hx::paccDynamic))->__Field(HX_("bpm",df,be,4a,00),::hx::paccDynamic)) );
+HXLINE( 237)		::Sys_obj::println((HX_("   $$$$$ Data BPM: ",6b,f2,a4,7b) + ::WallpaperState_obj::jason));
+HXLINE( 238)		::WallpaperState_obj::croshet = ::flixel::math::FlxMath_obj::roundDecimal((( (Float)(60) ) / ::WallpaperState_obj::jason),4);
+HXLINE( 239)		 ::flixel::FlxSprite _hx_tmp13 = this->bopper;
+HXDLIN( 239)		Float _hx_tmp14 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN( 239)		Float _hx_tmp15 = (_hx_tmp14 - (this->bopper->get_width() / ( (Float)(2) )));
+HXDLIN( 239)		::flixel::tweens::FlxTween_obj::tween(_hx_tmp13, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("x",78,00,00,00),_hx_tmp15)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),1)),((Float)1.7), ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())
             			->setFixed(1,HX_("onComplete",f8,d4,7e,5d), ::Dynamic(new _hx_Closure_1(_gthis)))));
-HXLINE( 267)		::flixel::FlxG_obj::mouse->set_useSystemCursor(true);
-HXLINE( 268)		::WallpaperState_obj::Div1 =  ::classes::FlxTagSprite_obj::__alloc( HX_CTX ,HX_("Div1",e0,95,42,2d),null(),null());
-HXLINE( 269)		::WallpaperState_obj::Div1->loadGraphic(HX_("bulkAssets/divider1.png",cd,14,a2,1f),null(),null(),null(),null(),null());
-HXLINE( 270)		::WallpaperState_obj::Div1->init_X = ( (Float)(-300) );
-HXLINE( 271)		::WallpaperState_obj::Div1->init_Y = ( (Float)(0) );
-HXLINE( 272)		::WallpaperState_obj::Div1->set_x(( (Float)(-300) ));
-HXLINE( 273)		this->add(::WallpaperState_obj::Div1);
-HXLINE( 276)		::WallpaperState_obj::Div2 =  ::classes::FlxTagSprite_obj::__alloc( HX_CTX ,HX_("Div2",e1,95,42,2d),null(),null());
-HXLINE( 277)		::WallpaperState_obj::Div2->loadGraphic(HX_("bulkAssets/divider2.png",4e,a9,08,b3),null(),null(),null(),null(),null());
-HXLINE( 278)		::WallpaperState_obj::Div2->init_X = ( (Float)(::flixel::FlxG_obj::width) );
-HXLINE( 279)		::WallpaperState_obj::Div2->init_Y = ( (Float)(0) );
-HXLINE( 280)		::WallpaperState_obj::Div2->set_x(( (Float)(::flixel::FlxG_obj::width) ));
-HXLINE( 281)		this->add(::WallpaperState_obj::Div2);
-HXLINE( 283)		::WallpaperState_obj::updateNote =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("Update AFK",4f,26,e5,d9),(( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(4) )),( (Float)(0) ),HX_("bulkAssets/reload.png",ee,be,d3,62),null());
-HXLINE( 284)		 ::classes::FlxAnimButton _hx_tmp16 = ::WallpaperState_obj::updateNote;
-HXDLIN( 284)		Float _hx_tmp17 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN( 284)		_hx_tmp16->set_init_X((_hx_tmp17 - (::WallpaperState_obj::updateNote->get_width() / ( (Float)(2) ))));
-HXLINE( 286)		::WallpaperState_obj::TopGroup->add(::WallpaperState_obj::updateNote).StaticCast<  ::flixel::FlxSprite >();
-HXLINE( 287)		::WallpaperState_obj::updateNote->setCallbacks( ::Dynamic(new _hx_Closure_2()), ::Dynamic(new _hx_Closure_3()), ::Dynamic(new _hx_Closure_4()), ::Dynamic(new _hx_Closure_5()));
-HXLINE( 311)		::WallpaperState_obj::afkNote =  ::openfl::text::TextField_obj::__alloc( HX_CTX );
-HXLINE( 312)		 ::openfl::text::TextField _hx_tmp18 = ::WallpaperState_obj::afkNote;
-HXDLIN( 312)		Float _hx_tmp19 = (::openfl::_hx_system::Capabilities_obj::get_screenResolutionX() / ( (Float)(2) ));
-HXDLIN( 312)		_hx_tmp18->set_x((_hx_tmp19 - (::WallpaperState_obj::afkNote->get_width() / ( (Float)(2) ))));
-HXLINE( 313)		 ::openfl::text::TextField _hx_tmp20 = ::WallpaperState_obj::afkNote;
-HXDLIN( 313)		_hx_tmp20->set_y(((::openfl::_hx_system::Capabilities_obj::get_screenResolutionY() / ( (Float)(2) )) + 60));
-HXLINE( 315)		::WallpaperState_obj::afkNote->set_selectable(false);
-HXLINE( 316)		::WallpaperState_obj::afkNote->set_type(0);
-HXLINE( 317)		 ::openfl::text::TextField _hx_tmp21 = ::WallpaperState_obj::afkNote;
-HXDLIN( 317)		_hx_tmp21->set_defaultTextFormat( ::openfl::text::TextFormat_obj::__alloc( HX_CTX ,HX_("PhantomMuff 1.5",0d,79,26,b7),22,-16711894,false,false,false,null(),null(),::openfl::text::_TextFormatAlign::TextFormatAlign_Impl__obj::fromString(HX_("center",d5,25,db,05)),null(),null(),null(),null()));
-HXLINE( 318)		::WallpaperState_obj::afkNote->set_autoSize(0);
-HXLINE( 319)		::WallpaperState_obj::afkNote->set_multiline(true);
-HXLINE( 320)		::WallpaperState_obj::afkNote->set_text(HX_("lorem ipsum",db,95,08,7e));
-HXLINE( 321)		::openfl::Lib_obj::get_current()->addChild(::WallpaperState_obj::afkNote);
-HXLINE( 323)		::WallpaperState_obj::shutdownWarn =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null())->loadGraphic(HX_("bulkAssets/warning.png",7d,66,8d,44),null(),null(),null(),null(),null());
-HXLINE( 324)		{
-HXLINE( 324)			 ::flixel::FlxSprite _this1 = ::WallpaperState_obj::shutdownWarn;
-HXDLIN( 324)			int axes1 = 17;
-HXDLIN( 324)			bool _hx_tmp22;
-HXDLIN( 324)			if ((axes1 != 1)) {
-HXLINE( 324)				_hx_tmp22 = (axes1 == 17);
+HXLINE( 240)		this->bopper->set_angle(( (Float)(10) ));
+HXLINE( 241)		::flixel::tweens::FlxTween_obj::tween(this->bopper, ::Dynamic(::hx::Anon_obj::Create(1)
+            			->setFixed(0,HX_("angle",d3,43,e2,22),-10)),((Float)2.6), ::Dynamic(::hx::Anon_obj::Create(2)
+            			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineInOut_dyn())
+            			->setFixed(1,HX_("type",ba,f2,08,4d),4)));
+HXLINE( 281)		::flixel::FlxG_obj::mouse->set_useSystemCursor(true);
+HXLINE( 282)		::WallpaperState_obj::Div1 =  ::classes::FlxTagSprite_obj::__alloc( HX_CTX ,HX_("Div1",e0,95,42,2d),null(),null());
+HXLINE( 283)		::WallpaperState_obj::Div1->loadGraphic(HX_("bulkAssets/divider1.png",cd,14,a2,1f),null(),null(),null(),null(),null());
+HXLINE( 284)		::WallpaperState_obj::Div1->init_X = ( (Float)(-300) );
+HXLINE( 285)		::WallpaperState_obj::Div1->init_Y = ( (Float)(0) );
+HXLINE( 286)		::WallpaperState_obj::Div1->set_x(( (Float)(-300) ));
+HXLINE( 287)		this->add(::WallpaperState_obj::Div1);
+HXLINE( 290)		::WallpaperState_obj::Div2 =  ::classes::FlxTagSprite_obj::__alloc( HX_CTX ,HX_("Div2",e1,95,42,2d),null(),null());
+HXLINE( 291)		::WallpaperState_obj::Div2->loadGraphic(HX_("bulkAssets/divider2.png",4e,a9,08,b3),null(),null(),null(),null(),null());
+HXLINE( 292)		::WallpaperState_obj::Div2->init_X = ( (Float)(::flixel::FlxG_obj::width) );
+HXLINE( 293)		::WallpaperState_obj::Div2->init_Y = ( (Float)(0) );
+HXLINE( 294)		::WallpaperState_obj::Div2->set_x(( (Float)(::flixel::FlxG_obj::width) ));
+HXLINE( 295)		this->add(::WallpaperState_obj::Div2);
+HXLINE( 297)		::WallpaperState_obj::updateNote =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("Update AFK",4f,26,e5,d9),(( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(4) )),( (Float)(0) ),HX_("bulkAssets/reload.png",ee,be,d3,62),null());
+HXLINE( 298)		 ::classes::FlxAnimButton _hx_tmp16 = ::WallpaperState_obj::updateNote;
+HXDLIN( 298)		Float _hx_tmp17 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN( 298)		_hx_tmp16->set_init_X((_hx_tmp17 - (::WallpaperState_obj::updateNote->get_width() / ( (Float)(2) ))));
+HXLINE( 300)		::WallpaperState_obj::TopGroup->add(::WallpaperState_obj::updateNote).StaticCast<  ::flixel::FlxSprite >();
+HXLINE( 301)		::WallpaperState_obj::updateNote->setCallbacks( ::Dynamic(new _hx_Closure_2()), ::Dynamic(new _hx_Closure_3()), ::Dynamic(new _hx_Closure_4()), ::Dynamic(new _hx_Closure_5()));
+HXLINE( 325)		::WallpaperState_obj::afkNote =  ::openfl::text::TextField_obj::__alloc( HX_CTX );
+HXLINE( 326)		 ::openfl::text::TextField _hx_tmp18 = ::WallpaperState_obj::afkNote;
+HXDLIN( 326)		Float _hx_tmp19 = (::openfl::_hx_system::Capabilities_obj::get_screenResolutionX() / ( (Float)(2) ));
+HXDLIN( 326)		_hx_tmp18->set_x((_hx_tmp19 - (::WallpaperState_obj::afkNote->get_width() / ( (Float)(2) ))));
+HXLINE( 327)		 ::openfl::text::TextField _hx_tmp20 = ::WallpaperState_obj::afkNote;
+HXDLIN( 327)		_hx_tmp20->set_y(((::openfl::_hx_system::Capabilities_obj::get_screenResolutionY() / ( (Float)(2) )) + 60));
+HXLINE( 329)		::WallpaperState_obj::afkNote->set_selectable(false);
+HXLINE( 330)		::WallpaperState_obj::afkNote->set_type(0);
+HXLINE( 331)		 ::openfl::text::TextField _hx_tmp21 = ::WallpaperState_obj::afkNote;
+HXDLIN( 331)		_hx_tmp21->set_defaultTextFormat( ::openfl::text::TextFormat_obj::__alloc( HX_CTX ,HX_("PhantomMuff 1.5",0d,79,26,b7),22,-16711894,false,false,false,null(),null(),::openfl::text::_TextFormatAlign::TextFormatAlign_Impl__obj::fromString(HX_("center",d5,25,db,05)),null(),null(),null(),null()));
+HXLINE( 332)		::WallpaperState_obj::afkNote->set_autoSize(0);
+HXLINE( 333)		::WallpaperState_obj::afkNote->set_multiline(true);
+HXLINE( 334)		::WallpaperState_obj::afkNote->set_text(HX_("lorem ipsum",db,95,08,7e));
+HXLINE( 335)		::openfl::Lib_obj::get_current()->addChild(::WallpaperState_obj::afkNote);
+HXLINE( 337)		::WallpaperState_obj::shutdownWarn =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null())->loadGraphic(HX_("bulkAssets/warning.png",7d,66,8d,44),null(),null(),null(),null(),null());
+HXLINE( 338)		{
+HXLINE( 338)			 ::flixel::FlxSprite _this1 = ::WallpaperState_obj::shutdownWarn;
+HXDLIN( 338)			int axes1 = 17;
+HXDLIN( 338)			bool _hx_tmp22;
+HXDLIN( 338)			if ((axes1 != 1)) {
+HXLINE( 338)				_hx_tmp22 = (axes1 == 17);
             			}
             			else {
-HXLINE( 324)				_hx_tmp22 = true;
+HXLINE( 338)				_hx_tmp22 = true;
             			}
-HXDLIN( 324)			if (_hx_tmp22) {
-HXLINE( 324)				int _hx_tmp23 = ::flixel::FlxG_obj::width;
-HXDLIN( 324)				_this1->set_x(((( (Float)(_hx_tmp23) ) - _this1->get_width()) / ( (Float)(2) )));
+HXDLIN( 338)			if (_hx_tmp22) {
+HXLINE( 338)				int _hx_tmp23 = ::flixel::FlxG_obj::width;
+HXDLIN( 338)				_this1->set_x(((( (Float)(_hx_tmp23) ) - _this1->get_width()) / ( (Float)(2) )));
             			}
-HXDLIN( 324)			bool _hx_tmp24;
-HXDLIN( 324)			if ((axes1 != 16)) {
-HXLINE( 324)				_hx_tmp24 = (axes1 == 17);
+HXDLIN( 338)			bool _hx_tmp24;
+HXDLIN( 338)			if ((axes1 != 16)) {
+HXLINE( 338)				_hx_tmp24 = (axes1 == 17);
             			}
             			else {
-HXLINE( 324)				_hx_tmp24 = true;
+HXLINE( 338)				_hx_tmp24 = true;
             			}
-HXDLIN( 324)			if (_hx_tmp24) {
-HXLINE( 324)				int _hx_tmp25 = ::flixel::FlxG_obj::height;
-HXDLIN( 324)				_this1->set_y(((( (Float)(_hx_tmp25) ) - _this1->get_height()) / ( (Float)(2) )));
+HXDLIN( 338)			if (_hx_tmp24) {
+HXLINE( 338)				int _hx_tmp25 = ::flixel::FlxG_obj::height;
+HXDLIN( 338)				_this1->set_y(((( (Float)(_hx_tmp25) ) - _this1->get_height()) / ( (Float)(2) )));
             			}
             		}
-HXLINE( 325)		this->add(::WallpaperState_obj::shutdownWarn);
-HXLINE( 326)		::WallpaperState_obj::shutdownWarn->set_alpha(( (Float)(0) ));
-HXLINE( 329)		::WallpaperState_obj::selectedLink =  ::openfl::text::TextField_obj::__alloc( HX_CTX );
-HXLINE( 331)		::WallpaperState_obj::selectedLink->set_selectable(false);
-HXLINE( 332)		::WallpaperState_obj::selectedLink->mouseEnabled = false;
-HXLINE( 333)		 ::openfl::text::TextField _hx_tmp26 = ::WallpaperState_obj::selectedLink;
-HXDLIN( 333)		_hx_tmp26->set_defaultTextFormat( ::openfl::text::TextFormat_obj::__alloc( HX_CTX ,HX_("PhantomMuff 1.5",0d,79,26,b7),22,-16711894,null(),null(),null(),null(),null(),null(),null(),null(),null(),null()));
-HXLINE( 334)		::WallpaperState_obj::selectedLink->set_autoSize(1);
-HXLINE( 335)		::WallpaperState_obj::selectedLink->set_multiline(true);
-HXLINE( 336)		::WallpaperState_obj::selectedLink->set_text(HX_("...",ee,0f,23,00));
-HXLINE( 337)		::openfl::Lib_obj::get_current()->addChild(::WallpaperState_obj::selectedLink);
-HXLINE( 339)		::WallpaperState_obj::shutDown =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("Shutdown",b6,b8,bd,44),( (Float)(0) ),( (Float)(0) ),HX_("bulkAssets/shutdown.png",2b,f5,20,88),null());
-HXLINE( 340)		::WallpaperState_obj::shutDown->scale->set_x(((Float)0.7));
-HXLINE( 341)		::WallpaperState_obj::shutDown->scale->set_y(((Float)0.7));
-HXLINE( 342)		 ::classes::FlxAnimButton _hx_tmp27 = ::WallpaperState_obj::shutDown;
-HXDLIN( 342)		Float _hx_tmp28 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN( 342)		_hx_tmp27->set_init_X(((_hx_tmp28 - (::WallpaperState_obj::shutDown->get_width() / ( (Float)(2) ))) + 125));
-HXLINE( 344)		::WallpaperState_obj::BottomGroup->add(::WallpaperState_obj::shutDown).StaticCast<  ::classes::FlxAnimButton >();
-HXLINE( 345)		::Array< int > safety = ::Array_obj< int >::fromData( _hx_array_data_d96d6c8f_24,1);
-HXLINE( 346)		 ::flixel::util::FlxTimer time =  ::flixel::util::FlxTimer_obj::__alloc( HX_CTX ,null());
-HXLINE( 347)		time->onComplete =  ::Dynamic(new _hx_Closure_6(safety));
-HXLINE( 348)		::WallpaperState_obj::shutDown->setCallbacks( ::Dynamic(new _hx_Closure_7(safety,time)), ::Dynamic(new _hx_Closure_8()), ::Dynamic(new _hx_Closure_9()), ::Dynamic(new _hx_Closure_10()));
-HXLINE( 380)		::WallpaperState_obj::tabBackIn =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("TabIn",7a,09,11,9e),( (Float)(0) ),( (Float)(0) ),HX_("bulkAssets/tabBackIn.png",42,c6,cb,b7),null());
-HXLINE( 381)		 ::classes::FlxAnimButton _hx_tmp29 = ::WallpaperState_obj::tabBackIn;
-HXDLIN( 381)		Float _hx_tmp30 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
-HXDLIN( 381)		_hx_tmp29->set_init_X((_hx_tmp30 - (::WallpaperState_obj::tabBackIn->get_width() / ( (Float)(2) ))));
-HXLINE( 382)		 ::classes::FlxAnimButton _hx_tmp31 = ::WallpaperState_obj::tabBackIn;
-HXDLIN( 382)		_hx_tmp31->set_init_Y(::WallpaperState_obj::tabBackIn->get_height());
-HXLINE( 383)		::WallpaperState_obj::tabBackIn->setCallbacks( ::Dynamic(new _hx_Closure_11()), ::Dynamic(new _hx_Closure_12()), ::Dynamic(new _hx_Closure_13()), ::Dynamic(new _hx_Closure_14()));
-HXLINE( 404)		this->add(::WallpaperState_obj::tabBackIn);
-HXLINE( 406)		this->add(::WallpaperState_obj::TopGroup);
-HXLINE( 407)		this->add(::WallpaperState_obj::BottomGroup);
-HXLINE( 408)		::classes::WindowsTransparency_obj::enableTransparency();
-HXLINE( 410)		::classes::ButtonMapping_obj::createButtons();
+HXLINE( 339)		this->add(::WallpaperState_obj::shutdownWarn);
+HXLINE( 340)		::WallpaperState_obj::shutdownWarn->set_alpha(( (Float)(0) ));
+HXLINE( 343)		::WallpaperState_obj::selectedLink =  ::openfl::text::TextField_obj::__alloc( HX_CTX );
+HXLINE( 345)		::WallpaperState_obj::selectedLink->set_selectable(false);
+HXLINE( 346)		::WallpaperState_obj::selectedLink->mouseEnabled = false;
+HXLINE( 347)		 ::openfl::text::TextField _hx_tmp26 = ::WallpaperState_obj::selectedLink;
+HXDLIN( 347)		_hx_tmp26->set_defaultTextFormat( ::openfl::text::TextFormat_obj::__alloc( HX_CTX ,HX_("PhantomMuff 1.5",0d,79,26,b7),22,-16711894,null(),null(),null(),null(),null(),null(),null(),null(),null(),null()));
+HXLINE( 348)		::WallpaperState_obj::selectedLink->set_autoSize(1);
+HXLINE( 349)		::WallpaperState_obj::selectedLink->set_multiline(true);
+HXLINE( 350)		::WallpaperState_obj::selectedLink->set_text(HX_("...",ee,0f,23,00));
+HXLINE( 351)		::openfl::Lib_obj::get_current()->addChild(::WallpaperState_obj::selectedLink);
+HXLINE( 353)		::WallpaperState_obj::shutDown =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("Shutdown",b6,b8,bd,44),( (Float)(0) ),( (Float)(0) ),HX_("bulkAssets/shutdown.png",2b,f5,20,88),null());
+HXLINE( 354)		::WallpaperState_obj::shutDown->scale->set_x(((Float)0.7));
+HXLINE( 355)		::WallpaperState_obj::shutDown->scale->set_y(((Float)0.7));
+HXLINE( 356)		 ::classes::FlxAnimButton _hx_tmp27 = ::WallpaperState_obj::shutDown;
+HXDLIN( 356)		int _hx_tmp28 = ::flixel::FlxG_obj::width;
+HXDLIN( 356)		_hx_tmp27->set_init_X(((( (Float)(_hx_tmp28) ) - (::WallpaperState_obj::shutDown->get_width() / ( (Float)(2) ))) - ( (Float)(100) )));
+HXLINE( 358)		::WallpaperState_obj::BottomGroup->add(::WallpaperState_obj::shutDown).StaticCast<  ::classes::FlxAnimButton >();
+HXLINE( 359)		::Array< int > safety = ::Array_obj< int >::fromData( _hx_array_data_d96d6c8f_24,1);
+HXLINE( 360)		 ::flixel::util::FlxTimer time =  ::flixel::util::FlxTimer_obj::__alloc( HX_CTX ,null());
+HXLINE( 361)		time->onComplete =  ::Dynamic(new _hx_Closure_6(safety));
+HXLINE( 362)		::WallpaperState_obj::shutDown->setCallbacks( ::Dynamic(new _hx_Closure_7(safety,time)), ::Dynamic(new _hx_Closure_8()), ::Dynamic(new _hx_Closure_9()), ::Dynamic(new _hx_Closure_10()));
+HXLINE( 394)		::WallpaperState_obj::tabBackIn =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,HX_("TabIn",7a,09,11,9e),( (Float)(0) ),( (Float)(0) ),HX_("bulkAssets/tabBackIn.png",42,c6,cb,b7),null());
+HXLINE( 395)		 ::classes::FlxAnimButton _hx_tmp29 = ::WallpaperState_obj::tabBackIn;
+HXDLIN( 395)		Float _hx_tmp30 = (( (Float)(::flixel::FlxG_obj::width) ) / ( (Float)(2) ));
+HXDLIN( 395)		_hx_tmp29->set_init_X((_hx_tmp30 - (::WallpaperState_obj::tabBackIn->get_width() / ( (Float)(2) ))));
+HXLINE( 396)		 ::classes::FlxAnimButton _hx_tmp31 = ::WallpaperState_obj::tabBackIn;
+HXDLIN( 396)		_hx_tmp31->set_init_Y(::WallpaperState_obj::tabBackIn->get_height());
+HXLINE( 397)		::WallpaperState_obj::tabBackIn->setCallbacks( ::Dynamic(new _hx_Closure_11()), ::Dynamic(new _hx_Closure_12()), ::Dynamic(new _hx_Closure_13()), ::Dynamic(new _hx_Closure_14()));
+HXLINE( 418)		this->add(::WallpaperState_obj::tabBackIn);
+HXLINE( 420)		this->add(::WallpaperState_obj::TopGroup);
+HXLINE( 421)		this->add(::WallpaperState_obj::BottomGroup);
+HXLINE( 423)		::classes::WindowsTransparency_obj::enableTransparency();
+HXLINE( 425)		::classes::ButtonMapping_obj::createButtons();
             	}
 
 
 void WallpaperState_obj::update(Float elapsed){
-            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_492_update)
-HXDLIN( 492)		 ::WallpaperState _gthis = ::hx::ObjectPtr<OBJ_>(this);
-HXLINE( 494)		bool _hx_tmp;
-HXDLIN( 494)		if ((::flixel::FlxG_obj::mouse->wheel > 0)) {
-HXLINE( 494)			_hx_tmp = (::WallpaperState_obj::pause->_volume < 1);
+            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_507_update)
+HXDLIN( 507)		 ::WallpaperState _gthis = ::hx::ObjectPtr<OBJ_>(this);
+HXLINE( 509)		bool _hx_tmp;
+HXDLIN( 509)		if ((::flixel::FlxG_obj::mouse->wheel > 0)) {
+HXLINE( 509)			_hx_tmp = (::WallpaperState_obj::pause->_volume < 1);
             		}
             		else {
-HXLINE( 494)			_hx_tmp = false;
+HXLINE( 509)			_hx_tmp = false;
             		}
-HXDLIN( 494)		if (_hx_tmp) {
-HXLINE( 495)			 ::classes::PathSound fh = ::WallpaperState_obj::pause;
-HXDLIN( 495)			fh->set_volume((fh->_volume + ((Float)0.05)));
-HXLINE( 496)			::flixel::FlxG_obj::sound->play(HX_("bulkAssets/beep.ogg",29,6c,e9,2f),null(),null(),null(),null(),null());
+HXDLIN( 509)		if (_hx_tmp) {
+HXLINE( 510)			 ::classes::PathSound fh = ::WallpaperState_obj::pause;
+HXDLIN( 510)			fh->set_volume((fh->_volume + ((Float)0.05)));
+HXLINE( 511)			::flixel::FlxG_obj::sound->play(HX_("bulkAssets/beep.ogg",29,6c,e9,2f),null(),null(),null(),null(),null());
             		}
             		else {
-HXLINE( 497)			bool _hx_tmp1;
-HXDLIN( 497)			if ((::flixel::FlxG_obj::mouse->wheel < 0)) {
-HXLINE( 497)				_hx_tmp1 = (::WallpaperState_obj::pause->_volume > 0);
+HXLINE( 512)			bool _hx_tmp1;
+HXDLIN( 512)			if ((::flixel::FlxG_obj::mouse->wheel < 0)) {
+HXLINE( 512)				_hx_tmp1 = (::WallpaperState_obj::pause->_volume > 0);
             			}
             			else {
-HXLINE( 497)				_hx_tmp1 = false;
+HXLINE( 512)				_hx_tmp1 = false;
             			}
-HXDLIN( 497)			if (_hx_tmp1) {
-HXLINE( 498)				 ::classes::PathSound fh1 = ::WallpaperState_obj::pause;
-HXDLIN( 498)				fh1->set_volume((fh1->_volume - ((Float)0.05)));
-HXLINE( 499)				::flixel::FlxG_obj::sound->play(HX_("bulkAssets/beep.ogg",29,6c,e9,2f),null(),null(),null(),null(),null());
+HXDLIN( 512)			if (_hx_tmp1) {
+HXLINE( 513)				 ::classes::PathSound fh1 = ::WallpaperState_obj::pause;
+HXDLIN( 513)				fh1->set_volume((fh1->_volume - ((Float)0.05)));
+HXLINE( 514)				::flixel::FlxG_obj::sound->play(HX_("bulkAssets/beep.ogg",29,6c,e9,2f),null(),null(),null(),null(),null());
             			}
             		}
-HXLINE( 502)		 ::openfl::text::TextField _hx_tmp2 = ::WallpaperState_obj::selectedLink;
-HXDLIN( 502)		_hx_tmp2->set_x(::flixel::FlxG_obj::mouse->getPosition(null())->x);
-HXLINE( 503)		 ::openfl::text::TextField _hx_tmp3 = ::WallpaperState_obj::selectedLink;
-HXDLIN( 503)		_hx_tmp3->set_y((::flixel::FlxG_obj::mouse->getPosition(null())->y - ( (Float)(75) )));
-HXLINE( 504)		if (!(::WallpaperState_obj::tabbedOut)) {
-HXLINE( 505)			Float _hx_tmp4 = ::flixel::FlxG_obj::mouse->getPosition(null())->y;
-HXDLIN( 505)			if ((_hx_tmp4 >= (::flixel::FlxG_obj::height - 3))) {
-HXLINE( 506)				::WallpaperState_obj::onTabOut(null());
-HXLINE( 507)				{
-HXLINE( 507)					 ::Dynamic filter = null();
-HXDLIN( 507)					 ::flixel::group::FlxTypedGroupIterator btn =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,::WallpaperState_obj::BottomGroup->group->members,filter);
-HXDLIN( 507)					while(btn->hasNext()){
-HXLINE( 507)						 ::classes::FlxAnimButton btn1 = btn->next().StaticCast<  ::classes::FlxAnimButton >();
-HXLINE( 508)						btn1->cd = true;
+HXLINE( 517)		 ::openfl::text::TextField _hx_tmp2 = ::WallpaperState_obj::selectedLink;
+HXDLIN( 517)		_hx_tmp2->set_x(::flixel::FlxG_obj::mouse->getPosition(null())->x);
+HXLINE( 518)		 ::openfl::text::TextField _hx_tmp3 = ::WallpaperState_obj::selectedLink;
+HXDLIN( 518)		_hx_tmp3->set_y((::flixel::FlxG_obj::mouse->getPosition(null())->y - ( (Float)(75) )));
+HXLINE( 519)		if (!(::WallpaperState_obj::tabbedOut)) {
+HXLINE( 520)			Float _hx_tmp4 = ::flixel::FlxG_obj::mouse->getPosition(null())->y;
+HXDLIN( 520)			if ((_hx_tmp4 >= (::flixel::FlxG_obj::height - 3))) {
+HXLINE( 521)				::WallpaperState_obj::onTabOut(null());
+HXLINE( 522)				{
+HXLINE( 522)					 ::Dynamic filter = null();
+HXDLIN( 522)					 ::flixel::group::FlxTypedGroupIterator btn =  ::flixel::group::FlxTypedGroupIterator_obj::__alloc( HX_CTX ,::WallpaperState_obj::BottomGroup->group->members,filter);
+HXDLIN( 522)					while(btn->hasNext()){
+HXLINE( 522)						 ::classes::FlxAnimButton btn1 = btn->next().StaticCast<  ::classes::FlxAnimButton >();
+HXLINE( 523)						btn1->cd = true;
             					}
             				}
             			}
             		}
             		else {
-HXLINE( 511)			 ::flixel::text::FlxText _hx_tmp5 = ::WallpaperState_obj::silly;
-HXDLIN( 511)			Float _hx_tmp6 = (( (Float)(::flixel::FlxG_obj::height) ) * ((Float)0.6));
-HXDLIN( 511)			_hx_tmp5->set_y((_hx_tmp6 + ::WallpaperState_obj::afkNote->get_height()));
+HXLINE( 526)			 ::flixel::text::FlxText _hx_tmp5 = ::WallpaperState_obj::silly;
+HXDLIN( 526)			Float _hx_tmp6 = (( (Float)(::flixel::FlxG_obj::height) ) * ((Float)0.6));
+HXDLIN( 526)			_hx_tmp5->set_y((_hx_tmp6 + ::WallpaperState_obj::afkNote->get_height()));
             		}
-HXLINE( 513)		this->secondsTotal = ::flixel::math::FlxMath_obj::roundDecimal((::WallpaperState_obj::pause->_time / ( (Float)(1000) )),4);
-HXLINE( 514)		bool _hx_tmp7;
-HXDLIN( 514)		bool _hx_tmp8;
-HXDLIN( 514)		if ((::hx::Mod(this->secondsTotal,::WallpaperState_obj::croshet) >= 0)) {
-HXLINE( 514)			_hx_tmp8 = (::hx::Mod(this->secondsTotal,::WallpaperState_obj::croshet) <= ((Float)0.03));
-            		}
-            		else {
-HXLINE( 514)			_hx_tmp8 = false;
-            		}
-HXDLIN( 514)		if (_hx_tmp8) {
-HXLINE( 514)			_hx_tmp7 = this->bopPrefs;
+HXLINE( 528)		this->secondsTotal = ::flixel::math::FlxMath_obj::roundDecimal((::WallpaperState_obj::pause->_time / ( (Float)(1000) )),4);
+HXLINE( 529)		bool _hx_tmp7;
+HXDLIN( 529)		bool _hx_tmp8;
+HXDLIN( 529)		if ((::hx::Mod(this->secondsTotal,::WallpaperState_obj::croshet) >= 0)) {
+HXLINE( 529)			_hx_tmp8 = (::hx::Mod(this->secondsTotal,::WallpaperState_obj::croshet) <= ((Float)0.03));
             		}
             		else {
-HXLINE( 514)			_hx_tmp7 = false;
+HXLINE( 529)			_hx_tmp8 = false;
             		}
-HXDLIN( 514)		if (_hx_tmp7) {
-HXLINE( 515)			if (!(this->delayy)) {
-            				HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::WallpaperState,_gthis) HXARGC(1)
+HXDLIN( 529)		if (_hx_tmp8) {
+HXLINE( 529)			_hx_tmp7 = this->bopPrefs;
+            		}
+            		else {
+HXLINE( 529)			_hx_tmp7 = false;
+            		}
+HXDLIN( 529)		if (_hx_tmp7) {
+HXLINE( 530)			if (!(this->delayy)) {
+            				HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_1, ::WallpaperState,_gthis) HXARGC(1)
             				void _hx_run( ::flixel::util::FlxTimer _){
-            					HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_535_update)
-HXLINE( 535)					_gthis->delayy = false;
+            					HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_549_update)
+HXLINE( 549)					_gthis->delayy = false;
             				}
             				HX_END_LOCAL_FUNC1((void))
 
-HXLINE( 516)				if (this->startBop) {
-HXLINE( 517)					::flixel::tweens::FlxTween_obj::completeTweensOf(this->bopper,null());
-HXLINE( 518)					this->camBeat++;
-HXLINE( 519)					if ((::hx::Mod(this->camBeat,2) == 0)) {
-HXLINE( 520)						::WallpaperState_obj::camHUD->set_zoom(((Float)1.01));
-HXLINE( 521)						::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camHUD, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 531)				if (this->startBop) {
+            					HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::WallpaperState,_gthis) HXARGC(1)
+            					void _hx_run( ::flixel::tweens::FlxTween _){
+            						HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_542_update)
+HXLINE( 542)						 ::flixel::FlxSprite _gthis1 = _gthis->bopper;
+HXDLIN( 542)						Float _hx_tmp = (( (Float)(::flixel::FlxG_obj::height) ) / ( (Float)(2) ));
+HXDLIN( 542)						 ::Dynamic _hx_tmp1 =  ::Dynamic(::hx::Anon_obj::Create(1)
+            							->setFixed(0,HX_("y",79,00,00,00),(_hx_tmp - (_gthis->bopper->get_height() / ( (Float)(2) )))));
+HXDLIN( 542)						::flixel::tweens::FlxTween_obj::tween(_gthis1,_hx_tmp1,(::WallpaperState_obj::croshet / ((Float)2.05)), ::Dynamic(::hx::Anon_obj::Create(1)
+            							->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineIn_dyn())));
+            					}
+            					HX_END_LOCAL_FUNC1((void))
+
+HXLINE( 532)					::flixel::tweens::FlxTween_obj::completeTweensOf(this->bopper,null());
+HXLINE( 533)					this->camBeat++;
+HXLINE( 534)					if ((::hx::Mod(this->camBeat,2) == 0)) {
+HXLINE( 535)						::WallpaperState_obj::camHUD->set_zoom(((Float)1.01));
+HXLINE( 536)						::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camHUD, ::Dynamic(::hx::Anon_obj::Create(1)
             							->setFixed(0,HX_("zoom",13,a3,f8,50),1)),(::WallpaperState_obj::croshet * ((Float)1.02)), ::Dynamic(::hx::Anon_obj::Create(1)
             							->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 522)						if ((::flixel::FlxG_obj::random->_hx_float(0,100,null()) < 2)) {
-HXLINE( 523)							this->bopper->loadGraphic(HX_("bulkAssets/heh.png",6c,47,07,01),null(),null(),null(),null(),null());
+HXLINE( 537)						if ((::flixel::FlxG_obj::random->_hx_float(0,100,null()) < 2)) {
+HXLINE( 538)							this->bopper->loadGraphic(HX_("bulkAssets/heh.png",6c,47,07,01),null(),null(),null(),null(),null());
             						}
             						else {
-HXLINE( 524)							this->bopper->loadGraphic(HX_("bulkAssets/bozo.png",57,d7,d8,a1),null(),null(),null(),null(),null());
+HXLINE( 539)							this->bopper->loadGraphic(HX_("bulkAssets/bozo.png",57,d7,d8,a1),null(),null(),null(),null(),null());
             						}
             					}
-HXLINE( 526)					 ::flixel::FlxSprite fh2 = this->bopper;
-HXDLIN( 526)					int _hx_tmp9;
-HXDLIN( 526)					if ((::hx::Mod(this->camBeat,2) == 0)) {
-HXLINE( 526)						_hx_tmp9 = 5;
-            					}
-            					else {
-HXLINE( 526)						_hx_tmp9 = -5;
-            					}
-HXDLIN( 526)					fh2->set_x((fh2->x + _hx_tmp9));
-HXLINE( 527)					::flixel::tweens::FlxTween_obj::tween(this->bopper, ::Dynamic(::hx::Anon_obj::Create(1)
-            						->setFixed(0,HX_("x",78,00,00,00),this->bopConst)),(::WallpaperState_obj::croshet / ((Float)2.01)), ::Dynamic(::hx::Anon_obj::Create(1)
-            						->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::expoOut_dyn())));
+HXLINE( 541)					::flixel::tweens::FlxTween_obj::tween(this->bopper, ::Dynamic(::hx::Anon_obj::Create(1)
+            						->setFixed(0,HX_("y",79,00,00,00),(this->bopper->y - ( (Float)(7) )))),(::WallpaperState_obj::croshet / ((Float)2.04)), ::Dynamic(::hx::Anon_obj::Create(2)
+            						->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::expoOut_dyn())
+            						->setFixed(1,HX_("onComplete",f8,d4,7e,5d), ::Dynamic(new _hx_Closure_0(_gthis)))));
             				}
-HXLINE( 529)				this->boopWay = !(this->boopWay);
-HXLINE( 530)				Float _hx_tmp10;
-HXDLIN( 530)				if (this->boopWay) {
-HXLINE( 530)					_hx_tmp10 = ( (Float)(10) );
+HXLINE( 545)				this->boopWay = !(this->boopWay);
+HXLINE( 546)				{
+HXLINE( 546)					 ::flixel::math::FlxBasePoint this1 = this->bopper->scale;
+HXDLIN( 546)					this1->set_x(((Float)0.9));
+HXDLIN( 546)					this1->set_y(((Float)0.9));
             				}
-            				else {
-HXLINE( 530)					_hx_tmp10 = ( (Float)(-10) );
-            				}
-HXDLIN( 530)				this->bopper->set_angle(_hx_tmp10);
-HXLINE( 531)				{
-HXLINE( 531)					 ::flixel::math::FlxBasePoint this1 = this->bopper->scale;
-HXDLIN( 531)					this1->set_x(((Float)0.9));
-HXDLIN( 531)					this1->set_y(((Float)0.9));
-            				}
-HXLINE( 532)				::flixel::tweens::FlxTween_obj::tween(this->bopper, ::Dynamic(::hx::Anon_obj::Create(1)
-            					->setFixed(0,HX_("angle",d3,43,e2,22),0)),(::WallpaperState_obj::croshet / ((Float)1.7)), ::Dynamic(::hx::Anon_obj::Create(1)
-            					->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::circOut_dyn())));
-HXLINE( 533)				::flixel::tweens::FlxTween_obj::tween(this->bopper->scale, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 547)				::flixel::tweens::FlxTween_obj::tween(this->bopper->scale, ::Dynamic(::hx::Anon_obj::Create(2)
             					->setFixed(0,HX_("x",78,00,00,00),((Float)0.75))
             					->setFixed(1,HX_("y",79,00,00,00),((Float)0.75))),(::WallpaperState_obj::croshet / ((Float)1.5)), ::Dynamic(::hx::Anon_obj::Create(1)
             					->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::quadOut_dyn())));
-HXLINE( 534)				this->delayy = true;
-HXLINE( 535)				 ::flixel::util::FlxTimer _hx_tmp11 =  ::flixel::util::FlxTimer_obj::__alloc( HX_CTX ,null());
-HXDLIN( 535)				_hx_tmp11->start((::WallpaperState_obj::croshet / ( (Float)(4) )), ::Dynamic(new _hx_Closure_0(_gthis)),null());
+HXLINE( 548)				this->delayy = true;
+HXLINE( 549)				 ::flixel::util::FlxTimer _hx_tmp9 =  ::flixel::util::FlxTimer_obj::__alloc( HX_CTX ,null());
+HXDLIN( 549)				_hx_tmp9->start((::WallpaperState_obj::croshet / ( (Float)(4) )), ::Dynamic(new _hx_Closure_1(_gthis)),null());
             			}
             		}
-HXLINE( 538)		this->timestuff = ::Date_obj::now()->toString();
-HXLINE( 539)		::String _hx_tmp12 = this->timestuff;
-HXDLIN( 539)		int _hx_tmp13;
-HXDLIN( 539)		if ((this->timestuff.substring(11,12) == HX_("0",30,00,00,00))) {
-HXLINE( 539)			_hx_tmp13 = 12;
+HXLINE( 552)		this->timestuff = ::Date_obj::now()->toString();
+HXLINE( 553)		::String _hx_tmp10 = this->timestuff;
+HXDLIN( 553)		int _hx_tmp11;
+HXDLIN( 553)		if ((this->timestuff.substring(11,12) == HX_("0",30,00,00,00))) {
+HXLINE( 553)			_hx_tmp11 = 12;
             		}
             		else {
-HXLINE( 539)			_hx_tmp13 = 11;
+HXLINE( 553)			_hx_tmp11 = 11;
             		}
-HXDLIN( 539)		this->aawur = ( (int)(::Std_obj::parseInt(_hx_tmp12.substring(_hx_tmp13,13))) );
-HXLINE( 540)		::String _hx_tmp14;
-HXDLIN( 540)		if ((this->aawur <= 11)) {
-HXLINE( 540)			_hx_tmp14 = HX_(" AM",0c,81,18,00);
-            		}
-            		else {
-HXLINE( 540)			_hx_tmp14 = HX_(" PM",1d,8e,18,00);
-            		}
-HXDLIN( 540)		this->AmPm = _hx_tmp14;
-HXLINE( 541)		int _hx_tmp15;
-HXDLIN( 541)		bool _hx_tmp16;
-HXDLIN( 541)		if ((this->aawur != 0)) {
-HXLINE( 541)			_hx_tmp16 = (this->aawur == 12);
+HXDLIN( 553)		this->aawur = ( (int)(::Std_obj::parseInt(_hx_tmp10.substring(_hx_tmp11,13))) );
+HXLINE( 554)		::String _hx_tmp12;
+HXDLIN( 554)		if ((this->aawur <= 11)) {
+HXLINE( 554)			_hx_tmp12 = HX_(" AM",0c,81,18,00);
             		}
             		else {
-HXLINE( 541)			_hx_tmp16 = true;
+HXLINE( 554)			_hx_tmp12 = HX_(" PM",1d,8e,18,00);
             		}
-HXDLIN( 541)		if (_hx_tmp16) {
-HXLINE( 541)			_hx_tmp15 = 12;
+HXDLIN( 554)		this->AmPm = _hx_tmp12;
+HXLINE( 555)		int _hx_tmp13;
+HXDLIN( 555)		bool _hx_tmp14;
+HXDLIN( 555)		if ((this->aawur != 0)) {
+HXLINE( 555)			_hx_tmp14 = (this->aawur == 12);
             		}
             		else {
-HXLINE( 541)			_hx_tmp15 = ::hx::Mod(::Std_obj::parseInt(this->timestuff.substring(11,13)),12);
+HXLINE( 555)			_hx_tmp14 = true;
             		}
-HXDLIN( 541)		this->Hour12 = _hx_tmp15;
-HXLINE( 542)		 ::flixel::text::FlxText _hx_tmp17 = this->realTime;
-HXDLIN( 542)		::String _hx_tmp18 = (HX_("Current Time: ",3a,09,ae,70) + this->Hour12);
-HXDLIN( 542)		::String _hx_tmp19 = (_hx_tmp18 + this->timestuff.substr(13,null()));
-HXDLIN( 542)		_hx_tmp17->set_text((_hx_tmp19 + this->AmPm));
-HXLINE( 543)		this->super::update(elapsed);
+HXDLIN( 555)		if (_hx_tmp14) {
+HXLINE( 555)			_hx_tmp13 = 12;
+            		}
+            		else {
+HXLINE( 555)			_hx_tmp13 = ::hx::Mod(::Std_obj::parseInt(this->timestuff.substring(11,13)),12);
+            		}
+HXDLIN( 555)		this->Hour12 = _hx_tmp13;
+HXLINE( 556)		 ::flixel::text::FlxText _hx_tmp15 = this->realTime;
+HXDLIN( 556)		::String _hx_tmp16 = (HX_("Current Time: ",3a,09,ae,70) + this->Hour12);
+HXDLIN( 556)		::String _hx_tmp17 = (_hx_tmp16 + this->timestuff.substr(13,null()));
+HXDLIN( 556)		_hx_tmp15->set_text((_hx_tmp17 + this->AmPm));
+HXLINE( 557)		this->super::update(elapsed);
+HXLINE( 558)		{
+HXLINE( 558)			int _g = 0;
+HXDLIN( 558)			::cpp::VirtualArray _g1 = ::WallpaperState_obj::updateArray;
+HXDLIN( 558)			while((_g < _g1->get_length())){
+HXLINE( 558)				 ::Dynamic cb = _g1->__get(_g);
+HXDLIN( 558)				_g = (_g + 1);
+HXDLIN( 558)				cb();
+            			}
+            		}
             	}
 
 
@@ -980,12 +984,43 @@ int WallpaperState_obj::afkTime;
  ::WallpaperState WallpaperState_obj::instance;
 
 void WallpaperState_obj::loadConfig( ::flixel::util::FlxSave save){
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_118_loadConfig)
-HXLINE( 119)		 ::Dynamic Prefs = save->data;
-HXLINE( 120)		::WallpaperState_obj::Selection = ( (::String)(Prefs->__Field(HX_("selected",5b,2a,6d,b1),::hx::paccDynamic)) );
-HXLINE( 121)		save->data->__SetField(HX_("fish",98,d4,bb,43),HX_("fosj.",0e,7a,95,04),::hx::paccDynamic);
-HXLINE( 122)		save->flush(null());
-HXLINE( 123)		::haxe::Log_obj::trace(save->data,::hx::SourceInfo(HX_("source/WallpaperState.hx",1b,b8,4d,0d),123,HX_("WallpaperState",8f,6c,6d,d9),HX_("loadConfig",88,85,fd,7c)));
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_119_loadConfig)
+HXLINE( 120)		if (::hx::IsNull( save->data->__Field(HX_("selected",5b,2a,6d,b1),::hx::paccDynamic) )) {
+HXLINE( 121)			::Array< ::String > musicList = ::sys::FileSystem_obj::readDirectory(HX_("bulkAssets/music",0b,81,5b,44));
+HXLINE( 122)			int i = 0;
+HXLINE( 123)			while((i <= (musicList->length - 1))){
+HXLINE( 124)				if ((i > (musicList->length - 1))) {
+HXLINE( 124)					HX_STACK_DO_THROW(HX_("WallpaperState | No music files were found, please add a file for fallback!",b3,f6,d5,38));
+            				}
+HXLINE( 125)				::Array< ::String > fileName = musicList->__get(i).split(HX_(".",2e,00,00,00));
+HXLINE( 126)				bool _hx_tmp;
+HXDLIN( 126)				bool _hx_tmp1;
+HXDLIN( 126)				if ((fileName->__get(1) != HX_("ogg",4f,94,54,00))) {
+HXLINE( 126)					_hx_tmp1 = (fileName->__get(1) == HX_("mp3",70,17,53,00));
+            				}
+            				else {
+HXLINE( 126)					_hx_tmp1 = true;
+            				}
+HXDLIN( 126)				if (!(_hx_tmp1)) {
+HXLINE( 126)					_hx_tmp = (fileName->__get(1) == HX_("wav",2c,a1,5a,00));
+            				}
+            				else {
+HXLINE( 126)					_hx_tmp = true;
+            				}
+HXDLIN( 126)				if (_hx_tmp) {
+HXLINE( 127)					::WallpaperState_obj::Selection = fileName->__get(0);
+HXLINE( 128)					save->data->__SetField(HX_("selected",5b,2a,6d,b1),::WallpaperState_obj::Selection,::hx::paccDynamic);
+HXLINE( 129)					::Sys_obj::println(((HX_("        \x1b""[1;33mloadConfig | \x1b""[0;43m Fallback set to: ",a7,83,59,65) + ::WallpaperState_obj::Selection) + HX_("\x1b""[0m",1d,fa,1d,12)));
+HXLINE( 130)					goto _hx_goto_30;
+            				}
+HXLINE( 132)				i = (i + 1);
+            			}
+            			_hx_goto_30:;
+            		}
+HXLINE( 135)		save->data->__SetField(HX_("fish",98,d4,bb,43),HX_("fosj.",0e,7a,95,04),::hx::paccDynamic);
+HXLINE( 136)		save->flush(null());
+HXLINE( 138)		::WallpaperState_obj::Selection = ( (::String)(save->data->__Field(HX_("selected",5b,2a,6d,b1),::hx::paccDynamic)) );
+HXLINE( 139)		::Sys_obj::println((HX_("$$$$$ SAVE DATA: ",d7,a0,3e,b2) + ::Std_obj::string(save->data)));
             	}
 
 
@@ -994,42 +1029,42 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(WallpaperState_obj,loadConfig,(void))
 void WallpaperState_obj::RunAFK(){
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(0)
             		void _hx_run(){
-            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_416_RunAFK)
-HXLINE( 417)			::WallpaperState_obj::afkTime++;
-HXLINE( 418)			 ::flixel::text::FlxText _hx_tmp = ::WallpaperState_obj::silly;
-HXDLIN( 418)			_hx_tmp->set_text((HX_("Time since AFK: ",93,7a,4d,6b) + ::flixel::util::FlxStringUtil_obj::formatTime(( (Float)(::WallpaperState_obj::afkTime) ),null())));
+            			HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_431_RunAFK)
+HXLINE( 432)			::WallpaperState_obj::afkTime++;
+HXLINE( 433)			 ::flixel::text::FlxText _hx_tmp = ::WallpaperState_obj::silly;
+HXDLIN( 433)			_hx_tmp->set_text((HX_("Time since AFK: ",93,7a,4d,6b) + ::flixel::util::FlxStringUtil_obj::formatTime(( (Float)(::WallpaperState_obj::afkTime) ),null())));
             		}
             		HX_END_LOCAL_FUNC0((void))
 
-            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_413_RunAFK)
-HXLINE( 414)		::WallpaperState_obj::afkTime = 0;
-HXLINE( 415)		::WallpaperState_obj::ticktock =  ::haxe::Timer_obj::__alloc( HX_CTX ,( (Float)(1000) ));
-HXLINE( 416)		::WallpaperState_obj::ticktock->run =  ::Dynamic(new _hx_Closure_0());
+            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_428_RunAFK)
+HXLINE( 429)		::WallpaperState_obj::afkTime = 0;
+HXLINE( 430)		::WallpaperState_obj::ticktock =  ::haxe::Timer_obj::__alloc( HX_CTX ,( (Float)(1000) ));
+HXLINE( 431)		::WallpaperState_obj::ticktock->run =  ::Dynamic(new _hx_Closure_0());
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(WallpaperState_obj,RunAFK,(void))
 
 void WallpaperState_obj::resetSelection(){
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_424_resetSelection)
-HXDLIN( 424)		::WallpaperState_obj::selectedLink->set_text(HX_("",00,00,00,00));
-HXDLIN( 424)		::WallpaperState_obj::selectedLink->set_textColor(65322);
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_439_resetSelection)
+HXDLIN( 439)		::WallpaperState_obj::selectedLink->set_text(HX_("",00,00,00,00));
+HXDLIN( 439)		::WallpaperState_obj::selectedLink->set_textColor(65322);
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(WallpaperState_obj,resetSelection,(void))
 
 void WallpaperState_obj::changeText(::String text, ::Dynamic color){
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_426_changeText)
-HXLINE( 427)		::WallpaperState_obj::selectedLink->set_text(text);
-HXLINE( 428)		int _hx_tmp;
-HXDLIN( 428)		if (::hx::IsNotNull( color )) {
-HXLINE( 428)			_hx_tmp = ( (int)(color) );
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_441_changeText)
+HXLINE( 442)		::WallpaperState_obj::selectedLink->set_text(text);
+HXLINE( 443)		int _hx_tmp;
+HXDLIN( 443)		if (::hx::IsNotNull( color )) {
+HXLINE( 443)			_hx_tmp = ( (int)(color) );
             		}
             		else {
-HXLINE( 428)			_hx_tmp = 65322;
+HXLINE( 443)			_hx_tmp = 65322;
             		}
-HXDLIN( 428)		::WallpaperState_obj::selectedLink->set_textColor(_hx_tmp);
+HXDLIN( 443)		::WallpaperState_obj::selectedLink->set_textColor(_hx_tmp);
             	}
 
 
@@ -1038,56 +1073,56 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(WallpaperState_obj,changeText,(void))
 void WallpaperState_obj::onTabOut( ::openfl::events::Event e){
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(1)
             		void _hx_run( ::flixel::tweens::FlxTween _){
-            			HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_444_onTabOut)
-HXLINE( 444)			int _g = 0;
-HXDLIN( 444)			::Array< ::Dynamic> _g1 = ::classes::ButtonMapping_obj::ButtonArray;
-HXDLIN( 444)			while((_g < _g1->length)){
-HXLINE( 444)				 ::classes::FlxAnimButton btn = _g1->__get(_g).StaticCast<  ::classes::FlxAnimButton >();
-HXDLIN( 444)				_g = (_g + 1);
-HXDLIN( 444)				btn->set_visible(false);
+            			HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_459_onTabOut)
+HXLINE( 459)			int _g = 0;
+HXDLIN( 459)			::Array< ::Dynamic> _g1 = ::classes::ButtonMapping_obj::ButtonArray;
+HXDLIN( 459)			while((_g < _g1->length)){
+HXLINE( 459)				 ::classes::FlxAnimButton btn = _g1->__get(_g).StaticCast<  ::classes::FlxAnimButton >();
+HXDLIN( 459)				_g = (_g + 1);
+HXDLIN( 459)				btn->set_visible(false);
             			}
             		}
             		HX_END_LOCAL_FUNC1((void))
 
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_432_onTabOut)
-HXLINE( 433)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::TopGroup,null());
-HXLINE( 434)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::BottomGroup,null());
-HXLINE( 435)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::tabBackIn,null());
-HXLINE( 436)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::Div1,null());
-HXLINE( 437)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::Div2,null());
-HXLINE( 438)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::camGUI,null());
-HXLINE( 439)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::TopGroup, ::Dynamic(::hx::Anon_obj::Create(2)
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_447_onTabOut)
+HXLINE( 448)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::TopGroup,null());
+HXLINE( 449)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::BottomGroup,null());
+HXLINE( 450)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::tabBackIn,null());
+HXLINE( 451)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::Div1,null());
+HXLINE( 452)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::Div2,null());
+HXLINE( 453)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::camGUI,null());
+HXLINE( 454)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::TopGroup, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("y",79,00,00,00),-80)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),0)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::elasticInOut_dyn())));
-HXLINE( 440)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::BottomGroup, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 455)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::BottomGroup, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("y",79,00,00,00),(::WallpaperState_obj::BottomPos + 200))
             			->setFixed(1,HX_("alpha",5e,a7,96,21),0)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::elasticInOut_dyn())));
-HXLINE( 441)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBackIn, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 456)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBackIn, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("y",79,00,00,00),::WallpaperState_obj::tabBackIn->init_Y)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),1)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 442)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::Div1, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 457)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::Div1, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("x",78,00,00,00),::WallpaperState_obj::Div1->init_X)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),0)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 443)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::Div2, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 458)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::Div2, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("x",78,00,00,00),::WallpaperState_obj::Div2->init_X)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),0)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 444)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camGUI, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 459)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camGUI, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("alpha",5e,a7,96,21),0)),((Float)0.2), ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::quintIn_dyn())
             			->setFixed(1,HX_("onComplete",f8,d4,7e,5d), ::Dynamic(new _hx_Closure_0()))));
-HXLINE( 445)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camGUI, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 460)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camGUI, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("y",79,00,00,00),200)),((Float)0.3), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::quintIn_dyn())));
-HXLINE( 446)		::WallpaperState_obj::RunAFK();
-HXLINE( 447)		::WallpaperState_obj::silly->set_visible(true);
-HXLINE( 448)		::WallpaperState_obj::tabbedOut = true;
-HXLINE( 449)		::WallpaperState_obj::flaxhixele->set_visible(true);
-HXLINE( 450)		::WallpaperState_obj::afkNote->set_visible(true);
+HXLINE( 461)		::WallpaperState_obj::RunAFK();
+HXLINE( 462)		::WallpaperState_obj::silly->set_visible(true);
+HXLINE( 463)		::WallpaperState_obj::tabbedOut = true;
+HXLINE( 464)		::WallpaperState_obj::flaxhixele->set_visible(true);
+HXLINE( 465)		::WallpaperState_obj::afkNote->set_visible(true);
             	}
 
 
@@ -1096,67 +1131,67 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(WallpaperState_obj,onTabOut,(void))
 void WallpaperState_obj::onTabIn(){
             		HX_BEGIN_LOCAL_FUNC_S0(::hx::LocalFunc,_hx_Closure_0) HXARGC(1)
             		void _hx_run( ::flixel::tweens::FlxTween _){
-            			HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_464_onTabIn)
-HXLINE( 464)			int _g = 0;
-HXDLIN( 464)			::Array< ::Dynamic> _g1 = ::classes::ButtonMapping_obj::ButtonArray;
-HXDLIN( 464)			while((_g < _g1->length)){
-HXLINE( 464)				 ::classes::FlxAnimButton btn = _g1->__get(_g).StaticCast<  ::classes::FlxAnimButton >();
-HXDLIN( 464)				_g = (_g + 1);
-HXDLIN( 464)				btn->set_visible(true);
+            			HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_479_onTabIn)
+HXLINE( 479)			int _g = 0;
+HXDLIN( 479)			::Array< ::Dynamic> _g1 = ::classes::ButtonMapping_obj::ButtonArray;
+HXDLIN( 479)			while((_g < _g1->length)){
+HXLINE( 479)				 ::classes::FlxAnimButton btn = _g1->__get(_g).StaticCast<  ::classes::FlxAnimButton >();
+HXDLIN( 479)				_g = (_g + 1);
+HXDLIN( 479)				btn->set_visible(true);
             			}
             		}
             		HX_END_LOCAL_FUNC1((void))
 
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_452_onTabIn)
-HXLINE( 453)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::TopGroup,null());
-HXLINE( 454)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::BottomGroup,null());
-HXLINE( 455)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::tabBackIn,null());
-HXLINE( 456)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::Div1,null());
-HXLINE( 457)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::Div2,null());
-HXLINE( 458)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::camGUI,null());
-HXLINE( 459)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::TopGroup, ::Dynamic(::hx::Anon_obj::Create(2)
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_467_onTabIn)
+HXLINE( 468)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::TopGroup,null());
+HXLINE( 469)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::BottomGroup,null());
+HXLINE( 470)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::tabBackIn,null());
+HXLINE( 471)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::Div1,null());
+HXLINE( 472)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::Div2,null());
+HXLINE( 473)		::flixel::tweens::FlxTween_obj::completeTweensOf(::WallpaperState_obj::camGUI,null());
+HXLINE( 474)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::TopGroup, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("y",79,00,00,00),::WallpaperState_obj::TopPos)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),1)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 460)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::BottomGroup, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 475)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::BottomGroup, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("y",79,00,00,00),::WallpaperState_obj::BottomPos)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),1)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 461)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBackIn, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 476)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::tabBackIn, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("y",79,00,00,00),-250)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),0)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 462)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::Div1, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 477)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::Div1, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("x",78,00,00,00),0)
             			->setFixed(1,HX_("alpha",5e,a7,96,21),1)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 463)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::Div2, ::Dynamic(::hx::Anon_obj::Create(2)
+HXLINE( 478)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::Div2, ::Dynamic(::hx::Anon_obj::Create(2)
             			->setFixed(0,HX_("x",78,00,00,00),(::flixel::FlxG_obj::width - 400))
             			->setFixed(1,HX_("alpha",5e,a7,96,21),1)),((Float)0.7), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 464)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camGUI, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 479)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camGUI, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("alpha",5e,a7,96,21),1)),((Float)0.3), ::Dynamic(::hx::Anon_obj::Create(3)
             			->setFixed(0,HX_("startDelay",c1,af,3d,f3),((Float)0.15))
             			->setFixed(1,HX_("onStart",c3,12,49,1a), ::Dynamic(new _hx_Closure_0()))
             			->setFixed(2,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::quintInOut_dyn())));
-HXLINE( 465)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camGUI, ::Dynamic(::hx::Anon_obj::Create(1)
+HXLINE( 480)		::flixel::tweens::FlxTween_obj::tween(::WallpaperState_obj::camGUI, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("y",79,00,00,00),0)),((Float)0.4), ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::sineOut_dyn())));
-HXLINE( 467)		::WallpaperState_obj::silly->set_visible(false);
-HXLINE( 468)		::WallpaperState_obj::tabbedOut = false;
-HXLINE( 469)		::WallpaperState_obj::flaxhixele->set_visible(false);
-HXLINE( 470)		::WallpaperState_obj::afkNote->set_visible(false);
-HXLINE( 471)		::WallpaperState_obj::ticktock->stop();
-HXLINE( 472)		Float _hx_tmp = (::openfl::_hx_system::Capabilities_obj::get_screenResolutionX() / ( (Float)(2) ));
-HXDLIN( 472)		::WallpaperState_obj::moveMouse(_hx_tmp,(::openfl::_hx_system::Capabilities_obj::get_screenResolutionY() / ( (Float)(2) )));
+HXLINE( 482)		::WallpaperState_obj::silly->set_visible(false);
+HXLINE( 483)		::WallpaperState_obj::tabbedOut = false;
+HXLINE( 484)		::WallpaperState_obj::flaxhixele->set_visible(false);
+HXLINE( 485)		::WallpaperState_obj::afkNote->set_visible(false);
+HXLINE( 486)		::WallpaperState_obj::ticktock->stop();
+HXLINE( 487)		Float _hx_tmp = (::openfl::_hx_system::Capabilities_obj::get_screenResolutionX() / ( (Float)(2) ));
+HXDLIN( 487)		::WallpaperState_obj::moveMouse(_hx_tmp,(::openfl::_hx_system::Capabilities_obj::get_screenResolutionY() / ( (Float)(2) )));
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(WallpaperState_obj,onTabIn,(void))
 
 void WallpaperState_obj::moveMouse(Float x,Float y){
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_475_moveMouse)
-HXDLIN( 475)		
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_490_moveMouse)
+HXDLIN( 490)		
             SetCursorPos(x, y);
         ;
             	}
@@ -1165,6 +1200,23 @@ HXDLIN( 475)
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(WallpaperState_obj,moveMouse,(void))
 
 bool WallpaperState_obj::tabbedOut;
+
+::cpp::VirtualArray WallpaperState_obj::updateArray;
+
+void WallpaperState_obj::bindToUpdate( ::Dynamic callback){
+            		HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::Dynamic,callback) HXARGC(1)
+            		 ::Dynamic _hx_run( ::Dynamic args){
+            			HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_562_bindToUpdate)
+HXDLIN( 562)			return callback(args);
+            		}
+            		HX_END_LOCAL_FUNC1(return)
+
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_562_bindToUpdate)
+HXDLIN( 562)		::WallpaperState_obj::updateArray->push( ::Dynamic(new _hx_Closure_0(callback)));
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(WallpaperState_obj,bindToUpdate,(void))
 
 
 ::hx::ObjectPtr< WallpaperState_obj > WallpaperState_obj::__new() {
@@ -1191,7 +1243,6 @@ void WallpaperState_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(bopper,"bopper");
 	HX_MARK_MEMBER_NAME(bgGoofy,"bgGoofy");
 	HX_MARK_MEMBER_NAME(startBop,"startBop");
-	HX_MARK_MEMBER_NAME(bopConst,"bopConst");
 	HX_MARK_MEMBER_NAME(realTime,"realTime");
 	HX_MARK_MEMBER_NAME(musicProg,"musicProg");
 	HX_MARK_MEMBER_NAME(mute,"mute");
@@ -1215,7 +1266,6 @@ void WallpaperState_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(bopper,"bopper");
 	HX_VISIT_MEMBER_NAME(bgGoofy,"bgGoofy");
 	HX_VISIT_MEMBER_NAME(startBop,"startBop");
-	HX_VISIT_MEMBER_NAME(bopConst,"bopConst");
 	HX_VISIT_MEMBER_NAME(realTime,"realTime");
 	HX_VISIT_MEMBER_NAME(musicProg,"musicProg");
 	HX_VISIT_MEMBER_NAME(mute,"mute");
@@ -1256,7 +1306,6 @@ void WallpaperState_obj::__Visit(HX_VISIT_PARAMS)
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"startBop") ) { return ::hx::Val( startBop ); }
-		if (HX_FIELD_EQ(inName,"bopConst") ) { return ::hx::Val( bopConst ); }
 		if (HX_FIELD_EQ(inName,"realTime") ) { return ::hx::Val( realTime ); }
 		if (HX_FIELD_EQ(inName,"bopPrefs") ) { return ::hx::Val( bopPrefs ); }
 		break;
@@ -1322,10 +1371,12 @@ bool WallpaperState_obj::__GetStatic(const ::String &inName, Dynamic &outValue, 
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"BottomGroup") ) { outValue = ( BottomGroup ); return true; }
+		if (HX_FIELD_EQ(inName,"updateArray") ) { outValue = ( updateArray ); return true; }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"selectedLink") ) { outValue = ( selectedLink ); return true; }
 		if (HX_FIELD_EQ(inName,"shutdownWarn") ) { outValue = ( shutdownWarn ); return true; }
+		if (HX_FIELD_EQ(inName,"bindToUpdate") ) { outValue = bindToUpdate_dyn(); return true; }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"resetSelection") ) { outValue = resetSelection_dyn(); return true; }
@@ -1355,7 +1406,6 @@ bool WallpaperState_obj::__GetStatic(const ::String &inName, Dynamic &outValue, 
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"startBop") ) { startBop=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"bopConst") ) { bopConst=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"realTime") ) { realTime=inValue.Cast<  ::flixel::text::FlxText >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"bopPrefs") ) { bopPrefs=inValue.Cast< bool >(); return inValue; }
 		break;
@@ -1415,6 +1465,7 @@ bool WallpaperState_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,::h
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"BottomGroup") ) { BottomGroup=ioValue.Cast<  ::flixel::group::FlxTypedSpriteGroup >(); return true; }
+		if (HX_FIELD_EQ(inName,"updateArray") ) { updateArray=ioValue.Cast< ::cpp::VirtualArray >(); return true; }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"selectedLink") ) { selectedLink=ioValue.Cast<  ::openfl::text::TextField >(); return true; }
@@ -1429,7 +1480,6 @@ void WallpaperState_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_("bopper",ba,fa,d0,62));
 	outFields->push(HX_("bgGoofy",55,12,20,45));
 	outFields->push(HX_("startBop",c1,6a,8e,42));
-	outFields->push(HX_("bopConst",60,00,a2,92));
 	outFields->push(HX_("realTime",8b,4a,29,10));
 	outFields->push(HX_("musicProg",df,7a,58,d4));
 	outFields->push(HX_("mute",d9,6e,65,48));
@@ -1452,7 +1502,6 @@ static ::hx::StorageInfo WallpaperState_obj_sMemberStorageInfo[] = {
 	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(WallpaperState_obj,bopper),HX_("bopper",ba,fa,d0,62)},
 	{::hx::fsObject /*  ::flixel::addons::display::FlxBackdrop */ ,(int)offsetof(WallpaperState_obj,bgGoofy),HX_("bgGoofy",55,12,20,45)},
 	{::hx::fsBool,(int)offsetof(WallpaperState_obj,startBop),HX_("startBop",c1,6a,8e,42)},
-	{::hx::fsFloat,(int)offsetof(WallpaperState_obj,bopConst),HX_("bopConst",60,00,a2,92)},
 	{::hx::fsObject /*  ::flixel::text::FlxText */ ,(int)offsetof(WallpaperState_obj,realTime),HX_("realTime",8b,4a,29,10)},
 	{::hx::fsObject /*  ::classes::Bar */ ,(int)offsetof(WallpaperState_obj,musicProg),HX_("musicProg",df,7a,58,d4)},
 	{::hx::fsObject /*  ::classes::FlxGroupButton */ ,(int)offsetof(WallpaperState_obj,mute),HX_("mute",d9,6e,65,48)},
@@ -1495,6 +1544,7 @@ static ::hx::StaticInfo WallpaperState_obj_sStaticStorageInfo[] = {
 	{::hx::fsString,(void *) &WallpaperState_obj::Note,HX_("Note",12,44,e3,33)},
 	{::hx::fsObject /*  ::WallpaperState */ ,(void *) &WallpaperState_obj::instance,HX_("instance",95,1f,e1,59)},
 	{::hx::fsBool,(void *) &WallpaperState_obj::tabbedOut,HX_("tabbedOut",e2,e9,7f,c5)},
+	{::hx::fsObject /* ::cpp::VirtualArray */ ,(void *) &WallpaperState_obj::updateArray,HX_("updateArray",d0,d6,27,0b)},
 	{ ::hx::fsUnknown, 0, null()}
 };
 #endif
@@ -1504,7 +1554,6 @@ static ::String WallpaperState_obj_sMemberFields[] = {
 	HX_("bopper",ba,fa,d0,62),
 	HX_("bgGoofy",55,12,20,45),
 	HX_("startBop",c1,6a,8e,42),
-	HX_("bopConst",60,00,a2,92),
 	HX_("realTime",8b,4a,29,10),
 	HX_("musicProg",df,7a,58,d4),
 	HX_("mute",d9,6e,65,48),
@@ -1549,6 +1598,7 @@ static void WallpaperState_obj_sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(WallpaperState_obj::Note,"Note");
 	HX_MARK_MEMBER_NAME(WallpaperState_obj::instance,"instance");
 	HX_MARK_MEMBER_NAME(WallpaperState_obj::tabbedOut,"tabbedOut");
+	HX_MARK_MEMBER_NAME(WallpaperState_obj::updateArray,"updateArray");
 };
 
 #ifdef HXCPP_VISIT_ALLOCS
@@ -1579,6 +1629,7 @@ static void WallpaperState_obj_sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(WallpaperState_obj::Note,"Note");
 	HX_VISIT_MEMBER_NAME(WallpaperState_obj::instance,"instance");
 	HX_VISIT_MEMBER_NAME(WallpaperState_obj::tabbedOut,"tabbedOut");
+	HX_VISIT_MEMBER_NAME(WallpaperState_obj::updateArray,"updateArray");
 };
 
 #endif
@@ -1619,6 +1670,8 @@ static ::String WallpaperState_obj_sStaticFields[] = {
 	HX_("onTabIn",fb,37,21,a1),
 	HX_("moveMouse",54,e5,2b,ca),
 	HX_("tabbedOut",e2,e9,7f,c5),
+	HX_("updateArray",d0,d6,27,0b),
+	HX_("bindToUpdate",c1,64,c4,94),
 	::String(null())
 };
 
@@ -1652,28 +1705,32 @@ void WallpaperState_obj::__register()
 void WallpaperState_obj::__boot()
 {
 {
-            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_67_boot)
-HXDLIN(  67)		TopGroup =  ::flixel::group::FlxTypedSpriteGroup_obj::__alloc( HX_CTX ,0,-100,null());
+            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_69_boot)
+HXDLIN(  69)		TopGroup =  ::flixel::group::FlxTypedSpriteGroup_obj::__alloc( HX_CTX ,0,-100,null());
             	}
 {
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_68_boot)
-HXDLIN(  68)		TopPos = 5;
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_70_boot)
+HXDLIN(  70)		TopPos = 5;
             	}
 {
-            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_77_boot)
-HXDLIN(  77)		pause =  ::classes::PathSound_obj::__alloc( HX_CTX );
+            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_79_boot)
+HXDLIN(  79)		pause =  ::classes::PathSound_obj::__alloc( HX_CTX );
             	}
 {
-            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_78_boot)
-HXDLIN(  78)		toggle =  ::classes::PathSound_obj::__alloc( HX_CTX );
+            	HX_GC_STACKFRAME(&_hx_pos_d4fd66a66087e08d_80_boot)
+HXDLIN(  80)		toggle =  ::classes::PathSound_obj::__alloc( HX_CTX );
             	}
 {
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_88_boot)
-HXDLIN(  88)		afkTime = 0;
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_89_boot)
+HXDLIN(  89)		afkTime = 0;
             	}
 {
-            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_491_boot)
-HXDLIN( 491)		tabbedOut = false;
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_506_boot)
+HXDLIN( 506)		tabbedOut = false;
+            	}
+{
+            	HX_STACKFRAME(&_hx_pos_d4fd66a66087e08d_560_boot)
+HXDLIN( 560)		updateArray = ::cpp::VirtualArray_obj::__new(0);
             	}
 }
 

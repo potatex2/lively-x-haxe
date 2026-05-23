@@ -1,5 +1,9 @@
 package classes;
 
+import lime.app.Application;
+import haxe.io.BytesData;
+import openfl.events.ProgressEvent;
+import openfl.Vector;
 import openfl.filesystem.File;
 import openfl.desktop.NativeProcessStartupInfo;
 import openfl.desktop.NativeProcess;
@@ -40,14 +44,14 @@ typedef ButtonProperties = {
     /** Offset by `y` from the bottom? */
     var fromBottom:Bool;
 
+    /** __Optional__ - other command-line arguments. */
+    @:optional var args:String;
+
     /** __Optional__ - tooltip color in _hexadecimal_ format (e.g. `0xFFFFFF`). */
     @:optional var tooltipColor:String;
 
     /** __Optional__ - button size (might make this a FlxPoint) */
     @:optional var scale:Int;
-
-    /** __Optional__ - Convenience flag for OneDrive paths. (personal feature tbh) */
-    @:optional var inOneDrive:Bool;
 
     // Possible feature: Set custom sound with default as ToggleJingle.ogg
 }
@@ -55,18 +59,48 @@ typedef ButtonProperties = {
 class ButtonMapping {
     public static var ButtonArray:Array<FlxAnimButton> = [];
     static var ErrorIndices:Map<Int, String> = [];
+    static final Default:ButtonProperties = {
+        x: 0,
+        y: 0,
+        label: null,
+        tooltip: "(No tooltip set)",
+        target: null,
+        runIn: null,
+        fromRight: false,
+        fromBottom: false,
+        tooltipColor: "#ffffff",
+        args: null,
+        scale: 1
+    };
     public static function createButtons() {
         final path:String = "bulkAssets/buttons/config.json";
         var buttonList:Array<ButtonProperties> = Json.parse(Assets.getText(path)).buttons;
         for (button in buttonList) {
+            //Defaults (isn't there a better way to do this?)
+            button.x = button.x ?? Default.x;
+            button.y = button.y ?? Default.y;
+            button.label = button.label ?? Default.label;
+            button.tooltip = button.tooltip ?? Default.tooltip;
+            button.target = button.target ?? Default.target;
+            button.runIn = button.runIn ?? Default.runIn;
+            button.fromRight = button.fromRight ?? Default.fromRight;
+            button.fromBottom = button.fromBottom ?? Default.fromBottom;
+            button.tooltipColor = button.tooltipColor ?? Default.tooltipColor;
+            button.args = button.args ?? Default.args;
+            button.scale = button.scale ?? Default.scale;
+
+            // Button creation
             var buttonToAdd:FlxAnimButton = new FlxAnimButton(button.label, 0, 0, 'bulkAssets/buttons/${button.label}');
-            buttonToAdd.init_X = button.fromRight ? Capabilities.screenResolutionX - button.x : button.x;
-            buttonToAdd.init_Y = button.fromBottom ? Capabilities.screenResolutionY - button.y : button.y;
             if (button.scale != null && button.scale is Int)
                 buttonToAdd.scale.set(button.scale, button.scale);
+            buttonToAdd.init_X = button.fromRight ? Capabilities.screenResolutionX - buttonToAdd.width - button.x : button.x;
+            buttonToAdd.init_Y = button.fromBottom ? Capabilities.screenResolutionY - buttonToAdd.height - button.y : button.y;
             
             var ifEnv:String = CheckForEnv(button.runIn, buttonList.indexOf(button));
-            if (ifEnv == null) continue; // skip making button callbacks and adding.
+            if (ifEnv == null) {
+                Sys.println("   \x1b[1;33mButtonMapping\x1b[37m | Button " + (buttonList.indexOf(button) + 1) + " needs argument checks.\x1b[0m");
+                continue; // skip making button callbacks and adding.
+            }
 
             buttonToAdd.setCallbacks(
                 () -> {
@@ -79,8 +113,19 @@ class ButtonMapping {
                     var args = new NativeProcessStartupInfo();
                     args.executable = new File(ifEnv + "/" + button.target); //placeholder index for one; iterate over object arguments in this block soon.
                     args.workingDirectory = new File(ifEnv);
+                    var bruh:Vector<String> = new Vector();
+                    bruh.push(button.args);
+                    args.arguments = bruh;
                     var exec:NativeProcess = new NativeProcess();
-                    try exec.start(args) catch(no) throw no;
+                    try {
+                        exec.start(args);
+                        // Command-line argument readings below for if an app successfully laucnhes; tailor to that purpose soon.
+                        exec.addEventListener(ProgressEvent.STANDARD_OUTPUT_DATA, (e) -> {
+                            @:privateAccess var bytes = new haxe.io.Bytes(Std.int(e.bytesLoaded), new BytesData());
+                            exec.standardOutput.readBytes(bytes, 0, 0);
+                            Sys.println("        \x1b[36m" + bytes.toString() + "\x1b[37m");
+                        }); 
+                    } catch(no) throw no;
                 },
                 () -> {
                     FlxTween.cancelTweensOf(buttonToAdd);
@@ -90,55 +135,61 @@ class ButtonMapping {
                 },
                 () -> {
                     FlxTween.cancelTweensOf(buttonToAdd, ["scale.x", "scale.y"]);
-                    FlxTween.tween(buttonToAdd, {"scale.x": 0.7, "scale.y": 0.7, y: buttonToAdd.y - 10}, 0.5, {ease: FlxEase.circOut});
+                    FlxTween.tween(buttonToAdd, {"scale.x": button.scale + 0.2, "scale.y": button.scale + 0.2, y: buttonToAdd.y - 10}, 0.5, {ease: FlxEase.circOut});
                     WallpaperState.changeText(button.tooltip, flixel.util.FlxColor.fromString(button.tooltipColor));
                 },
                 () -> {
                     inline WallpaperState.resetSelection();
                     FlxTween.cancelTweensOf(buttonToAdd, ["scale.x", "scale.y"]);
-                    FlxTween.tween(buttonToAdd, {"scale.x": 0.6, "scale.y": 0.6, y: buttonToAdd.init_Y}, 0.5, {ease: FlxEase.circOut});
+                    FlxTween.tween(buttonToAdd, {"scale.x": button.scale, "scale.y": button.scale, y: buttonToAdd.init_Y}, 0.5, {ease: FlxEase.circOut});
                 }
             );
             ButtonArray.push(buttonToAdd);
         }
-        if (Lambda.count(ErrorIndices) > 0) throw 'JSON | Could not open or run target at ${Lambda.count(ErrorIndices) > 1 ? "buttons: " + ErrorIndices : "button #" + (ErrorIndices)}; check the file path(s).';
+        if (Lambda.count(ErrorIndices) > 0) 
+            Application.current.window.alert('JSON | Could not initialize ${Lambda.count(ErrorIndices) > 1 ? "buttons: " + ErrorIndices : "button #" + (ErrorIndices)}; check object syntax or console for info.', "- Buttons failed! -");
 
-        trace(ButtonArray);
         for (btn in ButtonArray) {
             WallpaperState.instance.add(btn);
             btn.cameras = [WallpaperState.camGUI];
         }
     } 
     static function CheckForEnv(cmdPath:String, index:Int):String {
-        // To-do: In case of there being more than one argument (which there shouldn't be, really...) set an array for multiple occurrences.
         final envReg:EReg = ~/%([0-9a-zA-Z_(-)]+)%/giu;
-        final cdReg:EReg = ~/^(cd )/gi;
-        final extReg:EReg = ~/exe|txt|lnk/gi; //hardcoded for now
         var cwd:String = Sys.getCwd();
-        var formattedArgs:Array<String> = [];
         if (envReg.match(cmdPath)) {
-            var parsedEnv:Null<String> = envReg.matched(1); // Check To-do
+            var parsedEnv:Null<String> = envReg.matched(1);
             parsedEnv = Sys.getEnv(parsedEnv).replace("\\","/");
-            trace("** Env Variable detected: " + parsedEnv);
+            Sys.println("   \x1b[1;33mEnvCheck\x1b[0;37m | "+ (index + 1) +": Env Variable detected: " + parsedEnv);
             if (parsedEnv == null || parsedEnv == "") {
-                Sys.println('     !!! BUTTON ${index+1} ERROR. Environment variable specified does not exist or have a value!');
+                Sys.println("   \x1b[1;31mEnvCheck\x1b[0;33m | !!! BUTTON " + (index+1) + " ERROR. Environment variable specified does not exist or have a value!\x1b[37m");
                 ErrorIndices.set(index + 1, "InvalidEnvError");
                 return null;
             }
             
             cmdPath = envReg.replace(cmdPath, parsedEnv);
-            trace(cmdPath); // TO-DO: FIX ALL LOGIC FOR DIRECTORIES BEFORE FILES.
-            if (cdReg.match(cmdPath)) {
-                formattedArgs.push("cmd /k ");
-                cwd = cmdPath.substr(3);
-                cmdPath = cmdPath.substr(3);
-            }
+            // TO-DO: FIX ALL LOGIC FOR DIRECTORIES BEFORE FILES.
             if (FileSystem.exists(cwd + "/" + cmdPath) || FileSystem.exists(cmdPath) ) {
-                trace('Button ${index+1} successfully parsed. Target: $cmdPath');
+                Sys.println('      \\ Button ${index+1} \x1b[1;32msuccessfully parsed.\x1b[0;37m Target: $cmdPath');
                 return cmdPath;
             }
             else {
-                Sys.println('     !!! BUTTON ${index+1} ERROR. Target: $cmdPath');
+                // Overhaul: Check which directory may be misspelled and format output path segment for location.
+                var WhichDirectory:Array<String> = cmdPath.split("/");
+                var checker:String = "";
+                var ErrorFound:Bool = false;
+                for (path in WhichDirectory) {
+                    if (!FileSystem.exists(checker + path)) {
+                        if (checker == "C:/") continue;
+                        if (!ErrorFound) {
+                            checker = checker + "\x1b[1;31m" + path + "\x1b[0;37m/";
+                            ErrorFound = true;
+                            continue;
+                        }
+                    }
+                    checker += path+"/";
+                }
+                Sys.println("   \x1b[1;31mEnvCheck\x1b[0;33m | !!! BUTTON " + (index+1) + " ERROR. Target: \x1b[37m" + checker + "\x1b[37m");
                 ErrorIndices.set(index + 1, "NullPathError");
                 return null;
             }            

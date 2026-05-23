@@ -1,18 +1,20 @@
 {
     "buttons": [
         {
-            "x": 500,
-            "y": 200,
+            "x": 350,
+            "y": 40,
             "fromRight": false,
             "fromBottom": true,
             "label": "VSCode.png",
             "tooltip": "Open Recent Workspace",
+            "tooltipColor": "#3366ff",
             "target": "Code.exe",
             "runIn": "%USERPROFILE%/AppData/Local/Programs/Microsoft VS Code"
         },
         {
             "x": 650,
-            "y": 200,
+            "y": 40,
+            "scale": 1.5,
             "fromRight": false,
             "fromBottom": true,
             "label": "psychIcon.png",
@@ -20,6 +22,17 @@
             "tooltipColor": "#00eeee",
             "target": "PsychEngine.exe",
             "runIn": "%USERPROFILE%/FNF MODS/Psych 0.7.3 BULK"
+        },
+        {
+            "x": 500,
+            "y": 40,
+            "fromRight": false,
+            "fromBottom": true,
+            "label": "discord.png",
+            "tooltip": "Open Discord",
+            "tooltipColor": "#7650ff",
+            "target": "Discord.exe",
+            "runIn": "%localappdata%/Discord/app-1.0.9238"
         }
     ]
 }

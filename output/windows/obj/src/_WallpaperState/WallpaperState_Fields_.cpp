@@ -5,7 +5,7 @@
 #include <_WallpaperState/WallpaperState_Fields_.h>
 #endif
 
-HX_LOCAL_STACK_FRAME(_hx_pos_e0e44b769365bc00_548_jsOrWin,"_WallpaperState.WallpaperState_Fields_","jsOrWin",0x540c8cb8,"_WallpaperState.WallpaperState_Fields_.jsOrWin","WallpaperState.hx",548,0xca66d98f)
+HX_LOCAL_STACK_FRAME(_hx_pos_e0e44b769365bc00_567_jsOrWin,"_WallpaperState.WallpaperState_Fields_","jsOrWin",0x540c8cb8,"_WallpaperState.WallpaperState_Fields_.jsOrWin","WallpaperState.hx",567,0xca66d98f)
 namespace _WallpaperState{
 
 void WallpaperState_Fields__obj::__construct() { }
@@ -26,8 +26,8 @@ bool WallpaperState_Fields__obj::_hx_isInstanceOf(int inClassId) {
 }
 
  ::Dynamic WallpaperState_Fields__obj::jsOrWin( ::Dynamic jsVal, ::Dynamic winVal){
-            	HX_STACKFRAME(&_hx_pos_e0e44b769365bc00_548_jsOrWin)
-HXDLIN( 548)		return winVal;
+            	HX_STACKFRAME(&_hx_pos_e0e44b769365bc00_567_jsOrWin)
+HXDLIN( 567)		return winVal;
             	}
 
 

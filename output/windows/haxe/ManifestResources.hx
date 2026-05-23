@@ -106,10 +106,10 @@ import sys.FileSystem;
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_divider1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_divider2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_error_wav extends null { }
+@:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_fish_txt extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_heh_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_icon_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_icon64_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_info_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_music_breakfast_sky_json extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_music_breakfast_sky_ogg extends null { }
 @:keep @:bind @:noCompletion #if display private #end class __ASSET__bulkassets_music_breakfast_json extends null { }

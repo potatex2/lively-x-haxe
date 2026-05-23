@@ -88,14 +88,32 @@
 #ifndef INCLUDED_haxe_IMap
 #include <haxe/IMap.h>
 #endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
-#endif
 #ifndef INCLUDED_haxe_ds_IntMap
 #include <haxe/ds/IntMap.h>
 #endif
 #ifndef INCLUDED_haxe_format_JsonParser
 #include <haxe/format/JsonParser.h>
+#endif
+#ifndef INCLUDED_haxe_io_Bytes
+#include <haxe/io/Bytes.h>
+#endif
+#ifndef INCLUDED_lime_app_Application
+#include <lime/app/Application.h>
+#endif
+#ifndef INCLUDED_lime_app_IModule
+#include <lime/app/IModule.h>
+#endif
+#ifndef INCLUDED_lime_app_Module
+#include <lime/app/Module.h>
+#endif
+#ifndef INCLUDED_lime_ui_Window
+#include <lime/ui/Window.h>
+#endif
+#ifndef INCLUDED_openfl__Vector_IVector
+#include <openfl/_Vector/IVector.h>
+#endif
+#ifndef INCLUDED_openfl__Vector_ObjectVector
+#include <openfl/_Vector/ObjectVector.h>
 #endif
 #ifndef INCLUDED_openfl_desktop_NativeProcess
 #include <openfl/desktop/NativeProcess.h>
@@ -112,11 +130,17 @@
 #ifndef INCLUDED_openfl_display_InteractiveObject
 #include <openfl/display/InteractiveObject.h>
 #endif
+#ifndef INCLUDED_openfl_events_Event
+#include <openfl/events/Event.h>
+#endif
 #ifndef INCLUDED_openfl_events_EventDispatcher
 #include <openfl/events/EventDispatcher.h>
 #endif
 #ifndef INCLUDED_openfl_events_IEventDispatcher
 #include <openfl/events/IEventDispatcher.h>
+#endif
+#ifndef INCLUDED_openfl_events_ProgressEvent
+#include <openfl/events/ProgressEvent.h>
 #endif
 #ifndef INCLUDED_openfl_filesystem_File
 #include <openfl/filesystem/File.h>
@@ -133,24 +157,38 @@
 #ifndef INCLUDED_openfl_utils_Assets
 #include <openfl/utils/Assets.h>
 #endif
+#ifndef INCLUDED_openfl_utils_ByteArrayData
+#include <openfl/utils/ByteArrayData.h>
+#endif
+#ifndef INCLUDED_openfl_utils_IDataInput
+#include <openfl/utils/IDataInput.h>
+#endif
+#ifndef INCLUDED_openfl_utils_IDataOutput
+#include <openfl/utils/IDataOutput.h>
+#endif
+#ifndef INCLUDED_openfl_utils__ByteArray_ByteArray_Impl_
+#include <openfl/utils/_ByteArray/ByteArray_Impl_.h>
+#endif
 #ifndef INCLUDED_sys_FileSystem
 #include <sys/FileSystem.h>
 #endif
 
-HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_58_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",58,0xe380edeb)
-HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_72_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",72,0xe380edeb)
-HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_84_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",84,0xe380edeb)
-HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_90_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",90,0xe380edeb)
-static const ::String _hx_array_data_9115f354_6[] = {
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_75_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",75,0xe380edeb)
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_106_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",106,0xe380edeb)
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_123_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",123,0xe380edeb)
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_130_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",130,0xe380edeb)
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_136_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",136,0xe380edeb)
+static const ::String _hx_array_data_9115f354_7[] = {
 	HX_("scale.x",94,2d,07,65),HX_("scale.y",95,2d,07,65),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_95_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",95,0xe380edeb)
-static const ::String _hx_array_data_9115f354_8[] = {
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_141_createButtons,"classes.ButtonMapping","createButtons",0xd4e6c40b,"classes.ButtonMapping.createButtons","classes/ButtonMapping.hx",141,0xe380edeb)
+static const ::String _hx_array_data_9115f354_9[] = {
 	HX_("scale.x",94,2d,07,65),HX_("scale.y",95,2d,07,65),
 };
-HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_111_CheckForEnv,"classes.ButtonMapping","CheckForEnv",0x8af9ff12,"classes.ButtonMapping.CheckForEnv","classes/ButtonMapping.hx",111,0xe380edeb)
-HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_56_boot,"classes.ButtonMapping","boot",0x6efdaf8c,"classes.ButtonMapping.boot","classes/ButtonMapping.hx",56,0xe380edeb)
-HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_57_boot,"classes.ButtonMapping","boot",0x6efdaf8c,"classes.ButtonMapping.boot","classes/ButtonMapping.hx",57,0xe380edeb)
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_157_CheckForEnv,"classes.ButtonMapping","CheckForEnv",0x8af9ff12,"classes.ButtonMapping.CheckForEnv","classes/ButtonMapping.hx",157,0xe380edeb)
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_60_boot,"classes.ButtonMapping","boot",0x6efdaf8c,"classes.ButtonMapping.boot","classes/ButtonMapping.hx",60,0xe380edeb)
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_61_boot,"classes.ButtonMapping","boot",0x6efdaf8c,"classes.ButtonMapping.boot","classes/ButtonMapping.hx",61,0xe380edeb)
+HX_LOCAL_STACK_FRAME(_hx_pos_cd699f9074d75fac_62_boot,"classes.ButtonMapping","boot",0x6efdaf8c,"classes.ButtonMapping.boot","classes/ButtonMapping.hx",62,0xe380edeb)
 namespace classes{
 
 void ButtonMapping_obj::__construct() { }
@@ -174,33 +212,53 @@ bool ButtonMapping_obj::_hx_isInstanceOf(int inClassId) {
 
  ::haxe::ds::IntMap ButtonMapping_obj::ErrorIndices;
 
+ ::Dynamic ButtonMapping_obj::Default;
+
 void ButtonMapping_obj::createButtons(){
-            	HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_58_createButtons)
-HXLINE(  59)		::String path = HX_("bulkAssets/buttons/config.json",2c,82,4c,c8);
-HXLINE(  60)		::Array< ::Dynamic> buttonList = ( (::Array< ::Dynamic>)( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::openfl::utils::Assets_obj::getText(path))->doParse()->__Field(HX_("buttons",41,52,75,ca),::hx::paccDynamic)) );
-HXLINE(  61)		{
-HXLINE(  61)			int _g = 0;
-HXDLIN(  61)			while((_g < buttonList->length)){
-            				HX_BEGIN_LOCAL_FUNC_S3(::hx::LocalFunc,_hx_Closure_0,::String,ifEnv, ::classes::FlxAnimButton,buttonToAdd, ::Dynamic,button) HXARGC(0)
+            	HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_75_createButtons)
+HXLINE(  76)		::String path = HX_("bulkAssets/buttons/config.json",2c,82,4c,c8);
+HXLINE(  77)		::Array< ::Dynamic> buttonList = ( (::Array< ::Dynamic>)( ::haxe::format::JsonParser_obj::__alloc( HX_CTX ,::openfl::utils::Assets_obj::getText(path))->doParse()->__Field(HX_("buttons",41,52,75,ca),::hx::paccDynamic)) );
+HXLINE(  78)		{
+HXLINE(  78)			int _g = 0;
+HXDLIN(  78)			while((_g < buttonList->length)){
+            				HX_BEGIN_LOCAL_FUNC_S3(::hx::LocalFunc,_hx_Closure_1,::String,ifEnv, ::classes::FlxAnimButton,buttonToAdd, ::Dynamic,button) HXARGC(0)
             				void _hx_run(){
-            					HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_72_createButtons)
-HXLINE(  73)					::flixel::tweens::FlxTween_obj::cancelTweensOf(buttonToAdd,null());
-HXLINE(  74)					::WallpaperState_obj::toggle->soundCheck(HX_("ToggleJingle.ogg",66,d9,b3,cb),null());
-HXLINE(  75)					buttonToAdd->scale->set_x(((Float)0.6));
-HXLINE(  76)					buttonToAdd->scale->set_y(((Float)0.6));
-HXLINE(  78)					 ::openfl::desktop::NativeProcessStartupInfo args =  ::openfl::desktop::NativeProcessStartupInfo_obj::__alloc( HX_CTX );
-HXLINE(  79)					args->executable =  ::openfl::filesystem::File_obj::__alloc( HX_CTX ,( (::String)(((ifEnv + HX_("/",2f,00,00,00)) + button->__Field(HX_("target",51,f3,ec,86),::hx::paccDynamic))) ));
-HXLINE(  80)					args->workingDirectory =  ::openfl::filesystem::File_obj::__alloc( HX_CTX ,ifEnv);
-HXLINE(  81)					 ::openfl::desktop::NativeProcess exec =  ::openfl::desktop::NativeProcess_obj::__alloc( HX_CTX );
-HXLINE(  82)					try {
+            					HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_106_createButtons)
+HXLINE( 107)					::flixel::tweens::FlxTween_obj::cancelTweensOf(buttonToAdd,null());
+HXLINE( 108)					::WallpaperState_obj::toggle->soundCheck(HX_("ToggleJingle.ogg",66,d9,b3,cb),null());
+HXLINE( 109)					buttonToAdd->scale->set_x(( (Float)(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) ));
+HXLINE( 110)					buttonToAdd->scale->set_y(( (Float)(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) ));
+HXLINE( 113)					 ::openfl::desktop::NativeProcessStartupInfo args =  ::openfl::desktop::NativeProcessStartupInfo_obj::__alloc( HX_CTX );
+HXLINE( 114)					args->executable =  ::openfl::filesystem::File_obj::__alloc( HX_CTX ,( (::String)(((ifEnv + HX_("/",2f,00,00,00)) + button->__Field(HX_("target",51,f3,ec,86),::hx::paccDynamic))) ));
+HXLINE( 115)					args->workingDirectory =  ::openfl::filesystem::File_obj::__alloc( HX_CTX ,ifEnv);
+HXLINE( 116)					int length = null();
+HXDLIN( 116)					bool fixed = null();
+HXDLIN( 116)					::Array< ::String > array = null();
+HXDLIN( 116)					 ::openfl::_Vector::ObjectVector bruh =  ::openfl::_Vector::ObjectVector_obj::__alloc( HX_CTX ,length,fixed,array,true);
+HXLINE( 117)					bruh->push( ::Dynamic(button->__Field(HX_("args",5d,8d,74,40),::hx::paccDynamic)));
+HXLINE( 118)					args->arguments = bruh;
+HXLINE( 119)					 ::openfl::desktop::NativeProcess exec =  ::openfl::desktop::NativeProcess_obj::__alloc( HX_CTX );
+HXLINE( 120)					try {
+            						HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_0, ::openfl::desktop::NativeProcess,exec) HXARGC(1)
+            						void _hx_run( ::openfl::events::ProgressEvent e){
+            							HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_123_createButtons)
+HXLINE( 124)							int bytes = ::Std_obj::_hx_int(e->bytesLoaded);
+HXDLIN( 124)							 ::haxe::io::Bytes bytes1 =  ::haxe::io::Bytes_obj::__alloc( HX_CTX ,bytes,::Array_obj< unsigned char >::__new());
+HXLINE( 125)							::Dynamic _hx_tmp = exec->get_standardOutput();
+HXDLIN( 125)							::openfl::utils::IDataInput_obj::readBytes(_hx_tmp,::openfl::utils::_ByteArray::ByteArray_Impl__obj::fromBytes(bytes1),0,0);
+HXLINE( 126)							::Sys_obj::println(((HX_("        \x1b""[36m",8a,86,ce,5f) + bytes1->toString()) + HX_("\x1b""[37m",69,f7,1e,c8)));
+            						}
+            						HX_END_LOCAL_FUNC1((void))
+
             						HX_STACK_CATCHABLE( ::Dynamic, 0);
-HXLINE(  82)						exec->start(args);
+HXLINE( 121)						exec->start(args);
+HXLINE( 123)						exec->addEventListener(HX_("standardOutputData",68,2f,8b,c9), ::Dynamic(new _hx_Closure_0(exec)),null(),null(),null());
             					} catch( ::Dynamic _hx_e) {
             						if (_hx_e.IsClass<  ::Dynamic >() ){
             							HX_STACK_BEGIN_CATCH
             							 ::Dynamic _g = _hx_e;
-HXLINE(  82)							 ::haxe::Exception no = ::haxe::Exception_obj::caught(_g);
-HXDLIN(  82)							HX_STACK_DO_THROW(no);
+HXLINE( 128)							 ::haxe::Exception no = ::haxe::Exception_obj::caught(_g);
+HXDLIN( 128)							HX_STACK_DO_THROW(no);
             						}
             						else {
             							HX_STACK_DO_THROW(_hx_e);
@@ -209,135 +267,237 @@ HXDLIN(  82)							HX_STACK_DO_THROW(no);
             				}
             				HX_END_LOCAL_FUNC0((void))
 
-            				HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_1, ::classes::FlxAnimButton,buttonToAdd) HXARGC(0)
+            				HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_2, ::classes::FlxAnimButton,buttonToAdd) HXARGC(0)
             				void _hx_run(){
-            					HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_84_createButtons)
-HXLINE(  85)					::flixel::tweens::FlxTween_obj::cancelTweensOf(buttonToAdd,null());
-HXLINE(  86)					::WallpaperState_obj::toggle->soundCheck(HX_("clickIn.ogg",ae,6d,4a,9f),null());
-HXLINE(  87)					buttonToAdd->scale->set_x((buttonToAdd->scale->x - ((Float)0.2)));
-HXLINE(  88)					buttonToAdd->scale->set_y((buttonToAdd->scale->y - ((Float)0.2)));
+            					HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_130_createButtons)
+HXLINE( 131)					::flixel::tweens::FlxTween_obj::cancelTweensOf(buttonToAdd,null());
+HXLINE( 132)					::WallpaperState_obj::toggle->soundCheck(HX_("clickIn.ogg",ae,6d,4a,9f),null());
+HXLINE( 133)					buttonToAdd->scale->set_x((buttonToAdd->scale->x - ((Float)0.2)));
+HXLINE( 134)					buttonToAdd->scale->set_y((buttonToAdd->scale->y - ((Float)0.2)));
             				}
             				HX_END_LOCAL_FUNC0((void))
 
-            				HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_2, ::classes::FlxAnimButton,buttonToAdd, ::Dynamic,button) HXARGC(0)
+            				HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_3, ::classes::FlxAnimButton,buttonToAdd, ::Dynamic,button) HXARGC(0)
             				void _hx_run(){
-            					HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_90_createButtons)
-HXLINE(  91)					::flixel::tweens::FlxTween_obj::cancelTweensOf(buttonToAdd,::Array_obj< ::String >::fromData( _hx_array_data_9115f354_6,2));
-HXLINE(  92)					::flixel::tweens::FlxTween_obj::tween(buttonToAdd, ::Dynamic(::hx::Anon_obj::Create(3)
+            					HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_136_createButtons)
+HXLINE( 137)					::flixel::tweens::FlxTween_obj::cancelTweensOf(buttonToAdd,::Array_obj< ::String >::fromData( _hx_array_data_9115f354_7,2));
+HXLINE( 138)					::flixel::tweens::FlxTween_obj::tween(buttonToAdd, ::Dynamic(::hx::Anon_obj::Create(3)
             						->setFixed(0,HX_("y",79,00,00,00),(buttonToAdd->y - ( (Float)(10) )))
-            						->setFixed(1,HX_("scale.x",94,2d,07,65),((Float)0.7))
-            						->setFixed(2,HX_("scale.y",95,2d,07,65),((Float)0.7))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
+            						->setFixed(1,HX_("scale.x",94,2d,07,65), ::Dynamic((button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic) + ((Float)0.2))))
+            						->setFixed(2,HX_("scale.y",95,2d,07,65), ::Dynamic((button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic) + ((Float)0.2))))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
             						->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::circOut_dyn())));
-HXLINE(  93)					{
-HXLINE(  93)						::String text = ( (::String)(button->__Field(HX_("tooltip",03,ad,8c,6a),::hx::paccDynamic)) );
-HXDLIN(  93)						 ::Dynamic color = ::flixel::util::_FlxColor::FlxColor_Impl__obj::fromString(( (::String)(button->__Field(HX_("tooltipColor",60,29,fc,a7),::hx::paccDynamic)) ));
-HXDLIN(  93)						::WallpaperState_obj::selectedLink->set_text(text);
-HXDLIN(  93)						int _hx_tmp;
-HXDLIN(  93)						if (::hx::IsNotNull( color )) {
-HXLINE(  93)							_hx_tmp = ( (int)(color) );
+HXLINE( 139)					{
+HXLINE( 139)						::String text = ( (::String)(button->__Field(HX_("tooltip",03,ad,8c,6a),::hx::paccDynamic)) );
+HXDLIN( 139)						 ::Dynamic color = ::flixel::util::_FlxColor::FlxColor_Impl__obj::fromString(( (::String)(button->__Field(HX_("tooltipColor",60,29,fc,a7),::hx::paccDynamic)) ));
+HXDLIN( 139)						::WallpaperState_obj::selectedLink->set_text(text);
+HXDLIN( 139)						int _hx_tmp;
+HXDLIN( 139)						if (::hx::IsNotNull( color )) {
+HXLINE( 139)							_hx_tmp = ( (int)(color) );
             						}
             						else {
-HXLINE(  93)							_hx_tmp = 65322;
+HXLINE( 139)							_hx_tmp = 65322;
             						}
-HXDLIN(  93)						::WallpaperState_obj::selectedLink->set_textColor(_hx_tmp);
+HXDLIN( 139)						::WallpaperState_obj::selectedLink->set_textColor(_hx_tmp);
             					}
             				}
             				HX_END_LOCAL_FUNC0((void))
 
-            				HX_BEGIN_LOCAL_FUNC_S1(::hx::LocalFunc,_hx_Closure_3, ::classes::FlxAnimButton,buttonToAdd) HXARGC(0)
+            				HX_BEGIN_LOCAL_FUNC_S2(::hx::LocalFunc,_hx_Closure_4, ::classes::FlxAnimButton,buttonToAdd, ::Dynamic,button) HXARGC(0)
             				void _hx_run(){
-            					HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_95_createButtons)
-HXLINE(  96)					{
-HXLINE(  96)						::WallpaperState_obj::selectedLink->set_text(HX_("",00,00,00,00));
-HXDLIN(  96)						::WallpaperState_obj::selectedLink->set_textColor(65322);
+            					HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_141_createButtons)
+HXLINE( 142)					{
+HXLINE( 142)						::WallpaperState_obj::selectedLink->set_text(HX_("",00,00,00,00));
+HXDLIN( 142)						::WallpaperState_obj::selectedLink->set_textColor(65322);
             					}
-HXLINE(  97)					::flixel::tweens::FlxTween_obj::cancelTweensOf(buttonToAdd,::Array_obj< ::String >::fromData( _hx_array_data_9115f354_8,2));
-HXLINE(  98)					::flixel::tweens::FlxTween_obj::tween(buttonToAdd, ::Dynamic(::hx::Anon_obj::Create(3)
+HXLINE( 143)					::flixel::tweens::FlxTween_obj::cancelTweensOf(buttonToAdd,::Array_obj< ::String >::fromData( _hx_array_data_9115f354_9,2));
+HXLINE( 144)					::flixel::tweens::FlxTween_obj::tween(buttonToAdd, ::Dynamic(::hx::Anon_obj::Create(3)
             						->setFixed(0,HX_("y",79,00,00,00),buttonToAdd->init_Y)
-            						->setFixed(1,HX_("scale.x",94,2d,07,65),((Float)0.6))
-            						->setFixed(2,HX_("scale.y",95,2d,07,65),((Float)0.6))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
+            						->setFixed(1,HX_("scale.x",94,2d,07,65), ::Dynamic(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)))
+            						->setFixed(2,HX_("scale.y",95,2d,07,65), ::Dynamic(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)))),((Float)0.5), ::Dynamic(::hx::Anon_obj::Create(1)
             						->setFixed(0,HX_("ease",ee,8b,0c,43),::flixel::tweens::FlxEase_obj::circOut_dyn())));
             				}
             				HX_END_LOCAL_FUNC0((void))
 
-HXLINE(  61)				 ::Dynamic button = buttonList->__get(_g);
-HXDLIN(  61)				_g = (_g + 1);
-HXLINE(  62)				 ::classes::FlxAnimButton buttonToAdd =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,( (::String)(button->__Field(HX_("label",f4,0d,af,6f),::hx::paccDynamic)) ),( (Float)(0) ),( (Float)(0) ),( (::String)((HX_("bulkAssets/buttons/",28,ba,2b,41) + button->__Field(HX_("label",f4,0d,af,6f),::hx::paccDynamic))) ),null());
-HXLINE(  63)				 ::classes::FlxAnimButton buttonToAdd1 = buttonToAdd;
-HXDLIN(  63)				Float _hx_tmp;
-HXDLIN(  63)				if (( (bool)(button->__Field(HX_("fromRight",12,f6,ec,9d),::hx::paccDynamic)) )) {
-HXLINE(  63)					Float _hx_tmp1 = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionX();
-HXDLIN(  63)					_hx_tmp = (_hx_tmp1 - ( (Float)(button->__Field(HX_("x",78,00,00,00),::hx::paccDynamic)) ));
+HXLINE(  78)				 ::Dynamic button = buttonList->__get(_g);
+HXDLIN(  78)				_g = (_g + 1);
+HXLINE(  80)				 ::Dynamic tmp = button->__Field(HX_("x",78,00,00,00),::hx::paccDynamic);
+HXDLIN(  80)				int _hx_tmp;
+HXDLIN(  80)				if (::hx::IsNotNull( tmp )) {
+HXLINE(  80)					_hx_tmp = ( (int)(tmp) );
             				}
             				else {
-HXLINE(  63)					_hx_tmp = ( (Float)(button->__Field(HX_("x",78,00,00,00),::hx::paccDynamic)) );
+HXLINE(  80)					_hx_tmp = ( (int)(::classes::ButtonMapping_obj::Default->__Field(HX_("x",78,00,00,00),::hx::paccDynamic)) );
             				}
-HXDLIN(  63)				buttonToAdd1->set_init_X(_hx_tmp);
-HXLINE(  64)				 ::classes::FlxAnimButton buttonToAdd2 = buttonToAdd;
-HXDLIN(  64)				Float _hx_tmp2;
-HXDLIN(  64)				if (( (bool)(button->__Field(HX_("fromBottom",f5,eb,bc,a8),::hx::paccDynamic)) )) {
-HXLINE(  64)					Float _hx_tmp3 = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionY();
-HXDLIN(  64)					_hx_tmp2 = (_hx_tmp3 - ( (Float)(button->__Field(HX_("y",79,00,00,00),::hx::paccDynamic)) ));
-            				}
-            				else {
-HXLINE(  64)					_hx_tmp2 = ( (Float)(button->__Field(HX_("y",79,00,00,00),::hx::paccDynamic)) );
-            				}
-HXDLIN(  64)				buttonToAdd2->set_init_Y(_hx_tmp2);
-HXLINE(  65)				bool _hx_tmp4;
-HXDLIN(  65)				if (::hx::IsNotNull( button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic) )) {
-HXLINE(  65)					_hx_tmp4 = ::Std_obj::isOfType( ::Dynamic(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)),::hx::ClassOf< int >());
+HXDLIN(  80)				button->__SetField(HX_("x",78,00,00,00),_hx_tmp,::hx::paccDynamic);
+HXLINE(  81)				 ::Dynamic tmp1 = button->__Field(HX_("y",79,00,00,00),::hx::paccDynamic);
+HXDLIN(  81)				int _hx_tmp1;
+HXDLIN(  81)				if (::hx::IsNotNull( tmp1 )) {
+HXLINE(  81)					_hx_tmp1 = ( (int)(tmp1) );
             				}
             				else {
-HXLINE(  65)					_hx_tmp4 = false;
+HXLINE(  81)					_hx_tmp1 = ( (int)(::classes::ButtonMapping_obj::Default->__Field(HX_("y",79,00,00,00),::hx::paccDynamic)) );
             				}
-HXDLIN(  65)				if (_hx_tmp4) {
-HXLINE(  66)					 ::flixel::math::FlxBasePoint this1 = buttonToAdd->scale;
-HXDLIN(  66)					Float y = ( (Float)(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) );
-HXDLIN(  66)					this1->set_x(( (Float)(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) ));
-HXDLIN(  66)					this1->set_y(y);
+HXDLIN(  81)				button->__SetField(HX_("y",79,00,00,00),_hx_tmp1,::hx::paccDynamic);
+HXLINE(  82)				::String tmp2 = ( (::String)(button->__Field(HX_("label",f4,0d,af,6f),::hx::paccDynamic)) );
+HXDLIN(  82)				::String _hx_tmp2;
+HXDLIN(  82)				if (::hx::IsNotNull( tmp2 )) {
+HXLINE(  82)					_hx_tmp2 = tmp2;
             				}
-HXLINE(  68)				::String button1 = ( (::String)(button->__Field(HX_("runIn",10,d0,57,f1),::hx::paccDynamic)) );
-HXDLIN(  68)				::String ifEnv = ::classes::ButtonMapping_obj::CheckForEnv(button1,buttonList->indexOf(button,null()));
-HXLINE(  69)				if (::hx::IsNull( ifEnv )) {
-HXLINE(  69)					continue;
+            				else {
+HXLINE(  82)					_hx_tmp2 = ( (::String)(::classes::ButtonMapping_obj::Default->__Field(HX_("label",f4,0d,af,6f),::hx::paccDynamic)) );
             				}
-HXLINE(  71)				buttonToAdd->setCallbacks( ::Dynamic(new _hx_Closure_0(ifEnv,buttonToAdd,button)), ::Dynamic(new _hx_Closure_1(buttonToAdd)), ::Dynamic(new _hx_Closure_2(buttonToAdd,button)), ::Dynamic(new _hx_Closure_3(buttonToAdd)));
-HXLINE( 101)				::classes::ButtonMapping_obj::ButtonArray->push(buttonToAdd);
+HXDLIN(  82)				button->__SetField(HX_("label",f4,0d,af,6f),_hx_tmp2,::hx::paccDynamic);
+HXLINE(  83)				::String tmp3 = ( (::String)(button->__Field(HX_("tooltip",03,ad,8c,6a),::hx::paccDynamic)) );
+HXDLIN(  83)				::String _hx_tmp3;
+HXDLIN(  83)				if (::hx::IsNotNull( tmp3 )) {
+HXLINE(  83)					_hx_tmp3 = tmp3;
+            				}
+            				else {
+HXLINE(  83)					_hx_tmp3 = ( (::String)(::classes::ButtonMapping_obj::Default->__Field(HX_("tooltip",03,ad,8c,6a),::hx::paccDynamic)) );
+            				}
+HXDLIN(  83)				button->__SetField(HX_("tooltip",03,ad,8c,6a),_hx_tmp3,::hx::paccDynamic);
+HXLINE(  84)				::String tmp4 = ( (::String)(button->__Field(HX_("target",51,f3,ec,86),::hx::paccDynamic)) );
+HXDLIN(  84)				::String _hx_tmp4;
+HXDLIN(  84)				if (::hx::IsNotNull( tmp4 )) {
+HXLINE(  84)					_hx_tmp4 = tmp4;
+            				}
+            				else {
+HXLINE(  84)					_hx_tmp4 = ( (::String)(::classes::ButtonMapping_obj::Default->__Field(HX_("target",51,f3,ec,86),::hx::paccDynamic)) );
+            				}
+HXDLIN(  84)				button->__SetField(HX_("target",51,f3,ec,86),_hx_tmp4,::hx::paccDynamic);
+HXLINE(  85)				::String tmp5 = ( (::String)(button->__Field(HX_("runIn",10,d0,57,f1),::hx::paccDynamic)) );
+HXDLIN(  85)				::String _hx_tmp5;
+HXDLIN(  85)				if (::hx::IsNotNull( tmp5 )) {
+HXLINE(  85)					_hx_tmp5 = tmp5;
+            				}
+            				else {
+HXLINE(  85)					_hx_tmp5 = ( (::String)(::classes::ButtonMapping_obj::Default->__Field(HX_("runIn",10,d0,57,f1),::hx::paccDynamic)) );
+            				}
+HXDLIN(  85)				button->__SetField(HX_("runIn",10,d0,57,f1),_hx_tmp5,::hx::paccDynamic);
+HXLINE(  86)				 ::Dynamic tmp6 = button->__Field(HX_("fromRight",12,f6,ec,9d),::hx::paccDynamic);
+HXDLIN(  86)				bool _hx_tmp6;
+HXDLIN(  86)				if (::hx::IsNotNull( tmp6 )) {
+HXLINE(  86)					_hx_tmp6 = ( (bool)(tmp6) );
+            				}
+            				else {
+HXLINE(  86)					_hx_tmp6 = ( (bool)(::classes::ButtonMapping_obj::Default->__Field(HX_("fromRight",12,f6,ec,9d),::hx::paccDynamic)) );
+            				}
+HXDLIN(  86)				button->__SetField(HX_("fromRight",12,f6,ec,9d),_hx_tmp6,::hx::paccDynamic);
+HXLINE(  87)				 ::Dynamic tmp7 = button->__Field(HX_("fromBottom",f5,eb,bc,a8),::hx::paccDynamic);
+HXDLIN(  87)				bool _hx_tmp7;
+HXDLIN(  87)				if (::hx::IsNotNull( tmp7 )) {
+HXLINE(  87)					_hx_tmp7 = ( (bool)(tmp7) );
+            				}
+            				else {
+HXLINE(  87)					_hx_tmp7 = ( (bool)(::classes::ButtonMapping_obj::Default->__Field(HX_("fromBottom",f5,eb,bc,a8),::hx::paccDynamic)) );
+            				}
+HXDLIN(  87)				button->__SetField(HX_("fromBottom",f5,eb,bc,a8),_hx_tmp7,::hx::paccDynamic);
+HXLINE(  88)				::String tmp8 = ( (::String)(button->__Field(HX_("tooltipColor",60,29,fc,a7),::hx::paccDynamic)) );
+HXDLIN(  88)				::String _hx_tmp8;
+HXDLIN(  88)				if (::hx::IsNotNull( tmp8 )) {
+HXLINE(  88)					_hx_tmp8 = tmp8;
+            				}
+            				else {
+HXLINE(  88)					_hx_tmp8 = ( (::String)(::classes::ButtonMapping_obj::Default->__Field(HX_("tooltipColor",60,29,fc,a7),::hx::paccDynamic)) );
+            				}
+HXDLIN(  88)				button->__SetField(HX_("tooltipColor",60,29,fc,a7),_hx_tmp8,::hx::paccDynamic);
+HXLINE(  89)				::String tmp9 = ( (::String)(button->__Field(HX_("args",5d,8d,74,40),::hx::paccDynamic)) );
+HXDLIN(  89)				::String _hx_tmp9;
+HXDLIN(  89)				if (::hx::IsNotNull( tmp9 )) {
+HXLINE(  89)					_hx_tmp9 = tmp9;
+            				}
+            				else {
+HXLINE(  89)					_hx_tmp9 = ( (::String)(::classes::ButtonMapping_obj::Default->__Field(HX_("args",5d,8d,74,40),::hx::paccDynamic)) );
+            				}
+HXDLIN(  89)				button->__SetField(HX_("args",5d,8d,74,40),_hx_tmp9,::hx::paccDynamic);
+HXLINE(  90)				 ::Dynamic tmp10 = button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic);
+HXDLIN(  90)				 ::Dynamic _hx_tmp10;
+HXDLIN(  90)				if (::hx::IsNotNull( tmp10 )) {
+HXLINE(  90)					_hx_tmp10 = tmp10;
+            				}
+            				else {
+HXLINE(  90)					_hx_tmp10 = ::classes::ButtonMapping_obj::Default->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic);
+            				}
+HXDLIN(  90)				button->__SetField(HX_("scale",8a,ce,ce,78),_hx_tmp10,::hx::paccDynamic);
+HXLINE(  93)				 ::classes::FlxAnimButton buttonToAdd =  ::classes::FlxAnimButton_obj::__alloc( HX_CTX ,( (::String)(button->__Field(HX_("label",f4,0d,af,6f),::hx::paccDynamic)) ),( (Float)(0) ),( (Float)(0) ),( (::String)((HX_("bulkAssets/buttons/",28,ba,2b,41) + button->__Field(HX_("label",f4,0d,af,6f),::hx::paccDynamic))) ),null());
+HXLINE(  94)				bool _hx_tmp11;
+HXDLIN(  94)				if (::hx::IsNotNull( button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic) )) {
+HXLINE(  94)					_hx_tmp11 = ::Std_obj::isOfType( ::Dynamic(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)),::hx::ClassOf< int >());
+            				}
+            				else {
+HXLINE(  94)					_hx_tmp11 = false;
+            				}
+HXDLIN(  94)				if (_hx_tmp11) {
+HXLINE(  95)					 ::flixel::math::FlxBasePoint this1 = buttonToAdd->scale;
+HXDLIN(  95)					Float y = ( (Float)(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) );
+HXDLIN(  95)					this1->set_x(( (Float)(button->__Field(HX_("scale",8a,ce,ce,78),::hx::paccDynamic)) ));
+HXDLIN(  95)					this1->set_y(y);
+            				}
+HXLINE(  96)				 ::classes::FlxAnimButton buttonToAdd1 = buttonToAdd;
+HXDLIN(  96)				Float _hx_tmp12;
+HXDLIN(  96)				if (( (bool)(button->__Field(HX_("fromRight",12,f6,ec,9d),::hx::paccDynamic)) )) {
+HXLINE(  96)					Float _hx_tmp13 = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionX();
+HXDLIN(  96)					Float _hx_tmp14 = (_hx_tmp13 - buttonToAdd->get_width());
+HXDLIN(  96)					_hx_tmp12 = (_hx_tmp14 - ( (Float)(button->__Field(HX_("x",78,00,00,00),::hx::paccDynamic)) ));
+            				}
+            				else {
+HXLINE(  96)					_hx_tmp12 = ( (Float)(button->__Field(HX_("x",78,00,00,00),::hx::paccDynamic)) );
+            				}
+HXDLIN(  96)				buttonToAdd1->set_init_X(_hx_tmp12);
+HXLINE(  97)				 ::classes::FlxAnimButton buttonToAdd2 = buttonToAdd;
+HXDLIN(  97)				Float _hx_tmp15;
+HXDLIN(  97)				if (( (bool)(button->__Field(HX_("fromBottom",f5,eb,bc,a8),::hx::paccDynamic)) )) {
+HXLINE(  97)					Float _hx_tmp16 = ::openfl::_hx_system::Capabilities_obj::get_screenResolutionY();
+HXDLIN(  97)					Float _hx_tmp17 = (_hx_tmp16 - buttonToAdd->get_height());
+HXDLIN(  97)					_hx_tmp15 = (_hx_tmp17 - ( (Float)(button->__Field(HX_("y",79,00,00,00),::hx::paccDynamic)) ));
+            				}
+            				else {
+HXLINE(  97)					_hx_tmp15 = ( (Float)(button->__Field(HX_("y",79,00,00,00),::hx::paccDynamic)) );
+            				}
+HXDLIN(  97)				buttonToAdd2->set_init_Y(_hx_tmp15);
+HXLINE(  99)				::String button1 = ( (::String)(button->__Field(HX_("runIn",10,d0,57,f1),::hx::paccDynamic)) );
+HXDLIN(  99)				::String ifEnv = ::classes::ButtonMapping_obj::CheckForEnv(button1,buttonList->indexOf(button,null()));
+HXLINE( 100)				if (::hx::IsNull( ifEnv )) {
+HXLINE( 101)					::Sys_obj::println(((HX_("   \x1b""[1;33mButtonMapping\x1b""[37m | Button ",ba,94,6f,3b) + (buttonList->indexOf(button,null()) + 1)) + HX_(" needs argument checks.\x1b""[0m",60,b6,ce,d7)));
+HXLINE( 102)					continue;
+            				}
+HXLINE( 105)				buttonToAdd->setCallbacks( ::Dynamic(new _hx_Closure_1(ifEnv,buttonToAdd,button)), ::Dynamic(new _hx_Closure_2(buttonToAdd)), ::Dynamic(new _hx_Closure_3(buttonToAdd,button)), ::Dynamic(new _hx_Closure_4(buttonToAdd,button)));
+HXLINE( 147)				::classes::ButtonMapping_obj::ButtonArray->push(buttonToAdd);
             			}
             		}
-HXLINE( 103)		if ((::Lambda_obj::count(::classes::ButtonMapping_obj::ErrorIndices,null()) > 0)) {
-HXLINE( 103)			::String _hx_tmp5;
-HXDLIN( 103)			if ((::Lambda_obj::count(::classes::ButtonMapping_obj::ErrorIndices,null()) > 1)) {
-HXLINE( 103)				::String _hx_tmp6;
-HXDLIN( 103)				if (::hx::IsNull( ::classes::ButtonMapping_obj::ErrorIndices )) {
-HXLINE( 103)					_hx_tmp6 = HX_("null",87,9e,0e,49);
+HXLINE( 149)		if ((::Lambda_obj::count(::classes::ButtonMapping_obj::ErrorIndices,null()) > 0)) {
+HXLINE( 150)			 ::lime::ui::Window _hx_tmp18 = ::lime::app::Application_obj::current->_hx___window;
+HXDLIN( 150)			::String _hx_tmp19;
+HXDLIN( 150)			if ((::Lambda_obj::count(::classes::ButtonMapping_obj::ErrorIndices,null()) > 1)) {
+HXLINE( 150)				::String _hx_tmp20;
+HXDLIN( 150)				if (::hx::IsNull( ::classes::ButtonMapping_obj::ErrorIndices )) {
+HXLINE( 150)					_hx_tmp20 = HX_("null",87,9e,0e,49);
             				}
             				else {
-HXLINE( 103)					_hx_tmp6 = ::classes::ButtonMapping_obj::ErrorIndices->toString();
+HXLINE( 150)					_hx_tmp20 = ::classes::ButtonMapping_obj::ErrorIndices->toString();
             				}
-HXDLIN( 103)				_hx_tmp5 = (HX_("buttons: ",27,57,1f,50) + _hx_tmp6);
+HXDLIN( 150)				_hx_tmp19 = (HX_("buttons: ",27,57,1f,50) + _hx_tmp20);
             			}
             			else {
-HXLINE( 103)				::String _hx_tmp7;
-HXDLIN( 103)				if (::hx::IsNull( ::classes::ButtonMapping_obj::ErrorIndices )) {
-HXLINE( 103)					_hx_tmp7 = HX_("null",87,9e,0e,49);
+HXLINE( 150)				::String _hx_tmp21;
+HXDLIN( 150)				if (::hx::IsNull( ::classes::ButtonMapping_obj::ErrorIndices )) {
+HXLINE( 150)					_hx_tmp21 = HX_("null",87,9e,0e,49);
             				}
             				else {
-HXLINE( 103)					_hx_tmp7 = ::classes::ButtonMapping_obj::ErrorIndices->toString();
+HXLINE( 150)					_hx_tmp21 = ::classes::ButtonMapping_obj::ErrorIndices->toString();
             				}
-HXDLIN( 103)				_hx_tmp5 = (HX_("button #",75,5e,32,5c) + _hx_tmp7);
+HXDLIN( 150)				_hx_tmp19 = (HX_("button #",75,5e,32,5c) + _hx_tmp21);
             			}
-HXDLIN( 103)			HX_STACK_DO_THROW(((HX_("JSON | Could not open or run target at ",22,d4,ec,2d) + _hx_tmp5) + HX_("; check the file path(s).",0d,e2,5c,6a)));
+HXDLIN( 150)			_hx_tmp18->alert(((HX_("JSON | Could not initialize ",68,8a,f8,7a) + _hx_tmp19) + HX_("; check object syntax or console for info.",3c,08,ee,d5)),HX_("- Buttons failed! -",5f,09,f9,7e));
             		}
-HXLINE( 105)		::haxe::Log_obj::trace(::classes::ButtonMapping_obj::ButtonArray,::hx::SourceInfo(HX_("source/classes/ButtonMapping.hx",df,38,e8,6f),105,HX_("classes.ButtonMapping",54,f3,15,91),HX_("createButtons",a5,2a,b8,b2)));
-HXLINE( 106)		{
-HXLINE( 106)			int _g1 = 0;
-HXDLIN( 106)			::Array< ::Dynamic> _g2 = ::classes::ButtonMapping_obj::ButtonArray;
-HXDLIN( 106)			while((_g1 < _g2->length)){
-HXLINE( 106)				 ::classes::FlxAnimButton btn = _g2->__get(_g1).StaticCast<  ::classes::FlxAnimButton >();
-HXDLIN( 106)				_g1 = (_g1 + 1);
-HXLINE( 107)				::WallpaperState_obj::instance->add(btn).StaticCast<  ::flixel::FlxBasic >();
-HXLINE( 108)				btn->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camGUI));
+HXLINE( 152)		{
+HXLINE( 152)			int _g1 = 0;
+HXDLIN( 152)			::Array< ::Dynamic> _g2 = ::classes::ButtonMapping_obj::ButtonArray;
+HXDLIN( 152)			while((_g1 < _g2->length)){
+HXLINE( 152)				 ::classes::FlxAnimButton btn = _g2->__get(_g1).StaticCast<  ::classes::FlxAnimButton >();
+HXDLIN( 152)				_g1 = (_g1 + 1);
+HXLINE( 153)				::WallpaperState_obj::instance->add(btn).StaticCast<  ::flixel::FlxBasic >();
+HXLINE( 154)				btn->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::WallpaperState_obj::camGUI));
             			}
             		}
             	}
@@ -346,53 +506,65 @@ HXLINE( 108)				btn->set_cameras(::Array_obj< ::Dynamic>::__new(1)->init(0,::Wal
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ButtonMapping_obj,createButtons,(void))
 
 ::String ButtonMapping_obj::CheckForEnv(::String cmdPath,int index){
-            	HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_111_CheckForEnv)
-HXLINE( 113)		 ::EReg envReg =  ::EReg_obj::__alloc( HX_CTX ,HX_("%([0-9a-zA-Z_(-)]+)%",13,b1,a7,77),HX_("giu",13,84,4e,00));
-HXLINE( 114)		 ::EReg cdReg =  ::EReg_obj::__alloc( HX_CTX ,HX_("^(cd )",f4,3b,4f,df),HX_("gi",22,5a,00,00));
-HXLINE( 115)		 ::EReg extReg =  ::EReg_obj::__alloc( HX_CTX ,HX_("exe|txt|lnk",b3,64,a7,d7),HX_("gi",22,5a,00,00));
-HXLINE( 116)		::String cwd = ::Sys_obj::getCwd();
-HXLINE( 117)		::Array< ::String > formattedArgs = ::Array_obj< ::String >::__new(0);
-HXLINE( 118)		if (envReg->match(cmdPath)) {
-HXLINE( 119)			::String parsedEnv = envReg->matched(1);
-HXLINE( 120)			parsedEnv = ::StringTools_obj::replace(::Sys_obj::getEnv(parsedEnv),HX_("\\",5c,00,00,00),HX_("/",2f,00,00,00));
-HXLINE( 121)			::haxe::Log_obj::trace((HX_("** Env Variable detected: ",b9,80,16,57) + parsedEnv),::hx::SourceInfo(HX_("source/classes/ButtonMapping.hx",df,38,e8,6f),121,HX_("classes.ButtonMapping",54,f3,15,91),HX_("CheckForEnv",2c,ab,b4,c3)));
-HXLINE( 122)			bool _hx_tmp;
-HXDLIN( 122)			if (::hx::IsNotNull( parsedEnv )) {
-HXLINE( 122)				_hx_tmp = (parsedEnv == HX_("",00,00,00,00));
+            	HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_157_CheckForEnv)
+HXLINE( 158)		 ::EReg envReg =  ::EReg_obj::__alloc( HX_CTX ,HX_("%([0-9a-zA-Z_(-)]+)%",13,b1,a7,77),HX_("giu",13,84,4e,00));
+HXLINE( 159)		::String cwd = ::Sys_obj::getCwd();
+HXLINE( 160)		if (envReg->match(cmdPath)) {
+HXLINE( 161)			::String parsedEnv = envReg->matched(1);
+HXLINE( 162)			parsedEnv = ::StringTools_obj::replace(::Sys_obj::getEnv(parsedEnv),HX_("\\",5c,00,00,00),HX_("/",2f,00,00,00));
+HXLINE( 163)			::Sys_obj::println((((HX_("   \x1b""[1;33mEnvCheck\x1b""[0;37m | ",24,22,3e,cc) + (index + 1)) + HX_(": Env Variable detected: ",33,7a,01,99)) + parsedEnv));
+HXLINE( 164)			bool _hx_tmp;
+HXDLIN( 164)			if (::hx::IsNotNull( parsedEnv )) {
+HXLINE( 164)				_hx_tmp = (parsedEnv == HX_("",00,00,00,00));
             			}
             			else {
-HXLINE( 122)				_hx_tmp = true;
+HXLINE( 164)				_hx_tmp = true;
             			}
-HXDLIN( 122)			if (_hx_tmp) {
-HXLINE( 123)				::Sys_obj::println(((HX_("     !!! BUTTON ",ef,25,1c,d3) + (index + 1)) + HX_(" ERROR. Environment variable specified does not exist or have a value!",1a,e3,ee,c7)));
-HXLINE( 124)				::classes::ButtonMapping_obj::ErrorIndices->set((index + 1),HX_("InvalidEnvError",92,ca,6f,52));
-HXLINE( 125)				return null();
+HXDLIN( 164)			if (_hx_tmp) {
+HXLINE( 165)				::Sys_obj::println(((HX_("   \x1b""[1;31mEnvCheck\x1b""[0;33m | !!! BUTTON ",6d,3a,c1,8e) + (index + 1)) + HX_(" ERROR. Environment variable specified does not exist or have a value!\x1b""[37m",0f,96,a0,e9)));
+HXLINE( 166)				::classes::ButtonMapping_obj::ErrorIndices->set((index + 1),HX_("InvalidEnvError",92,ca,6f,52));
+HXLINE( 167)				return null();
             			}
-HXLINE( 128)			cmdPath = envReg->replace(cmdPath,parsedEnv);
-HXLINE( 129)			::haxe::Log_obj::trace(cmdPath,::hx::SourceInfo(HX_("source/classes/ButtonMapping.hx",df,38,e8,6f),129,HX_("classes.ButtonMapping",54,f3,15,91),HX_("CheckForEnv",2c,ab,b4,c3)));
-HXLINE( 130)			if (cdReg->match(cmdPath)) {
-HXLINE( 131)				formattedArgs->push(HX_("cmd /k ",9e,1e,10,53));
-HXLINE( 132)				cwd = cmdPath.substr(3,null());
-HXLINE( 133)				cmdPath = cmdPath.substr(3,null());
-            			}
-HXLINE( 135)			bool _hx_tmp1;
-HXDLIN( 135)			if (!(::sys::FileSystem_obj::exists(((cwd + HX_("/",2f,00,00,00)) + cmdPath)))) {
-HXLINE( 135)				_hx_tmp1 = ::sys::FileSystem_obj::exists(cmdPath);
+HXLINE( 170)			cmdPath = envReg->replace(cmdPath,parsedEnv);
+HXLINE( 172)			bool _hx_tmp1;
+HXDLIN( 172)			if (!(::sys::FileSystem_obj::exists(((cwd + HX_("/",2f,00,00,00)) + cmdPath)))) {
+HXLINE( 172)				_hx_tmp1 = ::sys::FileSystem_obj::exists(cmdPath);
             			}
             			else {
-HXLINE( 135)				_hx_tmp1 = true;
+HXLINE( 172)				_hx_tmp1 = true;
             			}
-HXDLIN( 135)			if (_hx_tmp1) {
-HXLINE( 136)				::haxe::Log_obj::trace((((HX_("Button ",ce,79,c6,97) + (index + 1)) + HX_(" successfully parsed. Target: ",53,8b,c7,f4)) + cmdPath),::hx::SourceInfo(HX_("source/classes/ButtonMapping.hx",df,38,e8,6f),136,HX_("classes.ButtonMapping",54,f3,15,91),HX_("CheckForEnv",2c,ab,b4,c3)));
-HXLINE( 137)				return cmdPath;
+HXDLIN( 172)			if (_hx_tmp1) {
+HXLINE( 173)				::Sys_obj::println((((HX_("      \\ Button ",0a,a6,0e,97) + (index + 1)) + HX_(" \x1b""[1;32msuccessfully parsed.\x1b""[0;37m Target: ",41,47,ba,fc)) + cmdPath));
+HXLINE( 174)				return cmdPath;
             			}
             			else {
-HXLINE( 140)				::Sys_obj::println((((HX_("     !!! BUTTON ",ef,25,1c,d3) + (index + 1)) + HX_(" ERROR. Target: ",11,0c,23,ea)) + cmdPath));
-HXLINE( 141)				::classes::ButtonMapping_obj::ErrorIndices->set((index + 1),HX_("NullPathError",3c,c8,1f,d5));
-HXLINE( 142)				return null();
+HXLINE( 178)				::Array< ::String > WhichDirectory = cmdPath.split(HX_("/",2f,00,00,00));
+HXLINE( 179)				::String checker = HX_("",00,00,00,00);
+HXLINE( 180)				bool ErrorFound = false;
+HXLINE( 181)				{
+HXLINE( 181)					int _g = 0;
+HXDLIN( 181)					while((_g < WhichDirectory->length)){
+HXLINE( 181)						::String path = WhichDirectory->__get(_g);
+HXDLIN( 181)						_g = (_g + 1);
+HXLINE( 182)						if (!(::sys::FileSystem_obj::exists((checker + path)))) {
+HXLINE( 183)							if ((checker == HX_("C:/",b8,09,33,00))) {
+HXLINE( 183)								continue;
+            							}
+HXLINE( 184)							if (!(ErrorFound)) {
+HXLINE( 185)								checker = (((checker + HX_("\x1b""[1;31m",85,3d,06,23)) + path) + HX_("\x1b""[0;37m/",31,c8,18,1c));
+HXLINE( 186)								ErrorFound = true;
+HXLINE( 187)								continue;
+            							}
+            						}
+HXLINE( 190)						checker = (checker + (path + HX_("/",2f,00,00,00)));
+            					}
+            				}
+HXLINE( 192)				::Sys_obj::println(((((HX_("   \x1b""[1;31mEnvCheck\x1b""[0;33m | !!! BUTTON ",6d,3a,c1,8e) + (index + 1)) + HX_(" ERROR. Target: \x1b""[37m",b8,8d,81,53)) + checker) + HX_("\x1b""[37m",69,f7,1e,c8)));
+HXLINE( 193)				::classes::ButtonMapping_obj::ErrorIndices->set((index + 1),HX_("NullPathError",3c,c8,1f,d5));
+HXLINE( 194)				return null();
             			}
             		}
-HXLINE( 145)		return null();
+HXLINE( 197)		return null();
             	}
 
 
@@ -406,6 +578,9 @@ ButtonMapping_obj::ButtonMapping_obj()
 bool ButtonMapping_obj::__GetStatic(const ::String &inName, Dynamic &outValue, ::hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 7:
+		if (HX_FIELD_EQ(inName,"Default") ) { outValue = ( Default ); return true; }
+		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"ButtonArray") ) { outValue = ( ButtonArray ); return true; }
 		if (HX_FIELD_EQ(inName,"CheckForEnv") ) { outValue = CheckForEnv_dyn(); return true; }
@@ -422,6 +597,9 @@ bool ButtonMapping_obj::__GetStatic(const ::String &inName, Dynamic &outValue, :
 bool ButtonMapping_obj::__SetStatic(const ::String &inName,Dynamic &ioValue,::hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 7:
+		if (HX_FIELD_EQ(inName,"Default") ) { Default=ioValue.Cast<  ::Dynamic >(); return true; }
+		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"ButtonArray") ) { ButtonArray=ioValue.Cast< ::Array< ::Dynamic> >(); return true; }
 		break;
@@ -436,6 +614,7 @@ static ::hx::StorageInfo *ButtonMapping_obj_sMemberStorageInfo = 0;
 static ::hx::StaticInfo ButtonMapping_obj_sStaticStorageInfo[] = {
 	{::hx::fsObject /* ::Array< ::Dynamic> */ ,(void *) &ButtonMapping_obj::ButtonArray,HX_("ButtonArray",27,c6,6c,57)},
 	{::hx::fsObject /*  ::haxe::ds::IntMap */ ,(void *) &ButtonMapping_obj::ErrorIndices,HX_("ErrorIndices",5f,78,96,5c)},
+	{::hx::fsObject /*  ::Dynamic */ ,(void *) &ButtonMapping_obj::Default,HX_("Default",a1,00,15,69)},
 	{ ::hx::fsUnknown, 0, null()}
 };
 #endif
@@ -443,12 +622,14 @@ static ::hx::StaticInfo ButtonMapping_obj_sStaticStorageInfo[] = {
 static void ButtonMapping_obj_sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ButtonMapping_obj::ButtonArray,"ButtonArray");
 	HX_MARK_MEMBER_NAME(ButtonMapping_obj::ErrorIndices,"ErrorIndices");
+	HX_MARK_MEMBER_NAME(ButtonMapping_obj::Default,"Default");
 };
 
 #ifdef HXCPP_VISIT_ALLOCS
 static void ButtonMapping_obj_sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ButtonMapping_obj::ButtonArray,"ButtonArray");
 	HX_VISIT_MEMBER_NAME(ButtonMapping_obj::ErrorIndices,"ErrorIndices");
+	HX_VISIT_MEMBER_NAME(ButtonMapping_obj::Default,"Default");
 };
 
 #endif
@@ -458,6 +639,7 @@ static void ButtonMapping_obj_sVisitStatics(HX_VISIT_PARAMS) {
 static ::String ButtonMapping_obj_sStaticFields[] = {
 	HX_("ButtonArray",27,c6,6c,57),
 	HX_("ErrorIndices",5f,78,96,5c),
+	HX_("Default",a1,00,15,69),
 	HX_("createButtons",a5,2a,b8,b2),
 	HX_("CheckForEnv",2c,ab,b4,c3),
 	::String(null())
@@ -493,12 +675,27 @@ void ButtonMapping_obj::__register()
 void ButtonMapping_obj::__boot()
 {
 {
-            	HX_STACKFRAME(&_hx_pos_cd699f9074d75fac_56_boot)
-HXDLIN(  56)		ButtonArray = ::Array_obj< ::Dynamic>::__new(0);
+            	HX_STACKFRAME(&_hx_pos_cd699f9074d75fac_60_boot)
+HXDLIN(  60)		ButtonArray = ::Array_obj< ::Dynamic>::__new(0);
             	}
 {
-            	HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_57_boot)
-HXDLIN(  57)		ErrorIndices =  ::haxe::ds::IntMap_obj::__alloc( HX_CTX );
+            	HX_GC_STACKFRAME(&_hx_pos_cd699f9074d75fac_61_boot)
+HXDLIN(  61)		ErrorIndices =  ::haxe::ds::IntMap_obj::__alloc( HX_CTX );
+            	}
+{
+            	HX_STACKFRAME(&_hx_pos_cd699f9074d75fac_62_boot)
+HXDLIN(  62)		Default =  ::Dynamic(::hx::Anon_obj::Create(11)
+            			->setFixed(0,HX_("target",51,f3,ec,86),null())
+            			->setFixed(1,HX_("fromRight",12,f6,ec,9d),false)
+            			->setFixed(2,HX_("tooltipColor",60,29,fc,a7),HX_("#ffffff",23,b8,6e,76))
+            			->setFixed(3,HX_("fromBottom",f5,eb,bc,a8),false)
+            			->setFixed(4,HX_("runIn",10,d0,57,f1),null())
+            			->setFixed(5,HX_("x",78,00,00,00),0)
+            			->setFixed(6,HX_("y",79,00,00,00),0)
+            			->setFixed(7,HX_("args",5d,8d,74,40),null())
+            			->setFixed(8,HX_("tooltip",03,ad,8c,6a),HX_("(No tooltip set)",7b,5a,fd,28))
+            			->setFixed(9,HX_("label",f4,0d,af,6f),null())
+            			->setFixed(10,HX_("scale",8a,ce,ce,78),1));
             	}
 }
 

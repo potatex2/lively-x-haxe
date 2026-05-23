@@ -64,8 +64,6 @@ class Main extends Sprite {
 	// Dimension initialization since Capabilities can't read them directly on opening.
 	public static var screenX:Float;
 	public static var screenY:Float;
-
-
     
     public static function main():Void
 	{
@@ -137,7 +135,7 @@ class Main extends Sprite {
 		// Tweak this for user experience and closing animation shi, idk this is meant to only be a bg element :P
 		Lib.application.window.onClose.add(() -> {
 			Lib.application.window.onClose.cancel();
-			trace("Closing window..");
+			Sys.println("Closing window..");
 			FlxG.save.close();
 			FlxTween.tween(Lib.application.window, {y: 1500, width: 50, height: 50}, 1.1, {ease: flixel.tweens.FlxEase.circIn, onStart: (_) -> FlxG.sound.play("bulkAssets/ToggleJingle.ogg"), onComplete: (_) -> Sys.exit(0)});
 		});
@@ -152,11 +150,7 @@ class Main extends Sprite {
 	public static function dies(?e:openfl.events.UncaughtErrorEvent) {
 		var callStack:Array<haxe.CallStack.StackItem> = haxe.CallStack.exceptionStack(true);
 		var eee:String = "Oops. I fumbled.\n----------\n";
-		if (callStack != null)
-			for (bsReason in callStack) {
-				eee += bsReason + "\n";
-			}
-		eee += "\n==⚠️ CRASH REASON: ⚠️==\n" + e.error;
+		eee += "\n==⚠️ CRASH REASON: ⚠️==\n" + haxe.CallStack.toString(callStack).replace("Called from", "@ ");
 		Sys.println(eee);
 		FlxG.sound.play("bulkAssets/error.wav");
 		Application.current.window.alert(eee, "please yell at me  -PotateX2");

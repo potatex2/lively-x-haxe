@@ -4,6 +4,9 @@
 #ifndef INCLUDED_Std
 #include <Std.h>
 #endif
+#ifndef INCLUDED_Sys
+#include <Sys.h>
+#endif
 #ifndef INCLUDED_flixel_FlxBasic
 #include <flixel/FlxBasic.h>
 #endif
@@ -78,9 +81,6 @@
 #endif
 #ifndef INCLUDED_flixel_util_IFlxDestroyable
 #include <flixel/util/IFlxDestroyable.h>
-#endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
 #endif
 #ifndef INCLUDED_lime_app_IModule
 #include <lime/app/IModule.h>
@@ -221,7 +221,7 @@ HXLINE(  96)					 ::flixel::util::FlxTimer_obj::__alloc( HX_CTX ,null())->start(
 HXLINE(  99)			int stageWidth = ::openfl::Lib_obj::get_current()->stage->stageWidth;
 HXLINE( 100)			int stageHeight = ::openfl::Lib_obj::get_current()->stage->stageHeight;
 HXLINE( 103)			if (::hx::IsNotNull( ::flixel::_hx_system::FlxSplash_obj::contextOverride )) {
-HXLINE( 103)				::haxe::Log_obj::trace((HX_("Context for override: ",da,76,b9,67) + ::flixel::_hx_system::FlxSplash_obj::contextOverride),::hx::SourceInfo(HX_("flixel/system/FlxSplash.hx",f2,80,de,a5),103,HX_("flixel.system.FlxSplash",6c,4f,a8,1e),HX_("create",fc,66,0f,7c)));
+HXLINE( 103)				::Sys_obj::println((HX_("### Context for override: ",d7,31,d4,77) + ::flixel::_hx_system::FlxSplash_obj::contextOverride));
             			}
 HXLINE( 104)			::String tmp = ::flixel::_hx_system::FlxSplash_obj::contextOverride;
 HXDLIN( 104)			::String _hx_tmp;
@@ -458,7 +458,7 @@ HXLINE( 237)		this->_gfx->endFill();
 HXLINE( 238)		if (::flixel::_hx_system::FlxSplash_obj::WIP) {
 HXLINE( 238)			this->_WIP->set_text(HX_("Off",4f,4b,3c,00));
             		}
-HXLINE( 239)		::haxe::Log_obj::trace(HX_("fun",3f,cc,4d,00),::hx::SourceInfo(HX_("flixel/system/FlxSplash.hx",f2,80,de,a5),239,HX_("flixel.system.FlxSplash",6c,4f,a8,1e),HX_("drawGreen",1f,44,f8,61)));
+HXLINE( 239)		::Sys_obj::print(HX_("fun",3f,cc,4d,00));
             	}
 
 
@@ -480,7 +480,7 @@ HXLINE( 253)		if (::flixel::_hx_system::FlxSplash_obj::WIP) {
 HXLINE( 253)			 ::flixel::text::FlxText fh1 = this->_WIP;
 HXDLIN( 253)			fh1->set_text((fh1->text + HX_("sets ",6f,ac,2f,7a)));
             		}
-HXLINE( 254)		::haxe::Log_obj::trace(HX_("ny",4b,60,00,00),::hx::SourceInfo(HX_("flixel/system/FlxSplash.hx",f2,80,de,a5),254,HX_("flixel.system.FlxSplash",6c,4f,a8,1e),HX_("drawYellow",98,1a,20,12)));
+HXLINE( 254)		::Sys_obj::print(HX_("ny",4b,60,00,00));
             	}
 
 
@@ -502,7 +502,7 @@ HXLINE( 268)		if (::flixel::_hx_system::FlxSplash_obj::WIP) {
 HXLINE( 268)			 ::flixel::text::FlxText fh1 = this->_WIP;
 HXDLIN( 268)			fh1->set_text((fh1->text + HX_("be",c3,55,00,00)));
             		}
-HXLINE( 269)		::haxe::Log_obj::trace(HX_("self",8c,8b,50,4c),::hx::SourceInfo(HX_("flixel/system/FlxSplash.hx",f2,80,de,a5),269,HX_("flixel.system.FlxSplash",6c,4f,a8,1e),HX_("drawRed",ad,bf,d6,fb)));
+HXLINE( 269)		::Sys_obj::print(HX_(" self",ac,1b,23,b9));
             	}
 
 
@@ -524,7 +524,7 @@ HXLINE( 283)		if (::flixel::_hx_system::FlxSplash_obj::WIP) {
 HXLINE( 283)			 ::flixel::text::FlxText fh1 = this->_WIP;
 HXDLIN( 283)			fh1->set_text((fh1->text + HX_("ing ",fe,38,bb,45)));
             		}
-HXLINE( 284)		::haxe::Log_obj::trace(HX_("in",e5,5b,00,00),::hx::SourceInfo(HX_("flixel/system/FlxSplash.hx",f2,80,de,a5),284,HX_("flixel.system.FlxSplash",6c,4f,a8,1e),HX_("drawBlue",be,ec,82,55)));
+HXLINE( 284)		::Sys_obj::print(HX_(" in",05,a4,18,00));
             	}
 
 
@@ -546,7 +546,7 @@ HXLINE( 298)		if (::flixel::_hx_system::FlxSplash_obj::WIP) {
 HXLINE( 298)			 ::flixel::text::FlxText fh1 = this->_WIP;
 HXDLIN( 298)			fh1->set_text((fh1->text + HX_("fixed... :/",1b,1c,f6,e6)));
             		}
-HXLINE( 299)		::haxe::Log_obj::trace(HX_("sert",d4,90,50,4c),::hx::SourceInfo(HX_("flixel/system/FlxSplash.hx",f2,80,de,a5),299,HX_("flixel.system.FlxSplash",6c,4f,a8,1e),HX_("drawLightBlue",ec,35,5e,19)));
+HXLINE( 299)		::Sys_obj::println(HX_("sert!",cd,28,2e,7a));
             	}
 
 

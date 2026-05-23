@@ -64,6 +64,7 @@ class HXCPP_CLASS_ATTRIBUTES ButtonMapping_obj : public ::hx::Object
 		static void __boot();
 		static ::Array< ::Dynamic> ButtonArray;
 		static  ::haxe::ds::IntMap ErrorIndices;
+		static  ::Dynamic Default;
 		static void createButtons();
 		static ::Dynamic createButtons_dyn();
 

@@ -6,7 +6,6 @@ import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
 import flixel.group.FlxSpriteGroup;
-import classes.Const;
 
 /**Direct class from Psych Engine for bar sprites.*/
 class Bar extends FlxSpriteGroup
@@ -34,7 +33,7 @@ class Bar extends FlxSpriteGroup
 		this.valueFunction = valueFunction;
 		setBounds(boundX, boundY);
 		
-		bg = new FlxSprite().loadGraphic('${Const.RD}$image.png');
+		bg = new FlxSprite().loadGraphic('bulkAssets/$image.png');
 		bg.antialiasing = true;
 		barWidth = Std.int(bg.width - 6);
 		barHeight = Std.int(bg.height - 6);

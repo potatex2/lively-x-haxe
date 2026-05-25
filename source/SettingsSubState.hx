@@ -68,7 +68,7 @@ class SettingsSubState extends FlxSubState {
         musicSelect = new FlxUIDropDownMenu(100, 50, musicSelection, (sel:String) -> {
             if (WallpaperState.flaxhixele.text.contains(sel)) return; // better way to check this, sigh.
             WallpaperState.Selection = sel;
-            WallpaperState.pause.soundCheck("music/" + sel + ".ogg", false);
+            FlxG.sound.music.loadEmbedded("bulkAssets/music/" + sel + ".ogg", true).play();
             WallpaperState.jason = haxe.Json.parse(Assets.getText('bulkAssets/music/$sel.json')).music.bpm;
             trace('Data BPM: ${WallpaperState.jason}');
             WallpaperState.croshet = flixel.math.FlxMath.roundDecimal(60 / WallpaperState.jason, 4);

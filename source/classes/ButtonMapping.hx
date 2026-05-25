@@ -1,5 +1,6 @@
 package classes;
 
+import openfl.events.Event;
 import lime.app.Application;
 import haxe.io.BytesData;
 import openfl.events.ProgressEvent;
@@ -8,12 +9,9 @@ import openfl.filesystem.File;
 import openfl.desktop.NativeProcessStartupInfo;
 import openfl.desktop.NativeProcess;
 import openfl.system.Capabilities;
-import haxe.exceptions.ArgumentException;
 import sys.FileSystem;
 import haxe.Exception;
-import haxe.ValueException;
 import flixel.tweens.FlxEase;
-import sys.io.Process;
 import classes.FlxDynamics.FlxAnimButton;
 import flixel.tweens.FlxTween;
 import haxe.Json;
@@ -50,12 +48,14 @@ typedef ButtonProperties = {
     /** __Optional__ - tooltip color in _hexadecimal_ format (e.g. `0xFFFFFF`). */
     @:optional var tooltipColor:String;
 
-    /** __Optional__ - button size (might make this a FlxPoint) */
+    /** __Optional__ - button size. */
     @:optional var scale:Int;
 
     // Possible feature: Set custom sound with default as ToggleJingle.ogg
 }
 
+
+//NTS: Make a reloadButtons() function and button for better UX and convenience.
 class ButtonMapping {
     public static var ButtonArray:Array<FlxAnimButton> = [];
     static var ErrorIndices:Map<Int, String> = [];
@@ -90,6 +90,12 @@ class ButtonMapping {
             button.scale = button.scale ?? Default.scale;
 
             // Button creation
+            var labelPath = 'bulkAssets/buttons/${button.label}';
+            if (!FileSystem.exists(labelPath)) {
+                ErrorIndices.set(buttonList.indexOf(button) + 1, "LabelPathError");
+                Sys.println("   \x1b[1;31mButtonMapping\x1b[33m | Button " + (buttonList.indexOf(button) + 1) + " has an invalid image path.\x1b[0m");
+                continue;
+            }
             var buttonToAdd:FlxAnimButton = new FlxAnimButton(button.label, 0, 0, 'bulkAssets/buttons/${button.label}');
             if (button.scale != null && button.scale is Int)
                 buttonToAdd.scale.set(button.scale, button.scale);
@@ -105,7 +111,7 @@ class ButtonMapping {
             buttonToAdd.setCallbacks(
                 () -> {
                     FlxTween.cancelTweensOf(buttonToAdd);
-                    WallpaperState.toggle.soundCheck("ToggleJingle.ogg");
+                    flixel.FlxG.sound.play("bulkAssets/sound/ToggleJingle.ogg");
                     buttonToAdd.scale.x = button.scale;
                     buttonToAdd.scale.y = button.scale;
                     //Note: Command flags are not properly parsed for this; fix soon
@@ -116,20 +122,24 @@ class ButtonMapping {
                     var bruh:Vector<String> = new Vector();
                     bruh.push(button.args);
                     args.arguments = bruh;
+
                     var exec:NativeProcess = new NativeProcess();
+                    var eventCallback = (e) -> {
+                        @:privateAccess var bytes = new haxe.io.Bytes(Std.int(e.bytesLoaded), new BytesData());
+                        exec.standardOutput.readBytes(bytes, 0, 0);
+                        Sys.println("EXTRACE | \x1b[36m" + bytes.toString() + "\x1b[37m");
+                    }; 
+
                     try {
                         exec.start(args);
-                        // Command-line argument readings below for if an app successfully laucnhes; tailor to that purpose soon.
-                        exec.addEventListener(ProgressEvent.STANDARD_OUTPUT_DATA, (e) -> {
-                            @:privateAccess var bytes = new haxe.io.Bytes(Std.int(e.bytesLoaded), new BytesData());
-                            exec.standardOutput.readBytes(bytes, 0, 0);
-                            Sys.println("        \x1b[36m" + bytes.toString() + "\x1b[37m");
-                        }); 
+                        
+                        // Command-line argument readings below for if an app successfully launches; make a smaller app for this soon.
+                        exec.addEventListener(ProgressEvent.STANDARD_OUTPUT_DATA, eventCallback);
                     } catch(no) throw no;
                 },
                 () -> {
                     FlxTween.cancelTweensOf(buttonToAdd);
-                    WallpaperState.toggle.soundCheck("clickIn.ogg");
+                    flixel.FlxG.sound.play("bulkAssets/sound/clickIn.ogg");
                     buttonToAdd.scale.x -= 0.2;
                     buttonToAdd.scale.y -= 0.2;
                 },

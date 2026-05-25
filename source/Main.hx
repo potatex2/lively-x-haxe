@@ -137,7 +137,7 @@ class Main extends Sprite {
 			Lib.application.window.onClose.cancel();
 			Sys.println("Closing window..");
 			FlxG.save.close();
-			FlxTween.tween(Lib.application.window, {y: 1500, width: 50, height: 50}, 1.1, {ease: flixel.tweens.FlxEase.circIn, onStart: (_) -> FlxG.sound.play("bulkAssets/ToggleJingle.ogg"), onComplete: (_) -> Sys.exit(0)});
+			FlxTween.tween(Lib.application.window, {y: 1500, width: 50, height: 50}, 1.1, {ease: flixel.tweens.FlxEase.circIn, onStart: (_) -> FlxG.sound.play("bulkAssets/sound/ToggleJingle.ogg"), onComplete: (_) -> Sys.exit(0)});
 		});
 	}
 	static function resetSpriteCache(sprite:Sprite):Void {

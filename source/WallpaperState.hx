@@ -1,4 +1,6 @@
-import haxe.Constraints.Function;
+import flixel.graphics.FlxGraphic;
+import flixel.graphics.frames.FlxAtlasFrames;
+import openfl.display.BitmapData;
 import classes.ButtonMapping;
 import flixel.ui.FlxButton;
 import flixel.group.FlxSpriteGroup;
@@ -21,7 +23,6 @@ import flixel.FlxG;
 import flixel.util.FlxTimer;
 import flixel.FlxCamera as HUD;
 import flixel.math.FlxMath;
-import classes.PathSound as Music;
 import classes.Bar;
 import classes.FlxDynamics;
 import flixel.tweens.*;
@@ -55,6 +56,9 @@ class WallpaperState extends FlxState {
      */
     public static var camHUD:HUD;
     var bgGoofy:BG;
+    static var transition:BG;
+    static var transitionSprite:FlxSprite;
+    private var lastFrame:Int = -1;
 
     /**
      * Camera instance for buttons added. (and another thing that i forgot)
@@ -75,9 +79,6 @@ class WallpaperState extends FlxState {
     public static var BottomGroup:FlxTypedSpriteGroup<FlxAnimButton>; 
     public static var BottomPos:Float;
     #end
-
-    public static var pause:Music = new Music();
-    public static var toggle:Music = new Music();
 
     var startBop:Bool = false;
     public static var jason:Float;
@@ -101,8 +102,7 @@ class WallpaperState extends FlxState {
     static var shutDown:FlxAnimButton;
     static var tabBackIn:FlxAnimButton;
 
-    static var Div1:FlxTagSprite;
-    static var Div2:FlxTagSprite;
+
     static var updateNote:FlxAnimButton;
     static var afkNote:TextField;
     static var silly:FlxText;
@@ -138,7 +138,18 @@ class WallpaperState extends FlxState {
         Selection = save.data.selected;
         Sys.println("$$$$$ SAVE DATA: " + save.data);
     }
+    static function Preload() {
+        var soundList:Array<String> = [];
+        for (file in FileSystem.readDirectory("bulkAssets/sound")) {
+            //FlxG.sound.cache('bulkAssets/sound/$file');
+            // this causes an error with the errors in the build obj files...
+            var test = new FlxSound().loadEmbedded('bulkAssets/sound/$file');
+            FlxG.sound.list.add(test);
+        }
+    }
+
     override function create() {
+        Preload();
         // For substate use
         instance = this;
 
@@ -161,9 +172,9 @@ class WallpaperState extends FlxState {
         bgGoofy.velocity.set(50, 25); // Yes it does, Flixel. Yes. It. Does.
         FlxTween.tween(bgGoofy, {alpha: 0.25}, 1.4, {ease: FlxEase.quartInOut});
 
-        pause.soundCheck('music/$Selection.ogg', false);
-        pause.volume = 0;
-        FlxTween.tween(pause, {volume: 1}, 2);
+        FlxG.sound.music = new FlxSound().loadEmbedded('bulkAssets/music/$Selection.ogg', true).play();
+        FlxG.sound.music.volume = 0;
+        FlxTween.tween(FlxG.sound.music, {volume: 1}, 2);
 
         camHUD = new HUD();
         FlxG.cameras.add(camHUD, false);
@@ -172,6 +183,19 @@ class WallpaperState extends FlxState {
         camGUI = new HUD();
         FlxG.cameras.add(camGUI, false);
         camGUI.bgColor.alpha = 0; // Yes. It. Does.
+
+        //Apparently loadGraphic() can't properly process subtexture atlases, sooo FlxAtlasFrames it is.
+        var atlasFrames:Dynamic = FlxAtlasFrames.fromSparrow("bulkAssets/transition.png", "bulkAssets/transition.xml");
+        transitionSprite = new FlxSprite();
+        transitionSprite.setFrames(atlasFrames, true);
+        add(transitionSprite);
+        transitionSprite.useFramePixels = true;
+        transitionSprite.animation.addByPrefix("fade", "fadeTrans", 9, false);
+        transitionSprite.animation.play("fade", true);
+        
+        transition = new BG();
+        add(transition);
+        updateBackdropFrame();
 
         bopper = new Img(FlxG.width + 200, FlxG.height / 2).loadGraphic(RootDirectory + "bozo.png");
         bopper.y = FlxG.height / 2 - bopper.height/2;
@@ -238,7 +262,7 @@ class WallpaperState extends FlxState {
         croshet = FlxMath.roundDecimal(60 / jason, 4);
         FlxTween.tween(bopper, {alpha: 1, x: FlxG.width/2 - bopper.width/2}, 1.7, {ease: FlxEase.sineOut, onComplete: (_) -> startBop = true});
         bopper.angle = 10;
-        FlxTween.tween(bopper, {angle: -10}, 2.6, {ease: FlxEase.sineInOut, type: 4});
+        FlxTween.tween(bopper, {angle: -10}, 1.5, {ease: FlxEase.sineInOut, type: 4});
         /*
         mute = new FlxGroupButton("music", musicProg.barWidth + 30, FlxG.height - 30, new FlxAnimButton(
             "toggleMusic", 0, 0, "bulkAssets/musicIcon.png", null
@@ -279,20 +303,6 @@ class WallpaperState extends FlxState {
         // Windows-based elements only.
         #if sys
         FlxG.mouse.useSystemCursor = true;
-        Div1 = new FlxTagSprite("Div1");
-        Div1.loadGraphic("bulkAssets/divider1.png");
-        Div1.init_X = -300;
-        Div1.init_Y = 0;
-        Div1.x = -300;
-        add(Div1);
-    // NOTE: put extra navigation buttons in the dividers - window is placed correctly when initialized
-    // Add AFK indicator and move time text; insert AFK as well
-        Div2 = new FlxTagSprite("Div2");
-        Div2.loadGraphic("bulkAssets/divider2.png");
-        Div2.init_X = FlxG.width;
-        Div2.init_Y = 0;
-        Div2.x = FlxG.width;
-        add(Div2);
 
         updateNote = new FlxAnimButton("Update AFK", FlxG.width / 4, 0, "bulkAssets/reload.png");
         updateNote.init_X = FlxG.width / 2 - updateNote.width / 2;
@@ -301,7 +311,7 @@ class WallpaperState extends FlxState {
         updateNote.setCallbacks(
             () -> {
                 FlxTween.cancelTweensOf(updateNote);
-                toggle.soundCheck("clickOut.ogg");
+                FlxG.sound.play("sound/clickOut.ogg");
                 var hasOneDrive:Bool = FileSystem.exists(Sys.getEnv("ONEDRIVECONSUMER") + '\\Desktop\\AFKNote.px2');
                 afkNote.text = Json.parse(sys.io.File.getContent(Sys.getEnv(hasOneDrive ? "ONEDRIVECONSUMER" : "USERPROFILE") + '\\Desktop\\AFKNote.px2')).afkNote;
                 updateNote.scale.x = 1;
@@ -309,7 +319,7 @@ class WallpaperState extends FlxState {
             },
             () -> {
                 FlxTween.cancelTweensOf(updateNote);
-                toggle.soundCheck("clickIn.ogg");
+                FlxG.sound.play("bulkAssets/sound/clickIn.ogg");
                 updateNote.scale.x -= 0.2;
                 updateNote.scale.y -= 0.2;
             },
@@ -344,8 +354,8 @@ class WallpaperState extends FlxState {
 
 		selectedLink.selectable = false;
 		selectedLink.mouseEnabled = false;
-		selectedLink.defaultTextFormat = new openfl.text.TextFormat("PhantomMuff 1.5", 22, 0xff00ff2a);
-		selectedLink.autoSize = LEFT;
+		selectedLink.defaultTextFormat = new openfl.text.TextFormat("PhantomMuff 1.5", 22, 0xff00ff2a, false, false, false, null, null, CENTER);
+		selectedLink.autoSize = CENTER;
 		selectedLink.multiline = true;
 		selectedLink.text = "...";
         openfl.Lib.current.addChild(selectedLink);
@@ -370,13 +380,13 @@ class WallpaperState extends FlxState {
                 time.reset(1);
                 FlxTween.cancelTweensOf(shutDown);
                 safety++;
-                FlxG.sound.play('bulkAssets/shutdown$safety.ogg', 0.7);
+                FlxG.sound.play('bulkAssets/sound/shutdown$safety.ogg', 0.7);
                 if (safety == 3)
                     Type.createInstance(Process, ["shutdown /p"]);
             },
             () -> {
                 FlxTween.cancelTweensOf(shutDown);
-                toggle.soundCheck("clickIn.ogg");
+                FlxG.sound.play("bulkAssets/sound/clickIn.ogg");
                 shutDown.scale.x -= 0.2;
                 shutDown.scale.y -= 0.2;
             },
@@ -402,7 +412,7 @@ class WallpaperState extends FlxState {
             },
             () -> {
                 FlxTween.cancelTweensOf(tabBackIn);
-                toggle.soundCheck("clickIn.ogg");
+                FlxG.sound.play("bulkAssets/sound/clickIn.ogg");
                 tabBackIn.scale.x -= 0.2;
                 tabBackIn.scale.y -= 0.2;
             },
@@ -448,14 +458,10 @@ class WallpaperState extends FlxState {
         FlxTween.completeTweensOf(TopGroup);
         FlxTween.completeTweensOf(BottomGroup);
         FlxTween.completeTweensOf(tabBackIn);
-        FlxTween.completeTweensOf(Div1);
-        FlxTween.completeTweensOf(Div2);
         FlxTween.completeTweensOf(camGUI);
-        FlxTween.tween(TopGroup, {y: -80, alpha: 0}, 0.7, {ease: FlxEase.elasticInOut});
+        FlxTween.tween(TopGroup, {y: -80, alpha: 0}, 0.7, {ease: FlxEase.elasticInOut, onUpdate: (_) -> updateBackdropFrame()});
         FlxTween.tween(BottomGroup, {y: BottomPos + 200, alpha: 0}, 0.7, {ease: FlxEase.elasticInOut});
         FlxTween.tween(tabBackIn, {y: tabBackIn.init_Y, alpha: 1}, 0.7, {ease: FlxEase.sineOut});
-        FlxTween.tween(Div1, {x: Div1.init_X, alpha: 0}, 0.7, {ease: FlxEase.sineOut});
-        FlxTween.tween(Div2, {x: Div2.init_X, alpha: 0}, 0.7, {ease: FlxEase.sineOut});
         FlxTween.tween(camGUI, {alpha: 0}, 0.2, {ease: FlxEase.quintIn, onComplete: (_) -> for (btn in ButtonMapping.ButtonArray) btn.visible = false});
         FlxTween.tween(camGUI, {y: 200}, 0.3, {ease: FlxEase.quintIn});
         RunAFK();
@@ -463,19 +469,16 @@ class WallpaperState extends FlxState {
         tabbedOut = true;
         flaxhixele.visible = true;
         afkNote.visible = true;
+        transitionSprite.animation.play("fade", true, true);
     }
     public static function onTabIn() {
         FlxTween.completeTweensOf(TopGroup);
         FlxTween.completeTweensOf(BottomGroup);
         FlxTween.completeTweensOf(tabBackIn);
-        FlxTween.completeTweensOf(Div1);
-        FlxTween.completeTweensOf(Div2);
         FlxTween.completeTweensOf(camGUI);
-        FlxTween.tween(TopGroup, {y: TopPos, alpha: 1}, 0.7, {ease: FlxEase.sineOut});
+        FlxTween.tween(TopGroup, {y: TopPos, alpha: 1}, 0.7, {ease: FlxEase.sineOut, onUpdate: (_) -> updateBackdropFrame()});
         FlxTween.tween(BottomGroup, {y: BottomPos, alpha: 1}, 0.7, {ease: FlxEase.sineOut});
         FlxTween.tween(tabBackIn, {y: -250, alpha: 0}, 0.7, {ease: FlxEase.sineOut});
-        FlxTween.tween(Div1, {x: 0, alpha: 1}, 0.7, {ease: FlxEase.sineOut});
-        FlxTween.tween(Div2, {x: FlxG.width - 400, alpha: 1}, 0.7, {ease: FlxEase.sineOut});
         FlxTween.tween(camGUI, {alpha: 1}, 0.3, {ease: FlxEase.quintInOut, startDelay: 0.15, onStart: (_) -> for (btn in ButtonMapping.ButtonArray) btn.visible = true});
         FlxTween.tween(camGUI, {y: 0}, 0.4, {ease: FlxEase.sineOut});
 
@@ -485,6 +488,7 @@ class WallpaperState extends FlxState {
         afkNote.visible = false;
         ticktock.stop();
         moveMouse(Capabilities.screenResolutionX / 2, Capabilities.screenResolutionY / 2);
+        transitionSprite.animation.play("fade", true, false);
     }
     static function moveMouse(x:Float, y:Float) {
         untyped __cpp__("
@@ -506,12 +510,12 @@ class WallpaperState extends FlxState {
     static var tabbedOut:Bool = false;
     override function update(elapsed:Float) {
         // Testing scroll event handler for vol
-        if (FlxG.mouse.wheel > 0 && pause.volume < 1) {
-            pause.volume += 0.05;
-            FlxG.sound.play("bulkAssets/beep.ogg");
-        } else if (FlxG.mouse.wheel < 0 && pause.volume > 0) {
-            pause.volume -= 0.05;
-            FlxG.sound.play("bulkAssets/beep.ogg");
+        if (FlxG.mouse.wheel > 0 && FlxG.sound.music.volume < 1) {
+            FlxG.sound.music.volume += 0.05;
+            FlxG.sound.play("bulkAssets/sound/beep.ogg");
+        } else if (FlxG.mouse.wheel < 0 && FlxG.sound.music.volume > 0) {
+            FlxG.sound.music.volume -= 0.05;
+            FlxG.sound.play("bulkAssets/sound/beep.ogg");
         }
         // Moved it out here since I don't know where to go with the button arrangements
         selectedLink.x = FlxG.mouse.getPosition().x;
@@ -525,7 +529,7 @@ class WallpaperState extends FlxState {
         } else {
             silly.y = FlxG.height * 0.6 + afkNote.height;
         }
-        secondsTotal = FlxMath.roundDecimal(pause.time / 1000, 4);
+        secondsTotal = FlxMath.roundDecimal(FlxG.sound.music.time / 1000, 4);
         if (secondsTotal % croshet >= 0 && secondsTotal % croshet <= 0.03 && bopPrefs) {
             if (!delayy) {
                 if (startBop) {
@@ -556,10 +560,28 @@ class WallpaperState extends FlxState {
             realTime.text = "Current Time: " + Hour12 + timestuff.substr(13) + AmPm #if js + " MST" #end;
         super.update(elapsed);
         for (cb in updateArray) cb();
+
+        transitionSprite.update(elapsed);
+        var cur:Int;
+        if (transitionSprite.animation.curAnim != null) {
+            cur = transitionSprite.animation.curAnim.curFrame;
+            if (cur != lastFrame) {
+                lastFrame = cur;
+            }
+        }
     }
-    static var updateArray:Array<Function> = [];
-    public static inline function bindToUpdate(callback:Function) {
+
+    static var updateArray:Array<haxe.Constraints.Function> = [];
+    public static inline function bindToUpdate(callback:haxe.Constraints.Function) {
         updateArray.push((?args) -> callback(args));
+    }
+
+    static function updateBackdropFrame() {
+        if (transitionSprite.framePixels != null) {
+            var bmp:BitmapData = transitionSprite.framePixels.clone();
+            var graphic = FlxGraphic.fromBitmapData(bmp);
+            transition.loadGraphic(graphic, false, transitionSprite.frameWidth, transitionSprite.frameHeight);
+        }
     }
 }
 

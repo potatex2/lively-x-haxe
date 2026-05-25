@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="transition.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="fadeTrans0000" x="0" y="0" width="12" height="12" frameX="1" frameY="1" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="fadeTrans0001" x="12" y="0" width="12" height="12" frameX="1" frameY="1" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="fadeTrans0002" x="24" y="0" width="12" height="12" frameX="1" frameY="1" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="fadeTrans0003" x="0" y="12" width="11" height="11" frameX="1" frameY="1" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="fadeTrans0004" x="11" y="12" width="8" height="8" frameX="1" frameY="1" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="fadeTrans0005" x="19" y="12" width="5" height="5" frameX="1" frameY="1" frameWidth="10" frameHeight="10"/>
+	<SubTexture name="fadeTrans0006" x="24" y="12" width="4" height="4" frameX="0" frameY="0" frameWidth="10" frameHeight="10"/>
+</TextureAtlas>

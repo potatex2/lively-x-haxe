@@ -1,8 +1,0 @@
-{
-    "music": {
-        "name": "redux",
-        "bpm": 106,
-        "needsVoices": true
-    },
-    "comments": "Sky Redux pause music, ported by PotateX2"
-}

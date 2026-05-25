@@ -73,7 +73,7 @@ class ButtonMapping {
         scale: 1
     };
     public static function createButtons() {
-        final path:String = "bulkAssets/buttons/config.json";
+        final path:String = "bulkAssets/config.json";
         var buttonList:Array<ButtonProperties> = Json.parse(Assets.getText(path)).buttons;
         for (button in buttonList) {
             //Defaults (isn't there a better way to do this?)

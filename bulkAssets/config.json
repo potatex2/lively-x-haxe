@@ -1,4 +1,7 @@
 {
+    "backend": {
+        "bgColor": "#888888"
+    },
     "buttons": [
         {
             "x": 350,

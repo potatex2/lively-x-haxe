@@ -161,7 +161,10 @@ class WallpaperState extends FlxState {
 
         super.create();
         Application.current.window.focus();
-        
+
+        //FlxG.camera.bgColor = Json.parse(Assets.getText('bulkAssets/config.json')).backend.bgColor;
+        //no effect, looking into it soon.
+
 		bgGoofy = new BG(RootDirectory + "bgGoofy.png"); 
 		bgGoofy.updateHitbox(); 
 		bgGoofy.alpha = 1; 
@@ -460,16 +463,17 @@ class WallpaperState extends FlxState {
         FlxTween.completeTweensOf(tabBackIn);
         FlxTween.completeTweensOf(camGUI);
         FlxTween.tween(TopGroup, {y: -80, alpha: 0}, 0.7, {ease: FlxEase.elasticInOut, onUpdate: (_) -> updateBackdropFrame()});
-        FlxTween.tween(BottomGroup, {y: BottomPos + 200, alpha: 0}, 0.7, {ease: FlxEase.elasticInOut});
+        FlxTween.tween(BottomGroup, {y: BottomPos, alpha: 1}, 0.7, {ease: FlxEase.sineOut});
         FlxTween.tween(tabBackIn, {y: tabBackIn.init_Y, alpha: 1}, 0.7, {ease: FlxEase.sineOut});
-        FlxTween.tween(camGUI, {alpha: 0}, 0.2, {ease: FlxEase.quintIn, onComplete: (_) -> for (btn in ButtonMapping.ButtonArray) btn.visible = false});
-        FlxTween.tween(camGUI, {y: 200}, 0.3, {ease: FlxEase.quintIn});
+        FlxTween.tween(camGUI, {alpha: 1}, 0.3, {ease: FlxEase.quintInOut, startDelay: 0.15, onStart: (_) -> for (btn in ButtonMapping.ButtonArray) btn.visible = true});
+        FlxTween.tween(camGUI, {y: 0}, 0.4, {ease: FlxEase.sineOut});
+        
         RunAFK();
         silly.visible = true;
         tabbedOut = true;
         flaxhixele.visible = true;
         afkNote.visible = true;
-        transitionSprite.animation.play("fade", true, true);
+        transitionSprite.animation.play("fade", true, false);
     }
     public static function onTabIn() {
         FlxTween.completeTweensOf(TopGroup);
@@ -477,10 +481,10 @@ class WallpaperState extends FlxState {
         FlxTween.completeTweensOf(tabBackIn);
         FlxTween.completeTweensOf(camGUI);
         FlxTween.tween(TopGroup, {y: TopPos, alpha: 1}, 0.7, {ease: FlxEase.sineOut, onUpdate: (_) -> updateBackdropFrame()});
-        FlxTween.tween(BottomGroup, {y: BottomPos, alpha: 1}, 0.7, {ease: FlxEase.sineOut});
+        FlxTween.tween(BottomGroup, {y: BottomPos + 200, alpha: 0}, 0.7, {ease: FlxEase.elasticInOut});        
         FlxTween.tween(tabBackIn, {y: -250, alpha: 0}, 0.7, {ease: FlxEase.sineOut});
-        FlxTween.tween(camGUI, {alpha: 1}, 0.3, {ease: FlxEase.quintInOut, startDelay: 0.15, onStart: (_) -> for (btn in ButtonMapping.ButtonArray) btn.visible = true});
-        FlxTween.tween(camGUI, {y: 0}, 0.4, {ease: FlxEase.sineOut});
+        FlxTween.tween(camGUI, {alpha: 0}, 0.2, {ease: FlxEase.quintIn, onComplete: (_) -> for (btn in ButtonMapping.ButtonArray) btn.visible = false});
+        FlxTween.tween(camGUI, {y: 200}, 0.3, {ease: FlxEase.quintIn});
 
         silly.visible = false;
         tabbedOut = false;
@@ -488,7 +492,7 @@ class WallpaperState extends FlxState {
         afkNote.visible = false;
         ticktock.stop();
         moveMouse(Capabilities.screenResolutionX / 2, Capabilities.screenResolutionY / 2);
-        transitionSprite.animation.play("fade", true, false);
+        transitionSprite.animation.play("fade", true, true);
     }
     static function moveMouse(x:Float, y:Float) {
         untyped __cpp__("

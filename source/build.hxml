@@ -1,5 +1,5 @@
 -cp src
--main Main
+-main Main --interp
 -cpp cpp_build
 -D HXCPP_CLANG=0
 # optional platform defines:

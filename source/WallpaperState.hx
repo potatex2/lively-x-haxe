@@ -1,3 +1,5 @@
+import classes.ui.ExternLogger;
+import openfl.events.MouseEvent;
 import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.display.BitmapData;
@@ -10,7 +12,6 @@ import openfl.system.Capabilities;
 import openfl.events.Event;
 import lime.app.Application;
 import haxe.Json; // parser
-import hscript.Interp;
 #if html5
 import js.Browser;
 #elseif sys
@@ -23,11 +24,13 @@ import flixel.FlxG;
 import flixel.util.FlxTimer;
 import flixel.FlxCamera as HUD;
 import flixel.math.FlxMath;
-import classes.Bar;
+import classes.psych.Bar;
 import classes.FlxDynamics;
 import flixel.tweens.*;
 import flixel.text.FlxText;
+import classes.psych.Discord;
 import flixel.addons.display.FlxBackdrop as BG;
+import SettingsSubState as SSS;
 #if cpp
 @:cppFileCode('#include <windows.h>')
 // Might work in conjunction with winuser.h in the future.
@@ -136,7 +139,10 @@ class WallpaperState extends FlxState {
         save.flush();
 
         Selection = save.data.selected;
-        Sys.println("$$$$$ SAVE DATA: " + save.data);
+        Sys.println("   \x1b[1;33mSaveData\x1b[0m | Loaded save: " + save.data);
+
+        //Testing HaxeUI
+
     }
     static function Preload() {
         var soundList:Array<String> = [];
@@ -146,10 +152,13 @@ class WallpaperState extends FlxState {
             var test = new FlxSound().loadEmbedded('bulkAssets/sound/$file');
             FlxG.sound.list.add(test);
         }
+        ExternLogger.init();
+        SSS.logger = new ExternLogger(100, 100, 500, 600, 14);
     }
 
     override function create() {
         Preload();
+        DiscordClient.changePresence("Still integrating Discord. Don't know what else yet.");
         // For substate use
         instance = this;
 
@@ -222,10 +231,34 @@ class WallpaperState extends FlxState {
 
         ticktock = new haxe.Timer(1000);
 
-        configButton = new FlxAnimButton("TestState", 0, 50, "bulkAssets/Settings.png", () -> if (FlxG.state.subState == null && configButton.visible) openSubState(new SettingsSubState()));
-        configButton.x = Capabilities.screenResolutionX - configButton.width - 50;
+        configButton = new FlxAnimButton("TestState", 0, 50, "bulkAssets/Settings.png");
+        configButton.init_X = Capabilities.screenResolutionX - configButton.width - 50;
         add(configButton);
         configButton.cameras = [camHUD];
+        configButton.setCallbacks(
+            () -> {
+                FlxTween.cancelTweensOf(configButton);
+                FlxG.sound.play("bulkAssets/sound/clickOut.ogg");
+                if (FlxG.state.subState == null && configButton.visible) openSubState(new SettingsSubState());
+                configButton.scale.x = 1;
+                configButton.scale.y = 1;
+            },
+            () -> {
+                FlxTween.cancelTweensOf(configButton);
+                FlxG.sound.play("bulkAssets/sound/clickIn.ogg");
+                configButton.scale.x -= 0.2;
+                configButton.scale.y -= 0.2;
+            },
+            () -> {
+                FlxTween.cancelTweensOf(configButton, ["scale.x", "scale.y"]);
+                FlxTween.tween(configButton, {"scale.x": 0.9, "scale.y": 0.9, y: configButton.y - 10}, 0.5, {ease: FlxEase.circOut});
+            },
+            () -> {
+                FlxTween.cancelTweensOf(configButton, ["scale.x", "scale.y"]);
+                FlxTween.tween(configButton, {"scale.x": 0.8, "scale.y": 0.8, y: configButton.init_Y}, 0.5, {ease: FlxEase.circOut});
+            }
+        );
+
         #if js
         RunAFK();
 
@@ -261,11 +294,11 @@ class WallpaperState extends FlxState {
         FlxTween.tween(musicProg, {alpha: 0.7}, 1.4, {ease: FlxEase.sineInOut});
         */
         jason = Json.parse(Assets.getText('bulkAssets/music/$Selection.json')).music.bpm;
-        Sys.println("   $$$$$ Data BPM: " + jason);
+        SSS.logger.trace("   $$$$$ Data BPM: " + jason, false);
         croshet = FlxMath.roundDecimal(60 / jason, 4);
         FlxTween.tween(bopper, {alpha: 1, x: FlxG.width/2 - bopper.width/2}, 1.7, {ease: FlxEase.sineOut, onComplete: (_) -> startBop = true});
         bopper.angle = 10;
-        FlxTween.tween(bopper, {angle: -10}, 1.5, {ease: FlxEase.sineInOut, type: 4});
+        FlxTween.tween(bopper, {angle: -10}, 1.3, {ease: FlxEase.sineInOut, type: 4});
         /*
         mute = new FlxGroupButton("music", musicProg.barWidth + 30, FlxG.height - 30, new FlxAnimButton(
             "toggleMusic", 0, 0, "bulkAssets/musicIcon.png", null
@@ -341,7 +374,7 @@ class WallpaperState extends FlxState {
         
 		afkNote.selectable = false;
         afkNote.type = openfl.text.TextFieldType.DYNAMIC;
-		afkNote.defaultTextFormat = new openfl.text.TextFormat("PhantomMuff 1.5", 22, 0xff00ff2a, false, false, false, null, null, "center");
+		afkNote.defaultTextFormat = new openfl.text.TextFormat("PhantomMuff 1.5", 22, 0xff00ff2a);
 		afkNote.autoSize = CENTER;
 		afkNote.multiline = true;
 		afkNote.text = "lorem ipsum";
@@ -435,6 +468,20 @@ class WallpaperState extends FlxState {
 
         classes.WindowsTransparency.enableTransparency();
         #end
+
+        // Testing scroll event handler for vol
+        FlxG.stage.addEventListener(MouseEvent.MOUSE_WHEEL, (scrl:MouseEvent) -> {
+            if (SSS.logger != null && !SSS.logger.hitTestPoint(openfl.Lib.current.stage.mouseX, openfl.Lib.current.stage.mouseY)) {
+                if (scrl.delta < 0 && FlxG.sound.music.volume > 0) {
+                    FlxG.sound.music.volume -= 0.05;
+                    FlxG.sound.play("bulkAssets/sound/beep.ogg");
+                } else if (scrl.delta > 0 && FlxG.sound.music.volume < 1) {
+                    FlxG.sound.music.volume += 0.05;
+                    FlxG.sound.play("bulkAssets/sound/beep.ogg");
+                }
+            }
+        }
+        );
         ButtonMapping.createButtons();
     }
 
@@ -513,22 +560,14 @@ class WallpaperState extends FlxState {
     var Hour12:Int;
     static var tabbedOut:Bool = false;
     override function update(elapsed:Float) {
-        // Testing scroll event handler for vol
-        if (FlxG.mouse.wheel > 0 && FlxG.sound.music.volume < 1) {
-            FlxG.sound.music.volume += 0.05;
-            FlxG.sound.play("bulkAssets/sound/beep.ogg");
-        } else if (FlxG.mouse.wheel < 0 && FlxG.sound.music.volume > 0) {
-            FlxG.sound.music.volume -= 0.05;
-            FlxG.sound.play("bulkAssets/sound/beep.ogg");
-        }
         // Moved it out here since I don't know where to go with the button arrangements
-        selectedLink.x = FlxG.mouse.getPosition().x;
+        selectedLink.x = FlxG.mouse.getPosition().x - 50;
         selectedLink.y = FlxG.mouse.getPosition().y - 75;
         if (!tabbedOut) {
             if (FlxG.mouse.getPosition().y >= FlxG.height - 3) {
                 onTabOut(null);
                 for (btn in BottomGroup)
-                    btn.cd = true;
+                    btn.cd = false;
             }
         } else {
             silly.y = FlxG.height * 0.6 + afkNote.height;

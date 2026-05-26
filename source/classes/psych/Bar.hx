@@ -1,4 +1,4 @@
-package classes;
+package classes.psych;
 
 import flixel.math.FlxRect;
 import flixel.math.FlxMath;

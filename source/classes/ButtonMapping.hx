@@ -1,5 +1,8 @@
 package classes;
 
+import openfl.events.NativeProcessExitEvent;
+import classes.psych.Discord.DiscordClient;
+import WallpaperState;
 import openfl.events.Event;
 import lime.app.Application;
 import haxe.io.BytesData;
@@ -51,7 +54,16 @@ typedef ButtonProperties = {
     /** __Optional__ - button size. */
     @:optional var scale:Int;
 
+    /** __Highly optional__ - Discord RPC properties on button click (reverts when target is closed).*/
+    @:optional var RPC:RpcSettings;
     // Possible feature: Set custom sound with default as ToggleJingle.ogg
+}
+private typedef RpcSettings = {
+    ?details:String,
+    ?state:Null<String>,
+    ?smallImageKey:Null<String>,
+    ?hasStartTimestamp:Bool,
+    ?endTimestamp:Null<Float>
 }
 
 
@@ -72,6 +84,13 @@ class ButtonMapping {
         args: null,
         scale: 1
     };
+    static final DefaultRpc:RpcSettings = {
+        details: "(No label provided.)",
+        state: "Stateful state",
+        smallImageKey: null,
+        hasStartTimestamp: false,
+        endTimestamp: null
+    };
     public static function createButtons() {
         final path:String = "bulkAssets/config.json";
         var buttonList:Array<ButtonProperties> = Json.parse(Assets.getText(path)).buttons;
@@ -88,6 +107,14 @@ class ButtonMapping {
             button.tooltipColor = button.tooltipColor ?? Default.tooltipColor;
             button.args = button.args ?? Default.args;
             button.scale = button.scale ?? Default.scale;
+
+            if (button.RPC != null) {
+                button.RPC.details = button.RPC.details ?? DefaultRpc.details;
+                button.RPC.endTimestamp = button.RPC.endTimestamp ?? DefaultRpc.endTimestamp;
+                button.RPC.hasStartTimestamp = button.RPC.hasStartTimestamp ?? DefaultRpc.hasStartTimestamp;
+                button.RPC.smallImageKey = button.RPC.smallImageKey ?? DefaultRpc.smallImageKey;
+                button.RPC.state = button.RPC.state ?? DefaultRpc.state;
+            }
 
             // Button creation
             var labelPath = 'bulkAssets/buttons/${button.label}';
@@ -122,12 +149,13 @@ class ButtonMapping {
                     var bruh:Vector<String> = new Vector();
                     bruh.push(button.args);
                     args.arguments = bruh;
+                    SettingsSubState.logger.trace("EXTRACE STARTED: "+  button.target + "\n===============", true);
 
                     var exec:NativeProcess = new NativeProcess();
                     var eventCallback = (e) -> {
                         @:privateAccess var bytes = new haxe.io.Bytes(Std.int(e.bytesLoaded), new BytesData());
                         exec.standardOutput.readBytes(bytes, 0, 0);
-                        Sys.println("EXTRACE | \x1b[36m" + bytes.toString() + "\x1b[37m");
+                        SettingsSubState.logger.trace(bytes.toString(), true);
                     }; 
 
                     try {
@@ -135,7 +163,13 @@ class ButtonMapping {
                         
                         // Command-line argument readings below for if an app successfully launches; make a smaller app for this soon.
                         exec.addEventListener(ProgressEvent.STANDARD_OUTPUT_DATA, eventCallback);
+                        exec.addEventListener(NativeProcessExitEvent.EXIT, (close:NativeProcessExitEvent) -> {
+                            DiscordClient.changePresence();
+                        });
                     } catch(no) throw no;
+
+                    if (button.RPC != null) DiscordClient.changePresence(button.RPC.details, button.RPC.state, button.RPC.smallImageKey, button.RPC.hasStartTimestamp, button.RPC.endTimestamp);
+                    else DiscordClient.changePresence("Just launched shortcut: " + button.target);
                 },
                 () -> {
                     FlxTween.cancelTweensOf(buttonToAdd);

@@ -1,4 +1,4 @@
-package classes;
+package classes.psych;
 
 import flixel.FlxG;
 import openfl.text.TextField;

@@ -12,7 +12,14 @@
             "tooltip": "Open Recent Workspace",
             "tooltipColor": "#3366ff",
             "target": "Code.exe",
-            "runIn": "%USERPROFILE%/AppData/Local/Programs/Microsoft VS Code"
+            "runIn": "%USERPROFILE%/AppData/Local/Programs/Microsoft VS Code",
+            "RPC": {
+                "details": "Testing Button onClick Updates",
+                "state": "Stateful state",
+                "smallImageKey": null,
+                "hasStartTimestamp": false,
+                "endTimestamp": null
+            }
         },
         {
             "x": 650,

@@ -13,13 +13,14 @@
     <!-- Source -->
     <classpath name="source" />
 
-    <!-- Assets -->
+    <!-- Assets (embed=true for some files soon?)-->
     <assets path="bulkAssets" />
 
     <!-- Libraries -->
     <haxelib name="flixel" />
     <haxelib name="flixel-ui" />
     <haxelib name="flixel-addons" />
+    <haxelib name="hxdiscord_rpc" />
 
     <!-- Haxe/CPP defines -->
     <haxedef name="FLX_NO_DEBUG" unless="debug" />

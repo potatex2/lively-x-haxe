@@ -1,5 +1,6 @@
 package;
 
+import classes.psych.Discord.DiscordClient;
 import flixel.tweens.FlxTween;
 import lime.app.Application;
 import openfl.system.Capabilities;
@@ -12,7 +13,7 @@ import openfl.display.StageScaleMode;
 import flixel.FlxGame;
 import openfl.events.Event;
 import WallpaperState;
-import classes.FPSCounter;
+import classes.psych.FPSCounter;
 #if js
 import js.Browser;
 import js.html.FontFace;
@@ -84,6 +85,7 @@ class Main extends Sprite {
         if (hasEventListener(Event.ADDED_TO_STAGE))
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 		setupGame();
+		DiscordClient.initialize();
     }
     private function setupGame() {
 		#if js
@@ -152,7 +154,7 @@ class Main extends Sprite {
 		var eee:String = "Oops. I fumbled.\n----------\n";
 		eee += "\n==⚠️ CRASH REASON: ⚠️==\n" + haxe.CallStack.toString(callStack).replace("Called from", "@ ");
 		Sys.println(eee);
-		FlxG.sound.play("bulkAssets/error.wav");
+		FlxG.sound.play("bulkAssets/sound/error.wav");
 		Application.current.window.alert(eee, "please yell at me  -PotateX2");
 		Sys.exit(1);
 	}

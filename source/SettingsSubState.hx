@@ -1,13 +1,13 @@
 package;
 import flixel.addons.ui.StrNameLabel;
 import sys.FileSystem;
-import flixel.system.ui.FlxSoundTray;
 import openfl.system.Capabilities;
 import flixel.FlxG;
 import flixel.tweens.FlxEase;
 import flixel.FlxSubState;
 import flixel.tweens.FlxTween;
 import classes.FlxDynamics;
+import classes.ui.ExternLogger;
 import flixel.addons.ui.FlxUIDropDownMenu;
 
 import WallpaperState;
@@ -16,8 +16,10 @@ class SettingsSubState extends FlxSubState {
     var outtaThere:FlxAnimButton;
     var placehold:FlxDynamicText;
     var musicSelect:FlxUIDropDownMenu;
+    public static var logger:ExternLogger;
     override function create() {
         super.create();
+
         WallpaperState.instance.configButton.visible = false;
         WallpaperState.instance.persistentUpdate = true;
         FlxTween.completeTweensOf(WallpaperState.camHUD, ["alpha"]);
@@ -34,6 +36,8 @@ class SettingsSubState extends FlxSubState {
 
         InitMusicSelect();
         musicSelect.selectedLabel = WallpaperState.Selection;
+
+        FlxG.stage.addChild(logger);
     }
     override function destroy() {
         FlxTween.completeTweensOf(WallpaperState.camHUD, ["alpha"]);
@@ -42,6 +46,7 @@ class SettingsSubState extends FlxSubState {
         outtaThere = null;
         FlxG.save.data.selected = musicSelect.selectedLabel;
         FlxG.save.flush();
+        FlxG.stage.removeChild(logger);
         close();
         super.destroy();
     }
@@ -70,7 +75,7 @@ class SettingsSubState extends FlxSubState {
             WallpaperState.Selection = sel;
             FlxG.sound.music.loadEmbedded("bulkAssets/music/" + sel + ".ogg", true).play();
             WallpaperState.jason = haxe.Json.parse(Assets.getText('bulkAssets/music/$sel.json')).music.bpm;
-            trace('Data BPM: ${WallpaperState.jason}');
+            logger.trace('Data BPM: ${WallpaperState.jason}', false);
             WallpaperState.croshet = flixel.math.FlxMath.roundDecimal(60 / WallpaperState.jason, 4);
             WallpaperState.flaxhixele.text = 'Custom-made in HaxeFlixel; music selected: "$sel"';
         });

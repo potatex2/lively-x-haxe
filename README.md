@@ -8,13 +8,13 @@ Oh, hey. You found another one of my hyperfixations lurking in the Internet. Wel
 
 Now, what *exactly* does this one have in store for us?
 
-## Current Features - 0.4.1
+## Current Features - 0.4.3 (forgot this existed)
 
-* Buttons can now be softcoded through JSON format, located in `bulkAssets/buttons/config.json`. A guideline for the variables is provided in the root folder.
-* Your own custom music can now also be added! (Yeah, having FNF pause menu music can get kinda old quickly...)
-  * info.json has been replaced; *you can select which one to play through the Settings substate in the top right corner.* :D
-* AFK duration counter and customizable AFK note
-* Proper crash handler (props to sqirra-rng) and **event logger** with console coloring
+* Basic Discord Rich Presence (RPC) support, ported from Psych Engine
+  * Customizable in `config.json` through the `"RPC": {}` property; only the relevant 5 are supported right now.
+* Barebones built-in console window for if you need to track anything from the console without needing the external ones; draggable with right-click and accessible in `SettingsSubState`. (The place where the X should be doesn't do anything yet. Also, Lively's weird focus stuff makes dragging more tedious, sorry.)
+* Source files from Psych have been delegated to their own folder. *Which should've been done in the first place, looking back...*
+
 
 ## Overview
 **Please note:** I'm too damn broke to get Wallpaper Engine, HOWEVER Lively Wallpaper works very similar to that software, so this will be the focus for this repo.

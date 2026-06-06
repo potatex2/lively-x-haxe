@@ -129,8 +129,6 @@ class Main extends Sprite {
 			if (FlxG.game != null)
 				resetSpriteCache(FlxG.game);
 		});
-
-		classes.WindowsTransparency.enableTransparency();
 		
 		#if js Browser.window.console.log("%%%%% Post-setup %%%%%\n"); #end
 

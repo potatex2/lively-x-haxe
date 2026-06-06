@@ -472,6 +472,8 @@ class WallpaperState extends FlxState {
         add(TopGroup);
         add(BottomGroup);
 
+        classes.WindowsTransparency.enableTransparency();
+
         ButtonMapping.createButtons();
         #end
 

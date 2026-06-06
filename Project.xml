@@ -13,8 +13,9 @@
     <!-- Source -->
     <classpath name="source" />
 
-    <!-- Assets (embed=true for some files soon?)-->
+    <!-- Assets -->
     <assets path="bulkAssets" />
+    <assets path="bulkAssets/embed" include="*" embed="true"/>
 
     <!-- Libraries -->
     <haxelib name="flixel" />
@@ -32,5 +33,5 @@
 	<haxedef name="HXCPP_STACK_LINE" />
 	<haxedef name="HXCPP_STACK_TRACE" />
 
-    <icon path="bulkAssets/icon.png"/>
+    <icon path="bulkAssets/embed/icon.png"/>
 </project>

@@ -1,10 +1,10 @@
+import flixel.util.FlxColor;
 import classes.ui.ExternLogger;
 import openfl.events.MouseEvent;
 import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import openfl.display.BitmapData;
 import classes.ButtonMapping;
-import flixel.ui.FlxButton;
 import flixel.group.FlxSpriteGroup;
 import flixel.util.FlxStringUtil;
 import openfl.text.TextField;
@@ -46,14 +46,14 @@ class WallpaperState extends FlxState {
     *     
     * _I know, I know, not a good practice... this is a hyperfixation, alright?_
     */
-    public var RootDirectory:String = "bulkAssets/";
+    public var RD:String = "bulkAssets/";
 
     /**
     * **You know I had to do a self-insert for this. :3**
     * 
     * _Placeholder image that bops to the music beat (independent of `camHUD`)._
     */
-    var bopper:Img;
+    public static var bopper:Img;
     /**
      * Camera instance for anything that will bop to the music playing.
      */
@@ -119,31 +119,32 @@ class WallpaperState extends FlxState {
     public var configButton:FlxAnimButton;
 
     // Load config preferences before wallpaper application runs with default values.
+    private var SaveDefaults:Dynamic = {
+
+    }
     public static function loadConfig(save:flixel.util.FlxSave) {
         if (save.data.selected == null) { //Fallback for music
             var musicList:Array<String> = FileSystem.readDirectory("bulkAssets/music");
             var i:Int = 0;
             while (i <= musicList.length - 1) {
-                if (i > musicList.length - 1) throw "WallpaperState | No music files were found, please add a file for fallback!";
+                if (i > musicList.length - 1) throw "WallpaperState.loadConfig() | No music files were found, please add a file for fallback!";
                 var fileName:Array<String> = musicList[i].split(".");
                 if (fileName[1] == "ogg" || fileName[1] == "mp3" || fileName[1] == "wav") {
                     Selection = fileName[0];
                     save.data.selected = Selection;
-                    Sys.println("        \x1b[1;33mloadConfig | \x1b[0;43m Fallback set to: " + Selection + "\x1b[0m");
+                    Sys.println("        \x1b[1;33mloadConfig() | \x1b[0;43m Fallback set to: " + Selection + "\x1b[0m");
                     break;   
                 }
                 i++;
             }
         }
-        save.data.fish = "fosj.";
         save.flush();
 
         Selection = save.data.selected;
         Sys.println("   \x1b[1;33mSaveData\x1b[0m | Loaded save: " + save.data);
-
-        //Testing HaxeUI
-
     }
+    
+    public static var backendRPC:{details:String, state:String};
     static function Preload() {
         var soundList:Array<String> = [];
         for (file in FileSystem.readDirectory("bulkAssets/sound")) {
@@ -153,12 +154,15 @@ class WallpaperState extends FlxState {
             FlxG.sound.list.add(test);
         }
         ExternLogger.init();
-        SSS.logger = new ExternLogger(100, 100, 500, 600, 14);
+        SSS.logger = new ExternLogger(Capabilities.screenResolutionX - 600, 250, 500, 600, 14);
+
+        //Optimize soon.
+        backendRPC = Json.parse(Assets.getText("bulkAssets/config.json")).backend.idleRPC;
+        DiscordClient.changePresence(backendRPC.details, backendRPC.state);
     }
 
     override function create() {
         Preload();
-        DiscordClient.changePresence("Still integrating Discord. Don't know what else yet.");
         // For substate use
         instance = this;
 
@@ -174,7 +178,7 @@ class WallpaperState extends FlxState {
         //FlxG.camera.bgColor = Json.parse(Assets.getText('bulkAssets/config.json')).backend.bgColor;
         //no effect, looking into it soon.
 
-		bgGoofy = new BG(RootDirectory + "bgGoofy.png"); 
+		bgGoofy = new BG(Embed("bgGoofy.png")); 
 		bgGoofy.updateHitbox(); 
 		bgGoofy.alpha = 1; 
 		bgGoofy.screenCenter(X); 
@@ -196,12 +200,10 @@ class WallpaperState extends FlxState {
         FlxG.cameras.add(camGUI, false);
         camGUI.bgColor.alpha = 0; // Yes. It. Does.
 
-        //Apparently loadGraphic() can't properly process subtexture atlases, sooo FlxAtlasFrames it is.
-        var atlasFrames:Dynamic = FlxAtlasFrames.fromSparrow("bulkAssets/transition.png", "bulkAssets/transition.xml");
-        transitionSprite = new FlxSprite();
-        transitionSprite.setFrames(atlasFrames, true);
+        var atlasFrames:FlxAtlasFrames = FlxAtlasFrames.fromSparrow(Embed("transition.png"), Embed("transition.xml"));
+        transitionSprite = new FlxSprite().setFrames(atlasFrames, true);
         add(transitionSprite);
-        transitionSprite.useFramePixels = true;
+        transitionSprite.useFramePixels = true; // not redundant.
         transitionSprite.animation.addByPrefix("fade", "fadeTrans", 9, false);
         transitionSprite.animation.play("fade", true);
         
@@ -209,7 +211,7 @@ class WallpaperState extends FlxState {
         add(transition);
         updateBackdropFrame();
 
-        bopper = new Img(FlxG.width + 200, FlxG.height / 2).loadGraphic(RootDirectory + "bozo.png");
+        bopper = new Img(FlxG.width + 200, FlxG.height / 2).loadGraphic(Embed("bozo.png"));
         bopper.y = FlxG.height / 2 - bopper.height/2;
         bopper.alpha = 0;
         add(bopper);
@@ -231,7 +233,7 @@ class WallpaperState extends FlxState {
 
         ticktock = new haxe.Timer(1000);
 
-        configButton = new FlxAnimButton("TestState", 0, 50, "bulkAssets/Settings.png");
+        configButton = new FlxAnimButton("TestState", 0, 50, Embed("Settings.png"));
         configButton.init_X = Capabilities.screenResolutionX - configButton.width - 50;
         add(configButton);
         configButton.cameras = [camHUD];
@@ -280,7 +282,7 @@ class WallpaperState extends FlxState {
         silly.cameras = [camHUD];
         FlxTween.tween(silly, {alpha: 1}, 1.4, {ease: FlxEase.sineInOut});
 
-        flaxhixele = new FlxText(5, FlxG.height - 30, 600, 'Custom-made in HaxeFlixel; music selected: "$Selection"', 15);
+        flaxhixele = new FlxText(5, FlxG.height - 30, 600, 'Created with HaxeFlixel; music selected: "$Selection"', 15);
         flaxhixele.alignment = "left";
         flaxhixele.alpha = 0.001;
         flaxhixele.setFormat("PhantomMuff 1.5", 15, 0xffffa600, "left");
@@ -340,16 +342,31 @@ class WallpaperState extends FlxState {
         #if sys
         FlxG.mouse.useSystemCursor = true;
 
-        updateNote = new FlxAnimButton("Update AFK", FlxG.width / 4, 0, "bulkAssets/reload.png");
+        afkNote = new openfl.text.TextField();
+		afkNote.x = Capabilities.screenResolutionX / 2 - afkNote.width / 2;
+		afkNote.y = Capabilities.screenResolutionY / 2 + 60;
+        
+		afkNote.selectable = false;
+        afkNote.type = openfl.text.TextFieldType.DYNAMIC;
+		afkNote.defaultTextFormat = new openfl.text.TextFormat("PhantomMuff 1.5", 30, 0xff00ff2a);
+		afkNote.autoSize = CENTER;
+		afkNote.multiline = true;
+		afkNote.text = "lorem ipsum";
+        openfl.Lib.current.addChild(afkNote);
+
+        updateNote = new FlxAnimButton("Update AFK", FlxG.width / 4, 0, Embed("reload.png"));
         updateNote.init_X = FlxG.width / 2 - updateNote.width / 2;
         //updateNote.init_Y = -65;
         TopGroup.add(updateNote);
+        var noteProps:{afkNote:String, color:String};
         updateNote.setCallbacks(
             () -> {
                 FlxTween.cancelTweensOf(updateNote);
-                FlxG.sound.play("sound/clickOut.ogg");
+                FlxG.sound.play("bulkAssets/sound/clickOut.ogg");
                 var hasOneDrive:Bool = FileSystem.exists(Sys.getEnv("ONEDRIVECONSUMER") + '\\Desktop\\AFKNote.px2');
-                afkNote.text = Json.parse(sys.io.File.getContent(Sys.getEnv(hasOneDrive ? "ONEDRIVECONSUMER" : "USERPROFILE") + '\\Desktop\\AFKNote.px2')).afkNote;
+                noteProps = cast Json.parse(sys.io.File.getContent(Sys.getEnv(hasOneDrive ? "ONEDRIVECONSUMER" : "USERPROFILE") + '\\Desktop\\AFKNote.px2'));
+                afkNote.text = noteProps.afkNote;
+                afkNote.textColor = FlxColor.fromString(noteProps?.color ?? "0xff00ff2a");
                 updateNote.scale.x = 1;
                 updateNote.scale.y = 1;
             },
@@ -368,19 +385,8 @@ class WallpaperState extends FlxState {
                 FlxTween.tween(updateNote, {"scale.x": 0.8, "scale.y": 0.8, y: updateNote.init_Y}, 0.5, {ease: FlxEase.circOut});
             }
         );
-        afkNote = new openfl.text.TextField();
-		afkNote.x = Capabilities.screenResolutionX / 2 - afkNote.width / 2;
-		afkNote.y = Capabilities.screenResolutionY / 2 + 60;
-        
-		afkNote.selectable = false;
-        afkNote.type = openfl.text.TextFieldType.DYNAMIC;
-		afkNote.defaultTextFormat = new openfl.text.TextFormat("PhantomMuff 1.5", 22, 0xff00ff2a);
-		afkNote.autoSize = CENTER;
-		afkNote.multiline = true;
-		afkNote.text = "lorem ipsum";
-        openfl.Lib.current.addChild(afkNote);
 
-        shutdownWarn = new Img().loadGraphic("bulkAssets/warning.png");
+        shutdownWarn = new Img().loadGraphic(Embed("warning.png"));
         shutdownWarn.screenCenter();
         add(shutdownWarn);
         shutdownWarn.alpha = 0;
@@ -396,7 +402,7 @@ class WallpaperState extends FlxState {
 		selectedLink.text = "...";
         openfl.Lib.current.addChild(selectedLink);
 
-        shutDown = new FlxAnimButton("Shutdown", 0, 0, "bulkAssets/shutdown.png");
+        shutDown = new FlxAnimButton("Shutdown", 0, 0, Embed("shutdown.png"));
         shutDown.scale.x = 0.7;
         shutDown.scale.y = 0.7;
         shutDown.init_X = FlxG.width - shutDown.width / 2 - 100;
@@ -437,7 +443,7 @@ class WallpaperState extends FlxState {
                 FlxTween.tween(shutDown, {"scale.x": 0.7, "scale.y": 0.7, y: BottomPos}, 0.5, {ease: FlxEase.circOut});
             }
         );
-        tabBackIn = new FlxAnimButton("TabIn", 0, 0, "bulkAssets/tabBackIn.png");
+        tabBackIn = new FlxAnimButton("TabIn", 0, 0, Embed("tabBackIn.png"));
         tabBackIn.init_X = FlxG.width / 2 - tabBackIn.width / 2;
         tabBackIn.init_Y = tabBackIn.height;
         tabBackIn.setCallbacks(
@@ -466,7 +472,7 @@ class WallpaperState extends FlxState {
         add(TopGroup);
         add(BottomGroup);
 
-        classes.WindowsTransparency.enableTransparency();
+        ButtonMapping.createButtons();
         #end
 
         // Testing scroll event handler for vol
@@ -474,15 +480,14 @@ class WallpaperState extends FlxState {
             if (SSS.logger != null && !SSS.logger.hitTestPoint(openfl.Lib.current.stage.mouseX, openfl.Lib.current.stage.mouseY)) {
                 if (scrl.delta < 0 && FlxG.sound.music.volume > 0) {
                     FlxG.sound.music.volume -= 0.05;
-                    FlxG.sound.play("bulkAssets/sound/beep.ogg");
+                    FlxG.sound.play(Embed("beep.ogg"));
                 } else if (scrl.delta > 0 && FlxG.sound.music.volume < 1) {
                     FlxG.sound.music.volume += 0.05;
-                    FlxG.sound.play("bulkAssets/sound/beep.ogg");
+                    FlxG.sound.play(Embed("beep.ogg"));
                 }
             }
         }
         );
-        ButtonMapping.createButtons();
     }
 
     static function RunAFK() {
@@ -504,7 +509,7 @@ class WallpaperState extends FlxState {
     }
 
     // Focus Handlers
-    public static function onTabOut(e:Event) {
+    public static function onTabOut() {
         FlxTween.completeTweensOf(TopGroup);
         FlxTween.completeTweensOf(BottomGroup);
         FlxTween.completeTweensOf(tabBackIn);
@@ -565,12 +570,12 @@ class WallpaperState extends FlxState {
         selectedLink.y = FlxG.mouse.getPosition().y - 75;
         if (!tabbedOut) {
             if (FlxG.mouse.getPosition().y >= FlxG.height - 3) {
-                onTabOut(null);
+                onTabOut();
                 for (btn in BottomGroup)
                     btn.cd = false;
             }
         } else {
-            silly.y = FlxG.height * 0.6 + afkNote.height;
+            silly.y = FlxG.height * 0.575 + afkNote.height;
         }
         secondsTotal = FlxMath.roundDecimal(FlxG.sound.music.time / 1000, 4);
         if (secondsTotal % croshet >= 0 && secondsTotal % croshet <= 0.03 && bopPrefs) {
@@ -619,7 +624,7 @@ class WallpaperState extends FlxState {
         updateArray.push((?args) -> callback(args));
     }
 
-    static function updateBackdropFrame() {
+    static function updateBackdropFrame() { // okay this is necessary
         if (transitionSprite.framePixels != null) {
             var bmp:BitmapData = transitionSprite.framePixels.clone();
             var graphic = FlxGraphic.fromBitmapData(bmp);
@@ -630,4 +635,7 @@ class WallpaperState extends FlxState {
 
 inline function jsOrWin(jsVal:Dynamic, winVal:Dynamic):Dynamic {
     return #if js jsVal #elseif cpp winVal #end;
+}
+inline function Embed(path:String):String {
+    return 'bulkAssets/embed/$path';
 }

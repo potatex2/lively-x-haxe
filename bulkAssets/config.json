@@ -1,6 +1,10 @@
 {
     "backend": {
-        "bgColor": "#888888"
+        "bgColor": "#888888",
+        "idleRPC": {
+            "details": "Staying AFK",
+            "state": "Lurking..."
+        }
     },
     "buttons": [
         {
@@ -14,8 +18,8 @@
             "target": "Code.exe",
             "runIn": "%USERPROFILE%/AppData/Local/Programs/Microsoft VS Code",
             "RPC": {
-                "details": "Testing Button onClick Updates",
-                "state": "Stateful state",
+                "details": "Brainstorming more on VSCode",
+                "state": "✨ probably hyperfixating!! ✨",
                 "smallImageKey": null,
                 "hasStartTimestamp": false,
                 "endTimestamp": null
@@ -31,7 +35,14 @@
             "tooltip": "Open Psych 0.7.3",
             "tooltipColor": "#00eeee",
             "target": "PsychEngine.exe",
-            "runIn": "%USERPROFILE%/FNF MODS/Psych 0.7.3 BULK"
+            "runIn": "%USERPROFILE%/FNF MODS/Psych 0.7.3 BULK",
+            "RPC": {
+                "details": "Psych Engine 0.7.3",
+                "state": "Funkin' in the Psych Ward",
+                "smallImageKey": null,
+                "hasStartTimestamp": false,
+                "endTimestamp": null
+            }
         },
         {
             "x": 500,
@@ -42,7 +53,32 @@
             "tooltip": "Open Discord",
             "tooltipColor": "#7650ff",
             "target": "Discord.exe",
-            "runIn": "%localappdata%/Discord/app-1.0.9238"
+            "runIn": "%localappdata%/Discord/app-1.0.9240",
+            "RPC": {
+                "details": "Opened Discord",
+                "state": "This'll probably make Discord crash again...",
+                "smallImageKey": null,
+                "hasStartTimestamp": false,
+                "endTimestamp": null
+            }
+        },
+        {
+            "x": 800,
+            "y": 40,
+            "fromRight": false,
+            "fromBottom": true,
+            "label": "tetris.png",
+            "tooltip": "TETR.IO",
+            "tooltipColor": "#ff88ff",
+            "target": "TETR.IO.exe",
+            "runIn": "%localappdata%/Programs/tetrio-desktop",
+            "RPC": {
+                "details": "T-Spinning out of my mind",
+                "state": "Tetris through the lag...",
+                "smallImageKey": null,
+                "hasStartTimestamp": false,
+                "endTimestamp": null
+            }
         }
     ]
 }

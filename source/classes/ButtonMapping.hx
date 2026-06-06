@@ -1,5 +1,6 @@
 package classes;
 
+import classes.ui.ExternLogger;
 import openfl.events.NativeProcessExitEvent;
 import classes.psych.Discord.DiscordClient;
 import WallpaperState;
@@ -71,6 +72,7 @@ private typedef RpcSettings = {
 class ButtonMapping {
     public static var ButtonArray:Array<FlxAnimButton> = [];
     static var ErrorIndices:Map<Int, String> = [];
+    static final maxChars:Int = 1500;
     static final Default:ButtonProperties = {
         x: 0,
         y: 0,
@@ -149,13 +151,18 @@ class ButtonMapping {
                     var bruh:Vector<String> = new Vector();
                     bruh.push(button.args);
                     args.arguments = bruh;
-                    SettingsSubState.logger.trace("EXTRACE STARTED: "+  button.target + "\n===============", true);
+                    SettingsSubState.logger.trace("EXTRACE STARTED: "+  button.target + "\n===============\n", true);
 
                     var exec:NativeProcess = new NativeProcess();
                     var eventCallback = (e) -> {
                         @:privateAccess var bytes = new haxe.io.Bytes(Std.int(e.bytesLoaded), new BytesData());
                         exec.standardOutput.readBytes(bytes, 0, 0);
                         SettingsSubState.logger.trace(bytes.toString(), true);
+                        // Performance improvements; refactor soon.
+                        if (ExternLogger.logs.length > 4096) {
+                            var excess:Int = ExternLogger.logs.length - maxChars;
+                            ExternLogger.logs.text = ExternLogger.logs.text.substr(excess);
+                        }
                     }; 
 
                     try {
@@ -164,7 +171,7 @@ class ButtonMapping {
                         // Command-line argument readings below for if an app successfully launches; make a smaller app for this soon.
                         exec.addEventListener(ProgressEvent.STANDARD_OUTPUT_DATA, eventCallback);
                         exec.addEventListener(NativeProcessExitEvent.EXIT, (close:NativeProcessExitEvent) -> {
-                            DiscordClient.changePresence();
+                            DiscordClient.changePresence(WallpaperState.backendRPC.details, WallpaperState.backendRPC.state);
                         });
                     } catch(no) throw no;
 
@@ -204,21 +211,19 @@ class ButtonMapping {
         if (envReg.match(cmdPath)) {
             var parsedEnv:Null<String> = envReg.matched(1);
             parsedEnv = Sys.getEnv(parsedEnv).replace("\\","/");
-            Sys.println("   \x1b[1;33mEnvCheck\x1b[0;37m | "+ (index + 1) +": Env Variable detected: " + parsedEnv);
             if (parsedEnv == null || parsedEnv == "") {
                 Sys.println("   \x1b[1;31mEnvCheck\x1b[0;33m | !!! BUTTON " + (index+1) + " ERROR. Environment variable specified does not exist or have a value!\x1b[37m");
                 ErrorIndices.set(index + 1, "InvalidEnvError");
                 return null;
             }
-            
+            Sys.println("   \x1b[1;33mEnvCheck\x1b[0;37m | "+ (index + 1) +": Env Variable detected: " + parsedEnv);
             cmdPath = envReg.replace(cmdPath, parsedEnv);
             // TO-DO: FIX ALL LOGIC FOR DIRECTORIES BEFORE FILES.
             if (FileSystem.exists(cwd + "/" + cmdPath) || FileSystem.exists(cmdPath) ) {
-                Sys.println('      \\ Button ${index+1} \x1b[1;32msuccessfully parsed.\x1b[0;37m Target: $cmdPath');
+                Sys.println('   \x1b[1;33mEnvCheck\x1b[0;37m | \\ Button ${index+1} \x1b[1;32msuccessfully parsed.\x1b[0;37m Target: $cmdPath');
                 return cmdPath;
             }
             else {
-                // Overhaul: Check which directory may be misspelled and format output path segment for location.
                 var WhichDirectory:Array<String> = cmdPath.split("/");
                 var checker:String = "";
                 var ErrorFound:Bool = false;
@@ -231,7 +236,7 @@ class ButtonMapping {
                             continue;
                         }
                     }
-                    checker += path+"/";
+                    checker += path + "/";
                 }
                 Sys.println("   \x1b[1;31mEnvCheck\x1b[0;33m | !!! BUTTON " + (index+1) + " ERROR. Target: \x1b[37m" + checker + "\x1b[37m");
                 ErrorIndices.set(index + 1, "NullPathError");

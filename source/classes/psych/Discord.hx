@@ -1,17 +1,18 @@
 package classes.psych;
 
+import classes.ui.ExternLogger;
 import Sys.sleep;
 import lime.app.Application;
 import hxdiscord_rpc.Discord;
 import hxdiscord_rpc.Types;
 
-// Discord class ported from Psych Engine.
+// Discord class ported from Psych Engine; updated to match git version.
 class DiscordClient
 {
 	public static var isInitialized:Bool = false;
 	private static final _defaultID:String = "1508968068959703181";
 	public static var clientID(default, set):String = _defaultID;
-	private static var presence:DiscordRichPresence = DiscordRichPresence.create();
+	private static var presence:DiscordRichPresence = new DiscordRichPresence();
 
 	public static function check()
 	{
@@ -37,11 +38,12 @@ class DiscordClient
 		var requestPtr:cpp.Star<DiscordUser> = cpp.ConstPointer.fromRaw(request).ptr;
 
 		if (Std.parseInt(cast(requestPtr.discriminator, String)) != 0) //New Discord IDs/Discriminator system
-			Sys.println('   \x1b[1;33mDiscord\x1b[0;37m Connected to User (${cast(requestPtr.username, String)}#${cast(requestPtr.discriminator, String)})');
+			Sys.println('   \x1b[1;33mDiscord\x1b[0;37m | Connected to User (${cast(requestPtr.username, String)}#${cast(requestPtr.discriminator, String)})');
 		else //Old discriminators
-			Sys.println('   \x1b[1;33mDiscord\x1b[0;37m Connected to User (${cast(requestPtr.username, String)})');
+			Sys.println('   \x1b[1;33mDiscord\x1b[0;37m | Connected to User (${cast(requestPtr.username, String)})');
 
-		changePresence();
+		changePresence("Just opened Discord", "You wouldn't be seeing this otherwise. :3");
+		var eee = new DiscordButton();
 	}
 
 	private static function onError(errorCode:Int, message:cpp.ConstCharStar):Void {
@@ -54,11 +56,11 @@ class DiscordClient
 
 	public static function initialize()
 	{
-		var discordHandlers:DiscordEventHandlers = DiscordEventHandlers.create();
+		var discordHandlers:DiscordEventHandlers = new DiscordEventHandlers();
 		discordHandlers.ready = cpp.Function.fromStaticFunction(onReady);
 		discordHandlers.disconnected = cpp.Function.fromStaticFunction(onDisconnected);
 		discordHandlers.errored = cpp.Function.fromStaticFunction(onError);
-		Discord.Initialize(clientID, cpp.RawPointer.addressOf(discordHandlers), 1, null);
+		Discord.Initialize(clientID, cpp.RawPointer.addressOf(discordHandlers), true, null);
 
 		if(!isInitialized) Sys.println("   \x1b[1;33mDiscord\x1b[0m | Discord Client initialized");
 
@@ -97,14 +99,25 @@ class DiscordClient
 		presence.details = details;
 		presence.state = state;
 		presence.largeImageKey = 'icon';
-		presence.largeImageText = "WIP";
+		presence.largeImageText = "Boop.";
 		presence.smallImageKey = smallImageKey;
+		  var buton:DiscordButton = new DiscordButton();
+		  buton.label = "⬇️ | Get It Yourself";
+		  buton.url = "https://github.com/potatex2/lively-x-haxe/releases";
+		var presencePtr:cpp.Pointer<DiscordRichPresence> = cpp.Pointer.addressOf(presence);
+		presencePtr.ptr.buttons[0] = buton;
+
 		// Obtained times are in milliseconds so they are divided so Discord can use it
 		presence.startTimestamp = Std.int(startTimestamp / 1000);
 		presence.endTimestamp = Std.int(endTimestamp / 1000);
 		updatePresence();
 
-		//trace('Discord RPC Updated. Arguments: $details, $state, $smallImageKey, $hasStartTimestamp, $endTimestamp');
+		if (SettingsSubState.logger != null) {
+			var endstr:String = 'RPC changed: ["$details", "$state", $smallImageKey, $hasStartTimestamp, $endTimestamp]';
+			ExternLogger.logs.appendText("DISCORD | " + endstr);
+			Sys.println("   \x1b[1;33mDiscord\x1b[0m | " + endstr);
+			
+		}
 	}
 
 	public static function updatePresence()

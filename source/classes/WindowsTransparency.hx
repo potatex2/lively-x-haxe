@@ -30,6 +30,7 @@ class WindowsTransparency
         //Lib.application.window.borderless = true;
     }
 
+    /**
     public static function disableTransparency():Void
     {
         FlxG.camera.bgColor = 0xFF100000;
@@ -42,6 +43,7 @@ class WindowsTransparency
 
         //Lib.application.window.borderless = false;
     }
+    **/
 
     #end
 }

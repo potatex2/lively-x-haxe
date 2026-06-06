@@ -1,5 +1,6 @@
 package;
 
+import classes.ui.CustomFlxSplash;
 import classes.psych.Discord.DiscordClient;
 import flixel.tweens.FlxTween;
 import lime.app.Application;
@@ -7,7 +8,6 @@ import openfl.system.Capabilities;
 import openfl.display.DisplayObject;
 import openfl.Lib;
 import flixel.FlxG;
-import flixel.system.FlxSplash;
 import openfl.display.Sprite; //for main ig
 import openfl.display.StageScaleMode;
 import flixel.FlxGame;
@@ -51,10 +51,10 @@ class Main extends Sprite {
     var state = {
 		width: Std.int(Capabilities?.screenResolutionX) ?? 1280, // WINDOW width
 		height: Std.int(Capabilities?.screenResolutionY) ?? 720, // WINDOW height
-		initialState: WallpaperState, // starting state
+		initialState: null, // starting state
 		zoom: 1.0, // game state bounds, SET TO -1 FOR CALCULATIONS
 		framerate: 60,
-		skipSplash: false, // Flixel splash
+		skipSplash: true, // Flixel splash
 		startFullscreen: false
 	};
 	/**App context for object rendering optimization.*/
@@ -74,7 +74,7 @@ class Main extends Sprite {
 	public function new() {
         super();
 
-        FlxSplash.creditOverride(Context.Wallpaper);
+        CustomFlxSplash.creditOverride(Context.Wallpaper);
         if (stage != null)
 			init();
 		else
@@ -129,7 +129,13 @@ class Main extends Sprite {
 			if (FlxG.game != null)
 				resetSpriteCache(FlxG.game);
 		});
+
+		classes.WindowsTransparency.enableTransparency();
+		
 		#if js Browser.window.console.log("%%%%% Post-setup %%%%%\n"); #end
+
+		//Startup
+		FlxG.switchState(new CustomFlxSplash(new WallpaperState()));
     }
 	private function Preload() {
 		FlxG.save.bind("WallpaperConfig");
@@ -154,7 +160,7 @@ class Main extends Sprite {
 		var eee:String = "Oops. I fumbled.\n----------\n";
 		eee += "\n==⚠️ CRASH REASON: ⚠️==\n" + haxe.CallStack.toString(callStack).replace("Called from", "@ ");
 		Sys.println(eee);
-		FlxG.sound.play("bulkAssets/sound/error.wav");
+		FlxG.sound.play(Embed("error.wav"));
 		Application.current.window.alert(eee, "please yell at me  -PotateX2");
 		Sys.exit(1);
 	}

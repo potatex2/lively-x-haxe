@@ -1,6 +1,6 @@
 Hyperfixation Status:
-- [x] In Active Development (WE ARE SO BACK)
-- [ ] In Periodic Development
+- [ ] In Active Development
+- [x] In Periodic Development (idk what's next)
 - [ ] Burnout / Other Hyperfocus
 
 # Haxe Wallpaper for Lively Wallpaper
@@ -8,13 +8,22 @@ Oh, hey. You found another one of my hyperfixations lurking in the Internet. Wel
 
 Now, what *exactly* does this one have in store for us?
 
-## Current Features - 0.4.1
+## Current Features - 0.4.4
 
-* Buttons can now be softcoded through JSON format, located in `bulkAssets/buttons/config.json`. A guideline for the variables is provided in the root folder.
-* Your own custom music can now also be added! (Yeah, having FNF pause menu music can get kinda old quickly...)
-  * info.json has been replaced; *you can select which one to play through the Settings substate in the top right corner.* :D
-* AFK duration counter and customizable AFK note
-* Proper crash handler (props to sqirra-rng) and **event logger** with console coloring
+* More customization features, including AFK note color (more soon) and now __the boppery boop itself!__
+* Some assets are now embedded for performance improvements.
+* **CustomFlxSplash is now its own standalone file/class, so you don't need to deal with the `haxelib` setup stuff anymore!**
+
+I'll overhaul the rest of the README soon enough. Blorp.
+
+### 0.4.3 changes:
+
+* Basic Discord Rich Presence (RPC) support, ported from Psych Engine
+  * Customizable in `config.json` through the `"RPC": {}` property; only the relevant 5 are supported right now.
+* Barebones built-in console window for if you need to track anything from the console without needing the external ones; draggable with right-click and accessible in `SettingsSubState`. (The place where the X should be doesn't do anything yet. Also, Lively's weird focus stuff makes dragging more tedious, sorry.)
+* Source files from Psych have been delegated to their own folder. *Which should've been done in the first place, looking back...*
+
+---
 
 ## Overview
 **Please note:** I'm too damn broke to get Wallpaper Engine, HOWEVER Lively Wallpaper works very similar to that software, so this will be the focus for this repo.
@@ -78,15 +87,13 @@ For the libraries you need to run this, run `haxelib install <library>` with the
 
 <img width="151" height="178" alt="image" src="https://github.com/user-attachments/assets/ac16b22a-172c-482c-9afe-9b761c399d26" />
 
-### Important: For the purpose of this project, flixel 5.8.0 has been modified for compatibility, and the version folder in libs/ MUST be added to `C:\Users\<user>\lime`. Ensure the version is confirmed with `haxelib set flixel 5.8.0`. I'm planning on making this more convenient later on, so sorry about that.
-
 #### Now you might be tired of all the hassle you had setting all this up, so *how do you see if it works?*
 
-In the root directory in the terminal, run `lime [test | build] windows` and wait a couple minutes for everything to build, depending on how good your hardware is. If you ran `test`, the window *should* open with no errors, and there's your wallpaper! _Well, MY wallpaper since you probably went to test this first..._
+In the root directory in the terminal, run `lime [test | build] windows` and wait a couple minutes for everything to build, depending on how good your hardware is. If you ran `test`, the window *should* open with no errors, and there's your wallpaper! _Or you can just check the Releases tab; that works too..._
 
 # Please report any runtime errors in the Issues tab of this repo.
 
 ---
 ## Other info will be added to the wiki soon.
 **\~ PotateX2**
-Edited on 05/23/2026, 12:07 am.
+Edited on 06/05/2026, 11:25 pm.
